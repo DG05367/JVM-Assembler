@@ -1,0 +1,112 @@
+
+INJECT JasminParser : {
+    static public void main(String[] args) {
+       if (args.length == 0) {
+           System.out.println("Usage: java JasminParser <input>");
+           System.exit(-1);
+       }
+       String input = "";
+       for (String arg : args) input += arg;
+       JasminParser parser = new JasminParser(input);
+       parser.Start();
+    }
+}
+
+
+
+SKIP : " " | "\t" | "\r" | "\n";
+
+TOKEN :
+
+    < INTEGER : (["0" - "9"])+ > |
+    < DOT : "." > |
+    < CLASS : "class" > |
+    < PUBLIC : "public" > |
+    < SUPER : "super" > |
+    < SEMICOLON : ";" > |
+    < DOUBLE_DOT : ":" > |
+    < METHOD : "method" > |
+    < END : "end" > |
+    < STATIC : "static" > |
+    < INT : "I" > |
+    < VOID : "V" > |
+    < LIMIT : "limit" > |
+    < SLASH: "/" > | 
+    < OPEN_PAREN : "(" > |
+    < CLOSE_PAREN : ")" > |
+    < LESS : "<" > |
+    < GREAT : ">" > |
+    < LOCALS : "locals" > |
+    < STACK : "stack" > |
+    < LOOP : "loop" > |
+    < ENDLOOP : "endloop" > |
+    < GO_TO : "goto" > |
+    < ICONST_0 : "iconst_0" > |
+    < ISTORE_2 : "istore_2" > |
+    < ISTORE_3 : "istore_3" > |
+    < ILOAD_1 : "iload_1" > |
+    < ILOAD_2 : "iload_2" > |
+    < ILOAD_3 : "iload_3" > |
+    < IF_ICMPGE : "if_icmpge" > |
+    < IADD : "iadd" > |
+    < IINC : "iinc" > |
+    < IRETURN : "ireturn" > |
+    < ALOAD_0 : "aload_0" > |
+    < INVOKENONVIRTUAL : "invokenonvirtual" > |
+    < RETURN : "return" > |
+    < IDENTIFIER : (["A" - "Z"] | ["a"-"z"]) (["0"-"9"] | ["A" - "Z"] | ["a"-"z"] | "_")* >;
+
+
+Start: <DOT> ClassDeclaration (SuperDeclaration)?;
+
+
+ClassDeclaration: <CLASS> <PUBLIC> <IDENTIFIER>;
+
+SuperDeclaration: <DOT> <SUPER> <IDENTIFIER> (<SLASH> <IDENTIFIER>)* (MethodDeclaration) <OPEN_PAREN> <CLOSE_PAREN> ;
+
+Instruction:
+    (<ALOAD_0> |
+    <ICONST_0> |
+    <ISTORE_2> |
+    <ISTORE_3> |
+    <ILOAD_1> |
+    <ILOAD_2> |
+    <ILOAD_3> |
+    <IF_ICMPGE> |
+    <IADD> |
+    <IINC> (<INTEGER>)? (<INTEGER>)? |
+    <ALOAD_0> |
+    <RETURN> |
+    <IRETURN> |
+    <DOT> <LIMIT> <LOCALS> (<INTEGER>)? |
+    <DOT> <LIMIT> <STACK> (<INTEGER>)? |
+    <INVOKENONVIRTUAL> (Path1)? ) (<IDENTIFIER>)? (<IDENTIFIER>)?;
+
+
+Label:
+    <IDENTIFIER> <DOUBLE_DOT>;
+
+Path1:
+    <IDENTIFIER> (<SLASH>) ((Path1) | (MethodName) (MethodArguments));
+
+
+MethodDeclaration: 
+    <DOT> (StartMethod)  (MethodName) (MethodArguments) (MethodBody)*
+    MethodFinal ;
+
+StartMethod:
+    <METHOD> <PUBLIC> (<STATIC>)?;
+
+MethodName:
+    (<LESS> <IDENTIFIER> <GREAT> |
+    <IDENTIFIER>);
+
+MethodArguments:
+    <OPEN_PAREN> (<INT> | <VOID>)? <CLOSE_PAREN> (<INT> | <VOID>)?;
+
+
+MethodBody:
+    (Instruction | Label) ;
+    
+MethodFinal:
+    <DOT> <END> <METHOD> ;
