@@ -32,57 +32,223 @@ class JasminParserNfaData implements JasminParserConstants {
     }
     static TokenType NFA_COMPOSITE_0(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
         TokenType type= null;
-        if (ch== 'a') {
-            nextStates.set(18);
+        if (ch== '.') {
+            nextStates.set(810);
+            nextStates.set(659);
+            nextStates.set(633);
+            nextStates.set(922);
+            nextStates.set(642);
+        }
+        else if (ch== '[') {
+            nextStates.set(1088);
+        }
+        else if (ch== 'a') {
+            nextStates.set(181);
+            nextStates.set(11);
+            nextStates.set(828);
+            nextStates.set(902);
+            nextStates.set(322);
+            nextStates.set(526);
+            nextStates.set(915);
+            nextStates.set(508);
+            nextStates.set(386);
+            nextStates.set(139);
+            nextStates.set(312);
+            nextStates.set(300);
+            nextStates.set(368);
+            nextStates.set(224);
+            nextStates.set(511);
+            nextStates.set(143);
+        }
+        else if (ch== 'b') {
+            nextStates.set(695);
+            nextStates.set(57);
+            nextStates.set(636);
         }
         else if (ch== 'c') {
-            nextStates.set(99);
+            nextStates.set(1055);
+            nextStates.set(865);
+            nextStates.set(55);
         }
-        else if (ch== 'e') {
-            nextStates.set(59);
-            nextStates.set(86);
+        else if (ch== 'd') {
+            nextStates.set(1127);
+            nextStates.set(599);
+            nextStates.set(768);
+            nextStates.set(1047);
+            nextStates.set(885);
+            nextStates.set(202);
+            nextStates.set(986);
+            nextStates.set(604);
+            nextStates.set(262);
+            nextStates.set(741);
+            nextStates.set(929);
+            nextStates.set(1123);
+            nextStates.set(339);
+            nextStates.set(870);
+            nextStates.set(904);
+            nextStates.set(981);
+            nextStates.set(994);
+            nextStates.set(516);
+            nextStates.set(980);
+            nextStates.set(549);
+            nextStates.set(724);
+            nextStates.set(1051);
+            nextStates.set(910);
+            nextStates.set(559);
+            nextStates.set(979);
+            nextStates.set(296);
+            nextStates.set(854);
+            nextStates.set(644);
+            nextStates.set(439);
+            nextStates.set(476);
+            nextStates.set(492);
+            nextStates.set(868);
+        }
+        else if (ch== 'f') {
+            nextStates.set(362);
+            nextStates.set(1054);
+            nextStates.set(696);
+            nextStates.set(256);
+            nextStates.set(136);
+            nextStates.set(792);
+            nextStates.set(719);
+            nextStates.set(936);
+            nextStates.set(555);
+            nextStates.set(397);
+            nextStates.set(753);
+            nextStates.set(396);
+            nextStates.set(311);
+            nextStates.set(574);
+            nextStates.set(1033);
+            nextStates.set(775);
+            nextStates.set(598);
+            nextStates.set(451);
+            nextStates.set(1027);
+            nextStates.set(952);
+            nextStates.set(1117);
+            nextStates.set(248);
+            nextStates.set(1092);
+            nextStates.set(999);
+            nextStates.set(344);
+            nextStates.set(7);
+            nextStates.set(27);
+            nextStates.set(159);
+            nextStates.set(583);
         }
         else if (ch== 'g') {
-            nextStates.set(165);
+            nextStates.set(169);
+            nextStates.set(107);
+            nextStates.set(253);
+            nextStates.set(813);
         }
         else if (ch== 'i') {
-            nextStates.set(40);
-            nextStates.set(65);
+            nextStates.set(193);
+            nextStates.set(852);
+            nextStates.set(1084);
+            nextStates.set(656);
+            nextStates.set(250);
+            nextStates.set(540);
+            nextStates.set(575);
+            nextStates.set(38);
+            nextStates.set(31);
+            nextStates.set(239);
+            nextStates.set(538);
+            nextStates.set(590);
+            nextStates.set(400);
+            nextStates.set(861);
+            nextStates.set(560);
+            nextStates.set(479);
+            nextStates.set(579);
+            nextStates.set(859);
+            nextStates.set(777);
+            nextStates.set(975);
+            nextStates.set(786);
+            nextStates.set(110);
+            nextStates.set(376);
+            nextStates.set(97);
+            nextStates.set(117);
+            nextStates.set(341);
+            nextStates.set(552);
+            nextStates.set(756);
+            nextStates.set(645);
+            nextStates.set(851);
+            nextStates.set(454);
+            nextStates.set(405);
+            nextStates.set(199);
+            nextStates.set(1007);
+            nextStates.set(804);
+            nextStates.set(228);
+            nextStates.set(212);
+            nextStates.set(441);
+            nextStates.set(220);
+            nextStates.set(83);
+            nextStates.set(543);
+            nextStates.set(795);
+            nextStates.set(941);
+            nextStates.set(240);
+            nextStates.set(288);
             nextStates.set(133);
-            nextStates.set(171);
-            nextStates.set(78);
-            nextStates.set(77);
-            nextStates.set(42);
-            nextStates.set(123);
-            nextStates.set(56);
+            nextStates.set(1079);
             nextStates.set(122);
-            nextStates.set(164);
+            nextStates.set(913);
+            nextStates.set(388);
+            nextStates.set(46);
+            nextStates.set(506);
+            nextStates.set(578);
+            nextStates.set(452);
+            nextStates.set(226);
+            nextStates.set(1081);
+            nextStates.set(726);
+            nextStates.set(217);
+            nextStates.set(839);
+            nextStates.set(360);
+        }
+        else if (ch== 'j') {
+            nextStates.set(843);
+            nextStates.set(1001);
         }
         else if (ch== 'l') {
+            nextStates.set(523);
+            nextStates.set(1003);
+            nextStates.set(1135);
+            nextStates.set(891);
+            nextStates.set(906);
+            nextStates.set(822);
+            nextStates.set(173);
+            nextStates.set(165);
+            nextStates.set(142);
+            nextStates.set(722);
+            nextStates.set(218);
+            nextStates.set(453);
+            nextStates.set(105);
+            nextStates.set(853);
+            nextStates.set(834);
+            nextStates.set(15);
             nextStates.set(137);
-            nextStates.set(152);
-            nextStates.set(89);
+            nextStates.set(480);
+            nextStates.set(210);
+            nextStates.set(1005);
+            nextStates.set(483);
+            nextStates.set(796);
         }
         else if (ch== 'm') {
-            nextStates.set(63);
+            nextStates.set(684);
+        }
+        else if (ch== 'n') {
+            nextStates.set(858);
         }
         else if (ch== 'p') {
-            nextStates.set(112);
+            nextStates.set(385);
         }
         else if (ch== 'r') {
-            nextStates.set(135);
+            nextStates.set(563);
         }
         else if (ch== 's') {
-            nextStates.set(7);
-            nextStates.set(23);
-            nextStates.set(22);
+            nextStates.set(302);
+            nextStates.set(748);
         }
-        else if (ch>='A'&&ch<='Z') {
-            nextStates.set(2);
-            if (validTypes.contains(TokenType.IDENTIFIER)) type= TokenType.IDENTIFIER;
-        }
-        if (ch>='a'&&ch<='z') {
-            nextStates.set(2);
+        if ((ch>='A'&&ch<='Z')||(ch>='a'&&ch<='z')) {
+            nextStates.set(597);
             if (validTypes.contains(TokenType.IDENTIFIER)) type= TokenType.IDENTIFIER;
         }
         else if (ch== '>') {
@@ -100,11 +266,17 @@ class JasminParserNfaData implements JasminParserConstants {
         else if (ch== '/') {
             if (validTypes.contains(TokenType.SLASH)) type= TokenType.SLASH;
         }
-        else if (ch== 'V') {
+        if (ch== 'V') {
             if (validTypes.contains(TokenType.VOID)) type= TokenType.VOID;
         }
         else if (ch== 'I') {
             if (validTypes.contains(TokenType.INT)) type= TokenType.INT;
+        }
+        else if (ch== '.') {
+            if (validTypes.contains(TokenType.DOT)) type= TokenType.DOT;
+        }
+        else if (ch== '"') {
+            if (validTypes.contains(TokenType.QUOTE)) type= TokenType.QUOTE;
         }
         else if (ch== ':') {
             if (validTypes.contains(TokenType.DOUBLE_DOT)) type= TokenType.DOUBLE_DOT;
@@ -112,1341 +284,8092 @@ class JasminParserNfaData implements JasminParserConstants {
         else if (ch== ';') {
             if (validTypes.contains(TokenType.SEMICOLON)) type= TokenType.SEMICOLON;
         }
-        else if (ch== '.') {
-            if (validTypes.contains(TokenType.DOT)) type= TokenType.DOT;
-        }
         else if (ch>='0'&&ch<='9') {
-            nextStates.set(148);
+            nextStates.set(382);
             if (validTypes.contains(TokenType.INTEGER)) type= TokenType.INTEGER;
         }
-        else if (ch== '\n') {
-            if (validTypes.contains(TokenType._TOKEN_4)) type= TokenType._TOKEN_4;
-        }
-        else if (ch== '\r') {
-            if (validTypes.contains(TokenType._TOKEN_3)) type= TokenType._TOKEN_3;
+        if (ch== ';') {
+            nextStates.set(970);
+            if (validTypes.contains(TokenType.LINE_COMMENT)) type= TokenType.LINE_COMMENT;
         }
         else if (ch== '\t') {
-            if (validTypes.contains(TokenType._TOKEN_2)) type= TokenType._TOKEN_2;
+            nextStates.set(1);
+            if (validTypes.contains(TokenType.WHITESPACE)) type= TokenType.WHITESPACE;
+        }
+        else if (ch== '\n') {
+            nextStates.set(1);
+            if (validTypes.contains(TokenType.WHITESPACE)) type= TokenType.WHITESPACE;
+        }
+        else if (ch== '\f') {
+            nextStates.set(1);
+            if (validTypes.contains(TokenType.WHITESPACE)) type= TokenType.WHITESPACE;
+        }
+        else if (ch== '\r') {
+            nextStates.set(1);
+            if (validTypes.contains(TokenType.WHITESPACE)) type= TokenType.WHITESPACE;
         }
         else if (ch== ' ') {
-            if (validTypes.contains(TokenType._TOKEN_1)) type= TokenType._TOKEN_1;
+            nextStates.set(1);
+            if (validTypes.contains(TokenType.WHITESPACE)) type= TokenType.WHITESPACE;
         }
         return type;
     }
 
     static TokenType NFA_COMPOSITE_1(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
         TokenType type= null;
-        if (ch>='A'&&ch<='Z') {
-            nextStates.set(2);
-            if (validTypes.contains(TokenType.IDENTIFIER)) type= TokenType.IDENTIFIER;
+        if (ch== '\t') {
+            nextStates.set(1);
+            if (validTypes.contains(TokenType.WHITESPACE)) type= TokenType.WHITESPACE;
         }
-        else if (ch>='a'&&ch<='z') {
-            nextStates.set(2);
-            if (validTypes.contains(TokenType.IDENTIFIER)) type= TokenType.IDENTIFIER;
+        else if (ch== '\n') {
+            nextStates.set(1);
+            if (validTypes.contains(TokenType.WHITESPACE)) type= TokenType.WHITESPACE;
+        }
+        else if (ch== '\f') {
+            nextStates.set(1);
+            if (validTypes.contains(TokenType.WHITESPACE)) type= TokenType.WHITESPACE;
+        }
+        else if (ch== '\r') {
+            nextStates.set(1);
+            if (validTypes.contains(TokenType.WHITESPACE)) type= TokenType.WHITESPACE;
+        }
+        else if (ch== ' ') {
+            nextStates.set(1);
+            if (validTypes.contains(TokenType.WHITESPACE)) type= TokenType.WHITESPACE;
         }
         return type;
     }
 
-    static TokenType NFA_COMPOSITE_2(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        TokenType type= null;
-        if (ch>='0'&&ch<='9') {
-            nextStates.set(2);
-            if (validTypes.contains(TokenType.IDENTIFIER)) type= TokenType.IDENTIFIER;
+    static TokenType NFA_2(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            nextStates.set(504);
         }
-        else if (ch>='A'&&ch<='Z') {
-            nextStates.set(2);
-            if (validTypes.contains(TokenType.IDENTIFIER)) type= TokenType.IDENTIFIER;
-        }
-        else if (ch== '_') {
-            nextStates.set(2);
-            if (validTypes.contains(TokenType.IDENTIFIER)) type= TokenType.IDENTIFIER;
-        }
-        else if (ch>='a'&&ch<='z') {
-            nextStates.set(2);
-            if (validTypes.contains(TokenType.IDENTIFIER)) type= TokenType.IDENTIFIER;
-        }
-        return type;
+        return null;
     }
 
     static TokenType NFA_3(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 't') {
-            nextStates.set(139);
-        }
-        return null;
-    }
-
-    static TokenType NFA_4(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== ' ') {
-            if (validTypes.contains(TokenType._TOKEN_1)) return TokenType._TOKEN_1;
-        }
-        return null;
-    }
-
-    static TokenType NFA_5(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'r') {
-            nextStates.set(127);
-        }
-        return null;
-    }
-
-    static TokenType NFA_6(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== '2') {
-            if (validTypes.contains(TokenType.ISTORE_2)) return TokenType.ISTORE_2;
-        }
-        return null;
-    }
-
-    static TokenType NFA_7(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 't') {
-            nextStates.set(105);
-        }
-        return null;
-    }
-
-    static TokenType NFA_8(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
         if (ch== 'o') {
-            if (validTypes.contains(TokenType.GO_TO)) return TokenType.GO_TO;
-        }
-        return null;
-    }
-
-    static TokenType NFA_9(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'a') {
-            nextStates.set(84);
-        }
-        return null;
-    }
-
-    static TokenType NFA_10(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'd') {
-            if (validTypes.contains(TokenType.METHOD)) return TokenType.METHOD;
-        }
-        return null;
-    }
-
-    static TokenType NFA_11(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'g') {
-            nextStates.set(165);
-        }
-        return null;
-    }
-
-    static TokenType NFA_12(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'n') {
-            if (validTypes.contains(TokenType.RETURN)) return TokenType.RETURN;
-        }
-        return null;
-    }
-
-    static TokenType NFA_13(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'c') {
-            nextStates.set(33);
-        }
-        return null;
-    }
-
-    static TokenType NFA_14(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'o') {
-            nextStates.set(5);
-        }
-        return null;
-    }
-
-    static TokenType NFA_15(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'i') {
-            nextStates.set(13);
-        }
-        return null;
-    }
-
-    static TokenType NFA_16(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== '0') {
-            if (validTypes.contains(TokenType.ICONST_0)) return TokenType.ICONST_0;
-        }
-        return null;
-    }
-
-    static TokenType NFA_17(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'o') {
-            nextStates.set(93);
-        }
-        return null;
-    }
-
-    static TokenType NFA_18(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'l') {
-            nextStates.set(45);
-        }
-        return null;
-    }
-
-    static TokenType NFA_19(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'd') {
-            if (validTypes.contains(TokenType.END)) return TokenType.END;
-        }
-        return null;
-    }
-
-    static TokenType NFA_20(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== '(') {
-            if (validTypes.contains(TokenType.OPEN_PAREN)) return TokenType.OPEN_PAREN;
-        }
-        return null;
-    }
-
-    static TokenType NFA_21(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 't') {
-            nextStates.set(118);
-        }
-        return null;
-    }
-
-    static TokenType NFA_22(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 't') {
-            nextStates.set(82);
-        }
-        return null;
-    }
-
-    static TokenType NFA_23(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'u') {
-            nextStates.set(162);
-        }
-        return null;
-    }
-
-    static TokenType NFA_24(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 't') {
-            nextStates.set(46);
-        }
-        return null;
-    }
-
-    static TokenType NFA_25(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'i') {
-            nextStates.set(133);
-        }
-        return null;
-    }
-
-    static TokenType NFA_26(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'c') {
-            if (validTypes.contains(TokenType.IINC)) return TokenType.IINC;
-        }
-        return null;
-    }
-
-    static TokenType NFA_27(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'v') {
-            nextStates.set(166);
-        }
-        return null;
-    }
-
-    static TokenType NFA_28(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'i') {
-            nextStates.set(78);
-        }
-        return null;
-    }
-
-    static TokenType NFA_29(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'o') {
-            nextStates.set(95);
-        }
-        return null;
-    }
-
-    static TokenType NFA_30(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'd') {
-            nextStates.set(64);
-        }
-        return null;
-    }
-
-    static TokenType NFA_31(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== '_') {
-            nextStates.set(15);
-        }
-        return null;
-    }
-
-    static TokenType NFA_32(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== '3') {
-            if (validTypes.contains(TokenType.ISTORE_3)) return TokenType.ISTORE_3;
-        }
-        return null;
-    }
-
-    static TokenType NFA_33(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'm') {
-            nextStates.set(175);
-        }
-        return null;
-    }
-
-    static TokenType NFA_34(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== '_') {
-            nextStates.set(32);
-        }
-        return null;
-    }
-
-    static TokenType NFA_35(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'o') {
-            nextStates.set(10);
-        }
-        return null;
-    }
-
-    static TokenType NFA_36(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'e') {
-            if (validTypes.contains(TokenType.IF_ICMPGE)) return TokenType.IF_ICMPGE;
-        }
-        return null;
-    }
-
-    static TokenType NFA_37(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'v') {
-            nextStates.set(57);
-        }
-        return null;
-    }
-
-    static TokenType NFA_38(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'a') {
-            nextStates.set(114);
-        }
-        return null;
-    }
-
-    static TokenType NFA_39(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== '.') {
-            if (validTypes.contains(TokenType.DOT)) return TokenType.DOT;
-        }
-        return null;
-    }
-
-    static TokenType NFA_40(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'l') {
-            nextStates.set(29);
-        }
-        return null;
-    }
-
-    static TokenType NFA_41(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'c') {
-            if (validTypes.contains(TokenType.STATIC)) return TokenType.STATIC;
-        }
-        return null;
-    }
-
-    static TokenType NFA_42(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 's') {
-            nextStates.set(3);
-        }
-        return null;
-    }
-
-    static TokenType NFA_43(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'l') {
-            nextStates.set(152);
-        }
-        return null;
-    }
-
-    static TokenType NFA_44(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'c') {
-            nextStates.set(99);
-        }
-        return null;
-    }
-
-    static TokenType NFA_45(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'o') {
-            nextStates.set(55);
-        }
-        return null;
-    }
-
-    static TokenType NFA_46(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'u') {
-            nextStates.set(62);
-        }
-        return null;
-    }
-
-    static TokenType NFA_47(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'a') {
-            nextStates.set(116);
-        }
-        return null;
-    }
-
-    static TokenType NFA_48(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'o') {
-            nextStates.set(38);
-        }
-        return null;
-    }
-
-    static TokenType NFA_49(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'l') {
-            nextStates.set(137);
-        }
-        return null;
-    }
-
-    static TokenType NFA_50(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'a') {
-            nextStates.set(51);
-        }
-        return null;
-    }
-
-    static TokenType NFA_51(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'l') {
-            if (validTypes.contains(TokenType.INVOKENONVIRTUAL)) return TokenType.INVOKENONVIRTUAL;
-        }
-        return null;
-    }
-
-    static TokenType NFA_52(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 's') {
-            nextStates.set(23);
-        }
-        return null;
-    }
-
-    static TokenType NFA_53(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== '_') {
-            nextStates.set(6);
-        }
-        return null;
-    }
-
-    static TokenType NFA_54(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'i') {
-            nextStates.set(42);
-        }
-        return null;
-    }
-
-    static TokenType NFA_55(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'a') {
-            nextStates.set(155);
-        }
-        return null;
-    }
-
-    static TokenType NFA_56(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'l') {
-            nextStates.set(48);
-        }
-        return null;
-    }
-
-    static TokenType NFA_57(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'i') {
-            nextStates.set(109);
-        }
-        return null;
-    }
-
-    static TokenType NFA_58(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== '>') {
-            if (validTypes.contains(TokenType.GREAT)) return TokenType.GREAT;
-        }
-        return null;
-    }
-
-    static TokenType NFA_59(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'n') {
-            nextStates.set(107);
-        }
-        return null;
-    }
-
-    static TokenType NFA_60(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'l') {
-            nextStates.set(17);
-        }
-        return null;
-    }
-
-    static TokenType NFA_61(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== '\r') {
-            if (validTypes.contains(TokenType._TOKEN_3)) return TokenType._TOKEN_3;
-        }
-        return null;
-    }
-
-    static TokenType NFA_62(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'r') {
-            nextStates.set(12);
-        }
-        return null;
-    }
-
-    static TokenType NFA_63(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'e') {
-            nextStates.set(131);
-        }
-        return null;
-    }
-
-    static TokenType NFA_64(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'd') {
-            if (validTypes.contains(TokenType.IADD)) return TokenType.IADD;
-        }
-        return null;
-    }
-
-    static TokenType NFA_65(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'r') {
-            nextStates.set(154);
-        }
-        return null;
-    }
-
-    static TokenType NFA_66(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 's') {
-            nextStates.set(22);
-        }
-        return null;
-    }
-
-    static TokenType NFA_67(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'i') {
-            nextStates.set(164);
-        }
-        return null;
-    }
-
-    static TokenType NFA_68(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'c') {
-            nextStates.set(9);
-        }
-        return null;
-    }
-
-    static TokenType NFA_69(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'd') {
-            nextStates.set(160);
-        }
-        return null;
-    }
-
-    static TokenType NFA_70(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'p') {
-            nextStates.set(112);
-        }
-        return null;
-    }
-
-    static TokenType NFA_71(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'o') {
-            nextStates.set(111);
-        }
-        return null;
-    }
-
-    static TokenType NFA_72(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'i') {
-            nextStates.set(40);
-        }
-        return null;
-    }
-
-    static TokenType NFA_73(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'r') {
-            nextStates.set(138);
-        }
-        return null;
-    }
-
-    static TokenType NFA_74(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'c') {
-            if (validTypes.contains(TokenType.PUBLIC)) return TokenType.PUBLIC;
-        }
-        return null;
-    }
-
-    static TokenType NFA_75(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== ')') {
-            if (validTypes.contains(TokenType.CLOSE_PAREN)) return TokenType.CLOSE_PAREN;
-        }
-        return null;
-    }
-
-    static TokenType NFA_76(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'p') {
-            if (validTypes.contains(TokenType.ENDLOOP)) return TokenType.ENDLOOP;
-        }
-        return null;
-    }
-
-    static TokenType NFA_77(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'c') {
-            nextStates.set(176);
-        }
-        return null;
-    }
-
-    static TokenType NFA_78(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'f') {
-            nextStates.set(31);
-        }
-        return null;
-    }
-
-    static TokenType NFA_79(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'e') {
             nextStates.set(86);
         }
         return null;
     }
 
-    static TokenType NFA_80(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+    static TokenType NFA_4(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '3') {
+            if (validTypes.contains(TokenType.DSTORE_3)) return TokenType.DSTORE_3;
+        }
+        return null;
+    }
+
+    static TokenType NFA_5(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(969);
+        }
+        return null;
+    }
+
+    static TokenType NFA_6(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(1127);
+        }
+        return null;
+    }
+
+    static TokenType NFA_7(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
         if (ch== 'm') {
-            nextStates.set(110);
+            nextStates.set(982);
         }
         return null;
     }
 
-    static TokenType NFA_81(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'i') {
-            nextStates.set(77);
-        }
-        return null;
-    }
-
-    static TokenType NFA_82(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'a') {
-            nextStates.set(21);
-        }
-        return null;
-    }
-
-    static TokenType NFA_83(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== '\n') {
-            if (validTypes.contains(TokenType._TOKEN_4)) return TokenType._TOKEN_4;
-        }
-        return null;
-    }
-
-    static TokenType NFA_84(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'l') {
-            nextStates.set(103);
-        }
-        return null;
-    }
-
-    static TokenType NFA_85(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== '_') {
-            nextStates.set(16);
-        }
-        return null;
-    }
-
-    static TokenType NFA_86(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'n') {
-            nextStates.set(19);
-        }
-        return null;
-    }
-
-    static TokenType NFA_87(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== '0') {
-            if (validTypes.contains(TokenType.ALOAD_0)) return TokenType.ALOAD_0;
-        }
-        return null;
-    }
-
-    static TokenType NFA_88(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'i') {
-            nextStates.set(56);
-        }
-        return null;
-    }
-
-    static TokenType NFA_89(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'i') {
-            nextStates.set(80);
-        }
-        return null;
-    }
-
-    static TokenType NFA_90(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== '\t') {
-            if (validTypes.contains(TokenType._TOKEN_2)) return TokenType._TOKEN_2;
-        }
-        return null;
-    }
-
-    static TokenType NFA_91(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'u') {
-            nextStates.set(50);
-        }
-        return null;
-    }
-
-    static TokenType NFA_92(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'd') {
-            nextStates.set(94);
-        }
-        return null;
-    }
-
-    static TokenType NFA_93(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'o') {
-            nextStates.set(76);
-        }
-        return null;
-    }
-
-    static TokenType NFA_94(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== '_') {
-            nextStates.set(167);
-        }
-        return null;
-    }
-
-    static TokenType NFA_95(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'a') {
-            nextStates.set(92);
-        }
-        return null;
-    }
-
-    static TokenType NFA_96(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+    static TokenType NFA_8(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
         if (ch== 's') {
-            nextStates.set(7);
+            nextStates.set(820);
         }
         return null;
     }
 
-    static TokenType NFA_97(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 't') {
-            nextStates.set(134);
-        }
-        return null;
-    }
-
-    static TokenType NFA_98(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'e') {
-            nextStates.set(59);
-        }
-        return null;
-    }
-
-    static TokenType NFA_99(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'l') {
-            nextStates.set(47);
-        }
-        return null;
-    }
-
-    static TokenType NFA_100(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'i') {
-            nextStates.set(171);
-        }
-        return null;
-    }
-
-    static TokenType NFA_101(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== '_') {
-            nextStates.set(87);
-        }
-        return null;
-    }
-
-    static TokenType NFA_102(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'o') {
-            nextStates.set(119);
-        }
-        return null;
-    }
-
-    static TokenType NFA_103(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 's') {
-            if (validTypes.contains(TokenType.LOCALS)) return TokenType.LOCALS;
-        }
-        return null;
-    }
-
-    static TokenType NFA_104(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+    static TokenType NFA_9(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
         if (ch== 'r') {
-            if (validTypes.contains(TokenType.SUPER)) return TokenType.SUPER;
+            nextStates.set(793);
         }
         return null;
     }
 
-    static TokenType NFA_105(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'a') {
-            nextStates.set(158);
+    static TokenType NFA_10(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            nextStates.set(509);
         }
         return null;
     }
 
-    static TokenType NFA_106(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+    static TokenType NFA_11(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
         if (ch== 's') {
-            nextStates.set(125);
+            nextStates.set(658);
         }
         return null;
     }
 
-    static TokenType NFA_107(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'd') {
-            nextStates.set(60);
+    static TokenType NFA_12(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'b') {
+            nextStates.set(695);
         }
         return null;
     }
 
-    static TokenType NFA_108(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+    static TokenType NFA_13(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
         if (ch== '<') {
             if (validTypes.contains(TokenType.LESS)) return TokenType.LESS;
         }
         return null;
     }
 
-    static TokenType NFA_109(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'r') {
-            nextStates.set(146);
-        }
-        return null;
-    }
-
-    static TokenType NFA_110(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'i') {
-            nextStates.set(117);
-        }
-        return null;
-    }
-
-    static TokenType NFA_111(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'p') {
-            if (validTypes.contains(TokenType.LOOP)) return TokenType.LOOP;
-        }
-        return null;
-    }
-
-    static TokenType NFA_112(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'u') {
-            nextStates.set(142);
-        }
-        return null;
-    }
-
-    static TokenType NFA_113(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'i') {
-            nextStates.set(74);
-        }
-        return null;
-    }
-
-    static TokenType NFA_114(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+    static TokenType NFA_14(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
         if (ch== 'd') {
-            nextStates.set(120);
+            nextStates.set(599);
         }
         return null;
     }
 
-    static TokenType NFA_115(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'i') {
-            nextStates.set(122);
+    static TokenType NFA_15(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            nextStates.set(562);
         }
         return null;
     }
 
-    static TokenType NFA_116(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 's') {
-            nextStates.set(147);
+    static TokenType NFA_16(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            nextStates.set(808);
         }
         return null;
     }
 
-    static TokenType NFA_117(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 't') {
-            if (validTypes.contains(TokenType.LIMIT)) return TokenType.LIMIT;
-        }
-        return null;
-    }
-
-    static TokenType NFA_118(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'i') {
-            nextStates.set(41);
-        }
-        return null;
-    }
-
-    static TokenType NFA_119(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+    static TokenType NFA_17(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
         if (ch== 'a') {
-            nextStates.set(69);
+            nextStates.set(204);
         }
         return null;
     }
 
-    static TokenType NFA_120(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== '_') {
-            nextStates.set(157);
+    static TokenType NFA_18(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(373);
         }
         return null;
     }
 
-    static TokenType NFA_121(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'n') {
-            nextStates.set(106);
-        }
-        return null;
-    }
-
-    static TokenType NFA_122(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'l') {
-            nextStates.set(102);
-        }
-        return null;
-    }
-
-    static TokenType NFA_123(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'a') {
-            nextStates.set(30);
-        }
-        return null;
-    }
-
-    static TokenType NFA_124(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'h') {
-            nextStates.set(35);
-        }
-        return null;
-    }
-
-    static TokenType NFA_125(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 't') {
-            nextStates.set(85);
-        }
-        return null;
-    }
-
-    static TokenType NFA_126(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'e') {
-            nextStates.set(34);
-        }
-        return null;
-    }
-
-    static TokenType NFA_127(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'e') {
-            nextStates.set(53);
-        }
-        return null;
-    }
-
-    static TokenType NFA_128(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'e') {
-            nextStates.set(174);
-        }
-        return null;
-    }
-
-    static TokenType NFA_129(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'e') {
-            nextStates.set(104);
-        }
-        return null;
-    }
-
-    static TokenType NFA_130(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'I') {
-            if (validTypes.contains(TokenType.INT)) return TokenType.INT;
-        }
-        return null;
-    }
-
-    static TokenType NFA_131(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 't') {
-            nextStates.set(124);
-        }
-        return null;
-    }
-
-    static TokenType NFA_132(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+    static TokenType NFA_19(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
         if (ch== 'g') {
-            nextStates.set(36);
+            if (validTypes.contains(TokenType.FNEG)) return TokenType.FNEG;
         }
         return null;
     }
 
-    static TokenType NFA_133(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'i') {
-            nextStates.set(163);
-        }
-        return null;
-    }
-
-    static TokenType NFA_134(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'u') {
-            nextStates.set(73);
-        }
-        return null;
-    }
-
-    static TokenType NFA_135(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+    static TokenType NFA_20(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
         if (ch== 'e') {
-            nextStates.set(24);
+            nextStates.set(1091);
         }
         return null;
     }
 
-    static TokenType NFA_136(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== ';') {
-            if (validTypes.contains(TokenType.SEMICOLON)) return TokenType.SEMICOLON;
+    static TokenType NFA_21(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(164);
         }
         return null;
     }
 
-    static TokenType NFA_137(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'o') {
-            nextStates.set(68);
+    static TokenType NFA_22(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(331);
         }
         return null;
     }
 
-    static TokenType NFA_138(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+    static TokenType NFA_23(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            nextStates.set(151);
+        }
+        return null;
+    }
+
+    static TokenType NFA_24(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(1003);
+        }
+        return null;
+    }
+
+    static TokenType NFA_25(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(289);
+        }
+        return null;
+    }
+
+    static TokenType NFA_26(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(1135);
+        }
+        return null;
+    }
+
+    static TokenType NFA_27(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(468);
+        }
+        return null;
+    }
+
+    static TokenType NFA_28(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
         if (ch== 'n') {
-            if (validTypes.contains(TokenType.IRETURN)) return TokenType.IRETURN;
+            nextStates.set(1125);
         }
         return null;
     }
 
-    static TokenType NFA_139(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'o') {
-            nextStates.set(156);
+    static TokenType NFA_29(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(123);
         }
         return null;
     }
 
-    static TokenType NFA_140(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'k') {
-            nextStates.set(128);
-        }
-        return null;
-    }
-
-    static TokenType NFA_141(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== ':') {
-            if (validTypes.contains(TokenType.DOUBLE_DOT)) return TokenType.DOUBLE_DOT;
-        }
-        return null;
-    }
-
-    static TokenType NFA_142(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'b') {
-            nextStates.set(149);
-        }
-        return null;
-    }
-
-    static TokenType NFA_143(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'o') {
-            nextStates.set(150);
-        }
-        return null;
-    }
-
-    static TokenType NFA_144(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+    static TokenType NFA_30(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
         if (ch== 'm') {
-            nextStates.set(63);
+            nextStates.set(669);
         }
         return null;
     }
 
-    static TokenType NFA_145(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 't') {
-            nextStates.set(14);
+    static TokenType NFA_31(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            nextStates.set(634);
         }
         return null;
     }
 
-    static TokenType NFA_146(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 't') {
-            nextStates.set(91);
+    static TokenType NFA_32(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            nextStates.set(818);
         }
         return null;
     }
 
-    static TokenType NFA_147(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+    static TokenType NFA_33(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(54);
+        }
+        return null;
+    }
+
+    static TokenType NFA_34(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
         if (ch== 's') {
             if (validTypes.contains(TokenType.CLASS)) return TokenType.CLASS;
         }
         return null;
     }
 
+    static TokenType NFA_35(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(768);
+        }
+        return null;
+    }
+
+    static TokenType NFA_36(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            nextStates.set(973);
+        }
+        return null;
+    }
+
+    static TokenType NFA_37(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(131);
+        }
+        return null;
+    }
+
+    static TokenType NFA_38(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(1119);
+        }
+        return null;
+    }
+
+    static TokenType NFA_39(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '.') {
+            nextStates.set(810);
+        }
+        return null;
+    }
+
+    static TokenType NFA_40(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '.') {
+            nextStates.set(659);
+        }
+        return null;
+    }
+
+    static TokenType NFA_41(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            nextStates.set(421);
+        }
+        return null;
+    }
+
+    static TokenType NFA_42(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'm') {
+            nextStates.set(488);
+        }
+        return null;
+    }
+
+    static TokenType NFA_43(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(656);
+        }
+        return null;
+    }
+
+    static TokenType NFA_44(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(67);
+        }
+        return null;
+    }
+
+    static TokenType NFA_45(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            if (validTypes.contains(TokenType.I2F)) return TokenType.I2F;
+        }
+        return null;
+    }
+
+    static TokenType NFA_46(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(154);
+        }
+        return null;
+    }
+
+    static TokenType NFA_47(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(250);
+        }
+        return null;
+    }
+
+    static TokenType NFA_48(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(575);
+        }
+        return null;
+    }
+
+    static TokenType NFA_49(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            nextStates.set(567);
+        }
+        return null;
+    }
+
+    static TokenType NFA_50(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '2') {
+            nextStates.set(675);
+        }
+        return null;
+    }
+
+    static TokenType NFA_51(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            nextStates.set(482);
+        }
+        return null;
+    }
+
+    static TokenType NFA_52(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            if (validTypes.contains(TokenType.DOT_METHOD)) return TokenType.DOT_METHOD;
+        }
+        return null;
+    }
+
+    static TokenType NFA_53(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(11);
+        }
+        return null;
+    }
+
+    static TokenType NFA_54(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            if (validTypes.contains(TokenType.IALOAD)) return TokenType.IALOAD;
+        }
+        return null;
+    }
+
+    static TokenType NFA_55(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(856);
+        }
+        return null;
+    }
+
+    static TokenType NFA_56(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(202);
+        }
+        return null;
+    }
+
+    static TokenType NFA_57(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(863);
+        }
+        return null;
+    }
+
+    static TokenType NFA_58(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(604);
+        }
+        return null;
+    }
+
+    static TokenType NFA_59(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '2') {
+            if (validTypes.contains(TokenType.ALOAD_2)) return TokenType.ALOAD_2;
+        }
+        return null;
+    }
+
+    static TokenType NFA_60(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            if (validTypes.contains(TokenType.CALOAD)) return TokenType.CALOAD;
+        }
+        return null;
+    }
+
+    static TokenType NFA_61(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            if (validTypes.contains(TokenType.IMUL)) return TokenType.IMUL;
+        }
+        return null;
+    }
+
+    static TokenType NFA_62(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(274);
+        }
+        return null;
+    }
+
+    static TokenType NFA_63(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'w') {
+            if (validTypes.contains(TokenType.GO_TO_W)) return TokenType.GO_TO_W;
+        }
+        return null;
+    }
+
+    static TokenType NFA_64(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(828);
+        }
+        return null;
+    }
+
+    static TokenType NFA_65(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(902);
+        }
+        return null;
+    }
+
+    static TokenType NFA_66(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(784);
+        }
+        return null;
+    }
+
+    static TokenType NFA_67(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            if (validTypes.contains(TokenType.GO_TO)) return TokenType.GO_TO;
+        }
+        return null;
+    }
+
+    static TokenType NFA_68(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(929);
+        }
+        return null;
+    }
+
+    static TokenType NFA_69(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'q') {
+            if (validTypes.contains(TokenType.IF_ICMPEQ)) return TokenType.IF_ICMPEQ;
+        }
+        return null;
+    }
+
+    static TokenType NFA_70(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(150);
+        }
+        return null;
+    }
+
+    static TokenType NFA_71(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            nextStates.set(25);
+        }
+        return null;
+    }
+
+    static TokenType NFA_72(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(1123);
+        }
+        return null;
+    }
+
+    static TokenType NFA_73(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'v') {
+            if (validTypes.contains(TokenType.DDIV)) return TokenType.DDIV;
+        }
+        return null;
+    }
+
+    static TokenType NFA_74(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            if (validTypes.contains(TokenType.IUSHR)) return TokenType.IUSHR;
+        }
+        return null;
+    }
+
+    static TokenType NFA_75(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            nextStates.set(845);
+        }
+        return null;
+    }
+
+    static TokenType NFA_76(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'b') {
+            if (validTypes.contains(TokenType.FSUB)) return TokenType.FSUB;
+        }
+        return null;
+    }
+
+    static TokenType NFA_77(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            if (validTypes.contains(TokenType.F2I)) return TokenType.F2I;
+        }
+        return null;
+    }
+
+    static TokenType NFA_78(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(302);
+        }
+        return null;
+    }
+
+    static TokenType NFA_79(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            nextStates.set(580);
+        }
+        return null;
+    }
+
+    static TokenType NFA_80(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'x') {
+            nextStates.set(864);
+        }
+        return null;
+    }
+
+    static TokenType NFA_81(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '3') {
+            if (validTypes.contains(TokenType.ASTORE_3)) return TokenType.ASTORE_3;
+        }
+        return null;
+    }
+
+    static TokenType NFA_82(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(170);
+        }
+        return null;
+    }
+
+    static TokenType NFA_83(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '2') {
+            nextStates.set(457);
+        }
+        return null;
+    }
+
+    static TokenType NFA_84(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '0') {
+            if (validTypes.contains(TokenType.ICONST_0)) return TokenType.ICONST_0;
+        }
+        return null;
+    }
+
+    static TokenType NFA_85(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(495);
+        }
+        return null;
+    }
+
+    static TokenType NFA_86(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            nextStates.set(182);
+        }
+        return null;
+    }
+
+    static TokenType NFA_87(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(526);
+        }
+        return null;
+    }
+
+    static TokenType NFA_88(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'u') {
+            nextStates.set(346);
+        }
+        return null;
+    }
+
+    static TokenType NFA_89(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'b') {
+            nextStates.set(270);
+        }
+        return null;
+    }
+
+    static TokenType NFA_90(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(179);
+        }
+        return null;
+    }
+
+    static TokenType NFA_91(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(886);
+        }
+        return null;
+    }
+
+    static TokenType NFA_92(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            nextStates.set(505);
+        }
+        return null;
+    }
+
+    static TokenType NFA_93(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'p') {
+            nextStates.set(1064);
+        }
+        return null;
+    }
+
+    static TokenType NFA_94(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            nextStates.set(649);
+        }
+        return null;
+    }
+
+    static TokenType NFA_95(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            nextStates.set(936);
+        }
+        return null;
+    }
+
+    static TokenType NFA_96(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(879);
+        }
+        return null;
+    }
+
+    static TokenType NFA_97(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            nextStates.set(866);
+        }
+        return null;
+    }
+
+    static TokenType NFA_98(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(568);
+        }
+        return null;
+    }
+
+    static TokenType NFA_99(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            nextStates.set(661);
+        }
+        return null;
+    }
+
+    static TokenType NFA_100(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            nextStates.set(725);
+        }
+        return null;
+    }
+
+    static TokenType NFA_101(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(861);
+        }
+        return null;
+    }
+
+    static TokenType NFA_102(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'k') {
+            nextStates.set(1133);
+        }
+        return null;
+    }
+
+    static TokenType NFA_103(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(699);
+        }
+        return null;
+    }
+
+    static TokenType NFA_104(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(639);
+        }
+        return null;
+    }
+
+    static TokenType NFA_105(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(514);
+        }
+        return null;
+    }
+
+    static TokenType NFA_106(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            nextStates.set(547);
+        }
+        return null;
+    }
+
+    static TokenType NFA_107(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(977);
+        }
+        return null;
+    }
+
+    static TokenType NFA_108(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(1048);
+        }
+        return null;
+    }
+
+    static TokenType NFA_109(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(1049);
+        }
+        return null;
+    }
+
+    static TokenType NFA_110(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(1011);
+        }
+        return null;
+    }
+
+    static TokenType NFA_111(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            if (validTypes.contains(TokenType.IASTORE)) return TokenType.IASTORE;
+        }
+        return null;
+    }
+
+    static TokenType NFA_112(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(812);
+        }
+        return null;
+    }
+
+    static TokenType NFA_113(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(582);
+        }
+        return null;
+    }
+
+    static TokenType NFA_114(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            if (validTypes.contains(TokenType.IF_ACMPNE)) return TokenType.IF_ACMPNE;
+        }
+        return null;
+    }
+
+    static TokenType NFA_115(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(981);
+        }
+        return null;
+    }
+
+    static TokenType NFA_116(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            if (validTypes.contains(TokenType.DRETURN)) return TokenType.DRETURN;
+        }
+        return null;
+    }
+
+    static TokenType NFA_117(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(41);
+        }
+        return null;
+    }
+
+    static TokenType NFA_118(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            if (validTypes.contains(TokenType.LLOAD)) return TokenType.LLOAD;
+        }
+        return null;
+    }
+
+    static TokenType NFA_119(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(1121);
+        }
+        return null;
+    }
+
+    static TokenType NFA_120(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            if (validTypes.contains(TokenType.LSTORE)) return TokenType.LSTORE;
+        }
+        return null;
+    }
+
+    static TokenType NFA_121(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(1087);
+        }
+        return null;
+    }
+
+    static TokenType NFA_122(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(419);
+        }
+        return null;
+    }
+
+    static TokenType NFA_123(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(1132);
+        }
+        return null;
+    }
+
+    static TokenType NFA_124(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(595);
+        }
+        return null;
+    }
+
+    static TokenType NFA_125(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'm') {
+            nextStates.set(315);
+        }
+        return null;
+    }
+
+    static TokenType NFA_126(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            if (validTypes.contains(TokenType.GETSTATIC)) return TokenType.GETSTATIC;
+        }
+        return null;
+    }
+
+    static TokenType NFA_127(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(959);
+        }
+        return null;
+    }
+
+    static TokenType NFA_128(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(379);
+        }
+        return null;
+    }
+
+    static TokenType NFA_129(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(502);
+        }
+        return null;
+    }
+
+    static TokenType NFA_130(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(110);
+        }
+        return null;
+    }
+
+    static TokenType NFA_131(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(806);
+        }
+        return null;
+    }
+
+    static TokenType NFA_132(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(683);
+        }
+        return null;
+    }
+
+    static TokenType NFA_133(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '2') {
+            nextStates.set(898);
+        }
+        return null;
+    }
+
+    static TokenType NFA_134(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            nextStates.set(114);
+        }
+        return null;
+    }
+
+    static TokenType NFA_135(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(901);
+        }
+        return null;
+    }
+
+    static TokenType NFA_136(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            nextStates.set(677);
+        }
+        return null;
+    }
+
+    static TokenType NFA_137(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(157);
+        }
+        return null;
+    }
+
+    static TokenType NFA_138(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(755);
+        }
+        return null;
+    }
+
+    static TokenType NFA_139(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(349);
+        }
+        return null;
+    }
+
+    static TokenType NFA_140(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(1018);
+        }
+        return null;
+    }
+
+    static TokenType NFA_141(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'p') {
+            nextStates.set(887);
+        }
+        return null;
+    }
+
+    static TokenType NFA_142(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'm') {
+            nextStates.set(267);
+        }
+        return null;
+    }
+
+    static TokenType NFA_143(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            nextStates.set(657);
+        }
+        return null;
+    }
+
+    static TokenType NFA_144(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(323);
+        }
+        return null;
+    }
+
+    static TokenType NFA_145(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            nextStates.set(397);
+        }
+        return null;
+    }
+
+    static TokenType NFA_146(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            if (validTypes.contains(TokenType.D2L)) return TokenType.D2L;
+        }
+        return null;
+    }
+
+    static TokenType NFA_147(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(623);
+        }
+        return null;
+    }
+
     static TokenType NFA_148(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch>='0'&&ch<='9') {
-            nextStates.set(148);
-            if (validTypes.contains(TokenType.INTEGER)) return TokenType.INTEGER;
+        if (ch== 'd') {
+            if (validTypes.contains(TokenType.ILOAD)) return TokenType.ILOAD;
         }
         return null;
     }
 
     static TokenType NFA_149(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'l') {
-            nextStates.set(113);
+        if (ch== 'e') {
+            nextStates.set(1106);
         }
         return null;
     }
 
     static TokenType NFA_150(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'n') {
-            nextStates.set(37);
+        if (ch== '1') {
+            if (validTypes.contains(TokenType.ICONST_1)) return TokenType.ICONST_1;
         }
         return null;
     }
 
     static TokenType NFA_151(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== '3') {
-            if (validTypes.contains(TokenType.ILOAD_3)) return TokenType.ILOAD_3;
+        if (ch== 'e') {
+            if (validTypes.contains(TokenType.LASTORE)) return TokenType.LASTORE;
         }
         return null;
     }
 
     static TokenType NFA_152(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'o') {
-            nextStates.set(71);
+        if (ch== 'n') {
+            nextStates.set(88);
         }
         return null;
     }
 
     static TokenType NFA_153(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 't') {
-            nextStates.set(8);
+        if (ch== 'r') {
+            nextStates.set(892);
         }
         return null;
     }
 
     static TokenType NFA_154(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'e') {
-            nextStates.set(97);
+        if (ch== 'o') {
+            nextStates.set(156);
         }
         return null;
     }
 
     static TokenType NFA_155(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'd') {
-            nextStates.set(101);
+        if (ch== 'n') {
+            nextStates.set(961);
         }
         return null;
     }
 
     static TokenType NFA_156(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'r') {
-            nextStates.set(126);
+        if (ch== 'a') {
+            nextStates.set(1061);
         }
         return null;
     }
 
     static TokenType NFA_157(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== '1') {
-            if (validTypes.contains(TokenType.ILOAD_1)) return TokenType.ILOAD_1;
+        if (ch== 'l') {
+            nextStates.set(840);
         }
         return null;
     }
 
     static TokenType NFA_158(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'c') {
-            nextStates.set(168);
+        if (ch== 'a') {
+            nextStates.set(431);
         }
         return null;
     }
 
     static TokenType NFA_159(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'l') {
-            nextStates.set(89);
+        if (ch== 'r') {
+            nextStates.set(1023);
         }
         return null;
     }
 
     static TokenType NFA_160(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== '_') {
-            nextStates.set(151);
+        if (ch== 'n') {
+            nextStates.set(383);
         }
         return null;
     }
 
     static TokenType NFA_161(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'i') {
-            nextStates.set(65);
+        if (ch== 'p') {
+            nextStates.set(1110);
         }
         return null;
     }
 
     static TokenType NFA_162(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'p') {
-            nextStates.set(129);
+        if (ch== 'w') {
+            if (validTypes.contains(TokenType.NEW)) return TokenType.NEW;
         }
         return null;
     }
 
     static TokenType NFA_163(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'n') {
-            nextStates.set(26);
+        if (ch== 'd') {
+            if (validTypes.contains(TokenType.ALOAD)) return TokenType.ALOAD;
         }
         return null;
     }
 
     static TokenType NFA_164(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'n') {
-            nextStates.set(27);
+        if (ch== '3') {
+            if (validTypes.contains(TokenType.FSTORE_3)) return TokenType.FSTORE_3;
         }
         return null;
     }
 
     static TokenType NFA_165(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'o') {
-            nextStates.set(153);
+        if (ch== 'd') {
+            nextStates.set(269);
         }
         return null;
     }
 
     static TokenType NFA_166(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'o') {
-            nextStates.set(140);
+        if (ch== '2') {
+            if (validTypes.contains(TokenType.FCONST_2)) return TokenType.FCONST_2;
         }
         return null;
     }
 
     static TokenType NFA_167(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== '2') {
-            if (validTypes.contains(TokenType.ILOAD_2)) return TokenType.ILOAD_2;
+        if (ch== 'r') {
+            nextStates.set(931);
         }
         return null;
     }
 
     static TokenType NFA_168(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'k') {
-            if (validTypes.contains(TokenType.STACK)) return TokenType.STACK;
+        if (ch== 'm') {
+            if (validTypes.contains(TokenType.DREM)) return TokenType.DREM;
         }
         return null;
     }
 
     static TokenType NFA_169(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== '/') {
-            if (validTypes.contains(TokenType.SLASH)) return TokenType.SLASH;
+        if (ch== 'e') {
+            nextStates.set(316);
         }
         return null;
     }
 
     static TokenType NFA_170(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'i') {
-            nextStates.set(123);
+        if (ch== 'd') {
+            nextStates.set(475);
         }
         return null;
     }
 
     static TokenType NFA_171(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 's') {
-            nextStates.set(145);
+        if (ch== 't') {
+            nextStates.set(1141);
         }
         return null;
     }
 
     static TokenType NFA_172(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'a') {
-            nextStates.set(18);
+        if (ch== 'i') {
+            nextStates.set(552);
         }
         return null;
     }
 
     static TokenType NFA_173(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'V') {
-            if (validTypes.contains(TokenType.VOID)) return TokenType.VOID;
+        if (ch== 'l') {
+            nextStates.set(747);
         }
         return null;
     }
 
     static TokenType NFA_174(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'n') {
-            nextStates.set(143);
+        if (ch== 'd') {
+            nextStates.set(1067);
         }
         return null;
     }
 
     static TokenType NFA_175(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'p') {
-            nextStates.set(132);
+        if (ch== 'd') {
+            nextStates.set(549);
         }
         return null;
     }
 
     static TokenType NFA_176(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
         if (ch== 'o') {
-            nextStates.set(121);
+            nextStates.set(897);
         }
         return null;
     }
 
     static TokenType NFA_177(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== 'r') {
-            nextStates.set(135);
+        if (ch== '2') {
+            if (validTypes.contains(TokenType.ICONST_2)) return TokenType.ICONST_2;
         }
         return null;
     }
 
     static TokenType NFA_178(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch>='A'&&ch<='Z') {
-            nextStates.set(2);
-            if (validTypes.contains(TokenType.IDENTIFIER)) return TokenType.IDENTIFIER;
+        if (ch== 'p') {
+            nextStates.set(528);
         }
         return null;
     }
 
     static TokenType NFA_179(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch>='a'&&ch<='z') {
-            nextStates.set(2);
-            if (validTypes.contains(TokenType.IDENTIFIER)) return TokenType.IDENTIFIER;
+        if (ch== 'r') {
+            nextStates.set(890);
         }
         return null;
     }
 
     static TokenType NFA_180(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch>='a'&&ch<='z') {
-            nextStates.set(2);
-            if (validTypes.contains(TokenType.IDENTIFIER)) return TokenType.IDENTIFIER;
+        if (ch== 'r') {
+            nextStates.set(554);
         }
         return null;
     }
 
     static TokenType NFA_181(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch== '_') {
-            nextStates.set(2);
-            if (validTypes.contains(TokenType.IDENTIFIER)) return TokenType.IDENTIFIER;
+        if (ch== 'l') {
+            nextStates.set(953);
         }
         return null;
     }
 
     static TokenType NFA_182(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch>='0'&&ch<='9') {
-            nextStates.set(2);
-            if (validTypes.contains(TokenType.IDENTIFIER)) return TokenType.IDENTIFIER;
+        if (ch== 'e') {
+            if (validTypes.contains(TokenType.FSTORE)) return TokenType.FSTORE;
         }
         return null;
     }
 
     static TokenType NFA_183(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
-        if (ch>='A'&&ch<='Z') {
-            nextStates.set(2);
+        if (ch== 'p') {
+            nextStates.set(625);
+        }
+        return null;
+    }
+
+    static TokenType NFA_184(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            nextStates.set(787);
+        }
+        return null;
+    }
+
+    static TokenType NFA_185(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'v') {
+            nextStates.set(1000);
+        }
+        return null;
+    }
+
+    static TokenType NFA_186(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(748);
+        }
+        return null;
+    }
+
+    static TokenType NFA_187(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            nextStates.set(869);
+        }
+        return null;
+    }
+
+    static TokenType NFA_188(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'x') {
+            nextStates.set(744);
+        }
+        return null;
+    }
+
+    static TokenType NFA_189(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(199);
+        }
+        return null;
+    }
+
+    static TokenType NFA_190(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            nextStates.set(120);
+        }
+        return null;
+    }
+
+    static TokenType NFA_191(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(4);
+        }
+        return null;
+    }
+
+    static TokenType NFA_192(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            nextStates.set(1033);
+        }
+        return null;
+    }
+
+    static TokenType NFA_193(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            nextStates.set(417);
+        }
+        return null;
+    }
+
+    static TokenType NFA_194(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            if (validTypes.contains(TokenType.INVOKESTATIC)) return TokenType.INVOKESTATIC;
+        }
+        return null;
+    }
+
+    static TokenType NFA_195(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(521);
+        }
+        return null;
+    }
+
+    static TokenType NFA_196(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            nextStates.set(838);
+        }
+        return null;
+    }
+
+    static TokenType NFA_197(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'k') {
+            if (validTypes.contains(TokenType.LOOK)) return TokenType.LOOK;
+        }
+        return null;
+    }
+
+    static TokenType NFA_198(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'g') {
+            nextStates.set(107);
+        }
+        return null;
+    }
+
+    static TokenType NFA_199(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(930);
+        }
+        return null;
+    }
+
+    static TokenType NFA_200(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            nextStates.set(775);
+        }
+        return null;
+    }
+
+    static TokenType NFA_201(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(918);
+        }
+        return null;
+    }
+
+    static TokenType NFA_202(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(404);
+        }
+        return null;
+    }
+
+    static TokenType NFA_203(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(910);
+        }
+        return null;
+    }
+
+    static TokenType NFA_204(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'y') {
+            nextStates.set(1063);
+        }
+        return null;
+    }
+
+    static TokenType NFA_205(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            if (validTypes.contains(TokenType.CHECKCAST)) return TokenType.CHECKCAST;
+        }
+        return null;
+    }
+
+    static TokenType NFA_206(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(212);
+        }
+        return null;
+    }
+
+    static TokenType NFA_207(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(196);
+        }
+        return null;
+    }
+
+    static TokenType NFA_208(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            nextStates.set(734);
+        }
+        return null;
+    }
+
+    static TokenType NFA_209(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(462);
+        }
+        return null;
+    }
+
+    static TokenType NFA_210(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            nextStates.set(42);
+        }
+        return null;
+    }
+
+    static TokenType NFA_211(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            if (validTypes.contains(TokenType.INVOKESPECIAL)) return TokenType.INVOKESPECIAL;
+        }
+        return null;
+    }
+
+    static TokenType NFA_212(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(893);
+        }
+        return null;
+    }
+
+    static TokenType NFA_213(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(1129);
+        }
+        return null;
+    }
+
+    static TokenType NFA_214(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(824);
+        }
+        return null;
+    }
+
+    static TokenType NFA_215(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(602);
+        }
+        return null;
+    }
+
+    static TokenType NFA_216(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(706);
+        }
+        return null;
+    }
+
+    static TokenType NFA_217(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(1029);
+        }
+        return null;
+    }
+
+    static TokenType NFA_218(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '2') {
+            nextStates.set(515);
+        }
+        return null;
+    }
+
+    static TokenType NFA_219(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(83);
+        }
+        return null;
+    }
+
+    static TokenType NFA_220(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            nextStates.set(384);
+        }
+        return null;
+    }
+
+    static TokenType NFA_221(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            nextStates.set(685);
+        }
+        return null;
+    }
+
+    static TokenType NFA_222(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            nextStates.set(917);
+        }
+        return null;
+    }
+
+    static TokenType NFA_223(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            if (validTypes.contains(TokenType.FADD)) return TokenType.FADD;
+        }
+        return null;
+    }
+
+    static TokenType NFA_224(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(465);
+        }
+        return null;
+    }
+
+    static TokenType NFA_225(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'g') {
+            nextStates.set(821);
+        }
+        return null;
+    }
+
+    static TokenType NFA_226(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            nextStates.set(103);
+        }
+        return null;
+    }
+
+    static TokenType NFA_227(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'v') {
+            nextStates.set(418);
+        }
+        return null;
+    }
+
+    static TokenType NFA_228(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            nextStates.set(246);
+        }
+        return null;
+    }
+
+    static TokenType NFA_229(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            nextStates.set(1027);
+        }
+        return null;
+    }
+
+    static TokenType NFA_230(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            nextStates.set(952);
+        }
+        return null;
+    }
+
+    static TokenType NFA_231(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            if (validTypes.contains(TokenType.FCMPL)) return TokenType.FCMPL;
+        }
+        return null;
+    }
+
+    static TokenType NFA_232(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(591);
+        }
+        return null;
+    }
+
+    static TokenType NFA_233(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(272);
+        }
+        return null;
+    }
+
+    static TokenType NFA_234(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(976);
+        }
+        return null;
+    }
+
+    static TokenType NFA_235(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(460);
+        }
+        return null;
+    }
+
+    static TokenType NFA_236(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'u') {
+            nextStates.set(76);
+        }
+        return null;
+    }
+
+    static TokenType NFA_237(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(564);
+        }
+        return null;
+    }
+
+    static TokenType NFA_238(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(1046);
+        }
+        return null;
+    }
+
+    static TokenType NFA_239(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(943);
+        }
+        return null;
+    }
+
+    static TokenType NFA_240(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            nextStates.set(857);
+        }
+        return null;
+    }
+
+    static TokenType NFA_241(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(780);
+        }
+        return null;
+    }
+
+    static TokenType NFA_242(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(640);
+        }
+        return null;
+    }
+
+    static TokenType NFA_243(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(896);
+        }
+        return null;
+    }
+
+    static TokenType NFA_244(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(133);
+        }
+        return null;
+    }
+
+    static TokenType NFA_245(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(883);
+        }
+        return null;
+    }
+
+    static TokenType NFA_246(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'v') {
+            nextStates.set(587);
+        }
+        return null;
+    }
+
+    static TokenType NFA_247(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(925);
+        }
+        return null;
+    }
+
+    static TokenType NFA_248(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(942);
+        }
+        return null;
+    }
+
+    static TokenType NFA_249(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '1') {
+            if (validTypes.contains(TokenType.DUP_X1)) return TokenType.DUP_X1;
+        }
+        return null;
+    }
+
+    static TokenType NFA_250(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            nextStates.set(225);
+        }
+        return null;
+    }
+
+    static TokenType NFA_251(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'm') {
+            nextStates.set(558);
+        }
+        return null;
+    }
+
+    static TokenType NFA_252(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'b') {
+            if (validTypes.contains(TokenType.I2B)) return TokenType.I2B;
+        }
+        return null;
+    }
+
+    static TokenType NFA_253(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(44);
+        }
+        return null;
+    }
+
+    static TokenType NFA_254(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(916);
+        }
+        return null;
+    }
+
+    static TokenType NFA_255(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(46);
+        }
+        return null;
+    }
+
+    static TokenType NFA_256(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(455);
+        }
+        return null;
+    }
+
+    static TokenType NFA_257(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(506);
+        }
+        return null;
+    }
+
+    static TokenType NFA_258(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(33);
+        }
+        return null;
+    }
+
+    static TokenType NFA_259(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(1096);
+        }
+        return null;
+    }
+
+    static TokenType NFA_260(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            nextStates.set(500);
+        }
+        return null;
+    }
+
+    static TokenType NFA_261(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(381);
+        }
+        return null;
+    }
+
+    static TokenType NFA_262(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(132);
+        }
+        return null;
+    }
+
+    static TokenType NFA_263(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(153);
+        }
+        return null;
+    }
+
+    static TokenType NFA_264(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'y') {
+            nextStates.set(766);
+        }
+        return null;
+    }
+
+    static TokenType NFA_265(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '1') {
+            if (validTypes.contains(TokenType.LCONST_1)) return TokenType.LCONST_1;
+        }
+        return null;
+    }
+
+    static TokenType NFA_266(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(480);
+        }
+        return null;
+    }
+
+    static TokenType NFA_267(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'u') {
+            nextStates.set(298);
+        }
+        return null;
+    }
+
+    static TokenType NFA_268(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'u') {
+            nextStates.set(758);
+        }
+        return null;
+    }
+
+    static TokenType NFA_269(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(914);
+        }
+        return null;
+    }
+
+    static TokenType NFA_270(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(342);
+        }
+        return null;
+    }
+
+    static TokenType NFA_271(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(71);
+        }
+        return null;
+    }
+
+    static TokenType NFA_272(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(746);
+        }
+        return null;
+    }
+
+    static TokenType NFA_273(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(1005);
+        }
+        return null;
+    }
+
+    static TokenType NFA_274(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'u') {
+            nextStates.set(167);
+        }
+        return null;
+    }
+
+    static TokenType NFA_275(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(188);
+        }
+        return null;
+    }
+
+    static TokenType NFA_276(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(1043);
+        }
+        return null;
+    }
+
+    static TokenType NFA_277(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(839);
+        }
+        return null;
+    }
+
+    static TokenType NFA_278(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== ')') {
+            if (validTypes.contains(TokenType.CLOSE_PAREN)) return TokenType.CLOSE_PAREN;
+        }
+        return null;
+    }
+
+    static TokenType NFA_279(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            if (validTypes.contains(TokenType.L2I)) return TokenType.L2I;
+        }
+        return null;
+    }
+
+    static TokenType NFA_280(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(796);
+        }
+        return null;
+    }
+
+    static TokenType NFA_281(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'w') {
+            if (validTypes.contains(TokenType.LDC_W)) return TokenType.LDC_W;
+        }
+        return null;
+    }
+
+    static TokenType NFA_282(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'u') {
+            nextStates.set(61);
+        }
+        return null;
+    }
+
+    static TokenType NFA_283(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'p') {
+            nextStates.set(385);
+        }
+        return null;
+    }
+
+    static TokenType NFA_284(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(463);
+        }
+        return null;
+    }
+
+    static TokenType NFA_285(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(484);
+        }
+        return null;
+    }
+
+    static TokenType NFA_286(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(263);
+        }
+        return null;
+    }
+
+    static TokenType NFA_287(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'g') {
+            if (validTypes.contains(TokenType.LNEG)) return TokenType.LNEG;
+        }
+        return null;
+    }
+
+    static TokenType NFA_288(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            nextStates.set(736);
+        }
+        return null;
+    }
+
+    static TokenType NFA_289(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(96);
+        }
+        return null;
+    }
+
+    static TokenType NFA_290(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(752);
+        }
+        return null;
+    }
+
+    static TokenType NFA_291(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(519);
+        }
+        return null;
+    }
+
+    static TokenType NFA_292(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(610);
+        }
+        return null;
+    }
+
+    static TokenType NFA_293(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(337);
+        }
+        return null;
+    }
+
+    static TokenType NFA_294(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            nextStates.set(1021);
+        }
+        return null;
+    }
+
+    static TokenType NFA_295(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(523);
+        }
+        return null;
+    }
+
+    static TokenType NFA_296(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(711);
+        }
+        return null;
+    }
+
+    static TokenType NFA_297(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '1') {
+            if (validTypes.contains(TokenType.DUP2_X1)) return TokenType.DUP2_X1;
+        }
+        return null;
+    }
+
+    static TokenType NFA_298(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            if (validTypes.contains(TokenType.LMUL)) return TokenType.LMUL;
+        }
+        return null;
+    }
+
+    static TokenType NFA_299(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'g') {
+            if (validTypes.contains(TokenType.DNEG)) return TokenType.DNEG;
+        }
+        return null;
+    }
+
+    static TokenType NFA_300(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(846);
+        }
+        return null;
+    }
+
+    static TokenType NFA_301(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            if (validTypes.contains(TokenType.IF_ICMPGT)) return TokenType.IF_ICMPGT;
+        }
+        return null;
+    }
+
+    static TokenType NFA_302(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(158);
+        }
+        return null;
+    }
+
+    static TokenType NFA_303(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(852);
+        }
+        return null;
+    }
+
+    static TokenType NFA_304(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            nextStates.set(1034);
+        }
+        return null;
+    }
+
+    static TokenType NFA_305(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(365);
+        }
+        return null;
+    }
+
+    static TokenType NFA_306(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            nextStates.set(696);
+        }
+        return null;
+    }
+
+    static TokenType NFA_307(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(891);
+        }
+        return null;
+    }
+
+    static TokenType NFA_308(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(988);
+        }
+        return null;
+    }
+
+    static TokenType NFA_309(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            nextStates.set(847);
+        }
+        return null;
+    }
+
+    static TokenType NFA_310(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== ':') {
+            if (validTypes.contains(TokenType.DOUBLE_DOT)) return TokenType.DOUBLE_DOT;
+        }
+        return null;
+    }
+
+    static TokenType NFA_311(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(350);
+        }
+        return null;
+    }
+
+    static TokenType NFA_312(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(144);
+        }
+        return null;
+    }
+
+    static TokenType NFA_313(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(438);
+        }
+        return null;
+    }
+
+    static TokenType NFA_314(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(906);
+        }
+        return null;
+    }
+
+    static TokenType NFA_315(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'p') {
+            nextStates.set(1028);
+        }
+        return null;
+    }
+
+    static TokenType NFA_316(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(849);
+        }
+        return null;
+    }
+
+    static TokenType NFA_317(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(1084);
+        }
+        return null;
+    }
+
+    static TokenType NFA_318(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            if (validTypes.contains(TokenType.RETURN)) return TokenType.RETURN;
+        }
+        return null;
+    }
+
+    static TokenType NFA_319(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            nextStates.set(486);
+        }
+        return null;
+    }
+
+    static TokenType NFA_320(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            nextStates.set(903);
+        }
+        return null;
+    }
+
+    static TokenType NFA_321(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'b') {
+            if (validTypes.contains(TokenType.ISUB)) return TokenType.ISUB;
+        }
+        return null;
+    }
+
+    static TokenType NFA_322(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(874);
+        }
+        return null;
+    }
+
+    static TokenType NFA_323(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(729);
+        }
+        return null;
+    }
+
+    static TokenType NFA_324(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(885);
+        }
+        return null;
+    }
+
+    static TokenType NFA_325(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            if (validTypes.contains(TokenType.BALOAD)) return TokenType.BALOAD;
+        }
+        return null;
+    }
+
+    static TokenType NFA_326(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            if (validTypes.contains(TokenType.DCMPL)) return TokenType.DCMPL;
+        }
+        return null;
+    }
+
+    static TokenType NFA_327(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(540);
+        }
+        return null;
+    }
+
+    static TokenType NFA_328(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(374);
+        }
+        return null;
+    }
+
+    static TokenType NFA_329(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(471);
+        }
+        return null;
+    }
+
+    static TokenType NFA_330(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(518);
+        }
+        return null;
+    }
+
+    static TokenType NFA_331(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(1074);
+        }
+        return null;
+    }
+
+    static TokenType NFA_332(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'm') {
+            nextStates.set(93);
+        }
+        return null;
+    }
+
+    static TokenType NFA_333(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(501);
+        }
+        return null;
+    }
+
+    static TokenType NFA_334(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(545);
+        }
+        return null;
+    }
+
+    static TokenType NFA_335(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(878);
+        }
+        return null;
+    }
+
+    static TokenType NFA_336(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            nextStates.set(1140);
+        }
+        return null;
+    }
+
+    static TokenType NFA_337(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            if (validTypes.contains(TokenType.IFLT)) return TokenType.IFLT;
+        }
+        return null;
+    }
+
+    static TokenType NFA_338(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '0') {
+            if (validTypes.contains(TokenType.ALOAD_0)) return TokenType.ALOAD_0;
+        }
+        return null;
+    }
+
+    static TokenType NFA_339(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'u') {
+            nextStates.set(141);
+        }
+        return null;
+    }
+
+    static TokenType NFA_340(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            nextStates.set(209);
+        }
+        return null;
+    }
+
+    static TokenType NFA_341(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            nextStates.set(646);
+        }
+        return null;
+    }
+
+    static TokenType NFA_342(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(626);
+        }
+        return null;
+    }
+
+    static TokenType NFA_343(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'm') {
+            nextStates.set(774);
+        }
+        return null;
+    }
+
+    static TokenType NFA_344(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            nextStates.set(30);
+        }
+        return null;
+    }
+
+    static TokenType NFA_345(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(99);
+        }
+        return null;
+    }
+
+    static TokenType NFA_346(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(740);
+        }
+        return null;
+    }
+
+    static TokenType NFA_347(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(986);
+        }
+        return null;
+    }
+
+    static TokenType NFA_348(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if ((ch>='A'&&ch<='Z')||(ch>='a'&&ch<='z')) {
+            nextStates.set(597);
             if (validTypes.contains(TokenType.IDENTIFIER)) return TokenType.IDENTIFIER;
         }
         return null;
     }
 
+    static TokenType NFA_349(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(497);
+        }
+        return null;
+    }
+
+    static TokenType NFA_350(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(237);
+        }
+        return null;
+    }
+
+    static TokenType NFA_351(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '0') {
+            if (validTypes.contains(TokenType.FSTORE_0)) return TokenType.FSTORE_0;
+        }
+        return null;
+    }
+
+    static TokenType NFA_352(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(245);
+        }
+        return null;
+    }
+
+    static TokenType NFA_353(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(262);
+        }
+        return null;
+    }
+
+    static TokenType NFA_354(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'q') {
+            if (validTypes.contains(TokenType.IFEQ)) return TokenType.IFEQ;
+        }
+        return null;
+    }
+
+    static TokenType NFA_355(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            if (validTypes.contains(TokenType.JSR)) return TokenType.JSR;
+        }
+        return null;
+    }
+
+    static TokenType NFA_356(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            if (validTypes.contains(TokenType.LOCALS)) return TokenType.LOCALS;
+        }
+        return null;
+    }
+
+    static TokenType NFA_357(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'k') {
+            nextStates.set(304);
+        }
+        return null;
+    }
+
+    static TokenType NFA_358(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(708);
+        }
+        return null;
+    }
+
+    static TokenType NFA_359(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '.') {
+            nextStates.set(633);
+        }
+        return null;
+    }
+
+    static TokenType NFA_360(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            nextStates.set(1124);
+        }
+        return null;
+    }
+
+    static TokenType NFA_361(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'b') {
+            if (validTypes.contains(TokenType.DSUB)) return TokenType.DSUB;
+        }
+        return null;
+    }
+
+    static TokenType NFA_362(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            nextStates.set(809);
+        }
+        return null;
+    }
+
+    static TokenType NFA_363(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(989);
+        }
+        return null;
+    }
+
+    static TokenType NFA_364(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(52);
+        }
+        return null;
+    }
+
+    static TokenType NFA_365(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            if (validTypes.contains(TokenType.STATIC)) return TokenType.STATIC;
+        }
+        return null;
+    }
+
+    static TokenType NFA_366(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(84);
+        }
+        return null;
+    }
+
+    static TokenType NFA_367(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'm') {
+            nextStates.set(214);
+        }
+        return null;
+    }
+
+    static TokenType NFA_368(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            nextStates.set(520);
+        }
+        return null;
+    }
+
+    static TokenType NFA_369(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            nextStates.set(571);
+        }
+        return null;
+    }
+
+    static TokenType NFA_370(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(680);
+        }
+        return null;
+    }
+
+    static TokenType NFA_371(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(281);
+        }
+        return null;
+    }
+
+    static TokenType NFA_372(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(163);
+        }
+        return null;
+    }
+
+    static TokenType NFA_373(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            nextStates.set(91);
+        }
+        return null;
+    }
+
+    static TokenType NFA_374(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(63);
+        }
+        return null;
+    }
+
+    static TokenType NFA_375(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(322);
+        }
+        return null;
+    }
+
+    static TokenType NFA_376(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            nextStates.set(22);
+        }
+        return null;
+    }
+
+    static TokenType NFA_377(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            nextStates.set(1053);
+        }
+        return null;
+    }
+
+    static TokenType NFA_378(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(148);
+        }
+        return null;
+    }
+
+    static TokenType NFA_379(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'x') {
+            nextStates.set(297);
+        }
+        return null;
+    }
+
+    static TokenType NFA_380(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '2') {
+            if (validTypes.contains(TokenType.DSTORE_2)) return TokenType.DSTORE_2;
+        }
+        return null;
+    }
+
+    static TokenType NFA_381(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(907);
+        }
+        return null;
+    }
+
+    static TokenType NFA_382(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch>='0'&&ch<='9') {
+            nextStates.set(382);
+            if (validTypes.contains(TokenType.INTEGER)) return TokenType.INTEGER;
+        }
+        return null;
+    }
+
+    static TokenType NFA_383(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(233);
+        }
+        return null;
+    }
+
+    static TokenType NFA_384(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(966);
+        }
+        return null;
+    }
+
+    static TokenType NFA_385(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'u') {
+            nextStates.set(89);
+        }
+        return null;
+    }
+
+    static TokenType NFA_386(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(651);
+        }
+        return null;
+    }
+
+    static TokenType NFA_387(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(450);
+        }
+        return null;
+    }
+
+    static TokenType NFA_388(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(832);
+        }
+        return null;
+    }
+
+    static TokenType NFA_389(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(1037);
+        }
+        return null;
+    }
+
+    static TokenType NFA_390(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            nextStates.set(332);
+        }
+        return null;
+    }
+
+    static TokenType NFA_391(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'q') {
+            if (validTypes.contains(TokenType.IF_ACMPEQ)) return TokenType.IF_ACMPEQ;
+        }
+        return null;
+    }
+
+    static TokenType NFA_392(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(339);
+        }
+        return null;
+    }
+
+    static TokenType NFA_393(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(187);
+        }
+        return null;
+    }
+
+    static TokenType NFA_394(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(1039);
+        }
+        return null;
+    }
+
+    static TokenType NFA_395(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'k') {
+            nextStates.set(20);
+        }
+        return null;
+    }
+
+    static TokenType NFA_396(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '2') {
+            nextStates.set(437);
+        }
+        return null;
+    }
+
+    static TokenType NFA_397(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(860);
+        }
+        return null;
+    }
+
+    static TokenType NFA_398(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            if (validTypes.contains(TokenType.IFLE)) return TokenType.IFLE;
+        }
+        return null;
+    }
+
+    static TokenType NFA_399(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(579);
+        }
+        return null;
+    }
+
+    static TokenType NFA_400(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            nextStates.set(995);
+        }
+        return null;
+    }
+
+    static TokenType NFA_401(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== ';') {
+            if (validTypes.contains(TokenType.SEMICOLON)) return TokenType.SEMICOLON;
+        }
+        return null;
+    }
+
+    static TokenType NFA_402(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(508);
+        }
+        return null;
+    }
+
+    static TokenType NFA_403(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(904);
+        }
+        return null;
+    }
+
+    static TokenType NFA_404(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(135);
+        }
+        return null;
+    }
+
+    static TokenType NFA_405(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            nextStates.set(185);
+        }
+        return null;
+    }
+
+    static TokenType NFA_406(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(859);
+        }
+        return null;
+    }
+
+    static TokenType NFA_407(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(596);
+        }
+        return null;
+    }
+
+    static TokenType NFA_408(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            nextStates.set(292);
+        }
+        return null;
+    }
+
+    static TokenType NFA_409(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'u') {
+            nextStates.set(700);
+        }
+        return null;
+    }
+
+    static TokenType NFA_410(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '[') {
+            nextStates.set(1088);
+        }
+        return null;
+    }
+
+    static TokenType NFA_411(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            nextStates.set(299);
+        }
+        return null;
+    }
+
+    static TokenType NFA_412(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            if (validTypes.contains(TokenType.DADD)) return TokenType.DADD;
+        }
+        return null;
+    }
+
+    static TokenType NFA_413(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            nextStates.set(1070);
+        }
+        return null;
+    }
+
+    static TokenType NFA_414(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            nextStates.set(958);
+        }
+        return null;
+    }
+
+    static TokenType NFA_415(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(1111);
+        }
+        return null;
+    }
+
+    static TokenType NFA_416(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(807);
+        }
+        return null;
+    }
+
+    static TokenType NFA_417(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'v') {
+            nextStates.set(791);
+        }
+        return null;
+    }
+
+    static TokenType NFA_418(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(964);
+        }
+        return null;
+    }
+
+    static TokenType NFA_419(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(258);
+        }
+        return null;
+    }
+
+    static TokenType NFA_420(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '5') {
+            if (validTypes.contains(TokenType.ICONST_5)) return TokenType.ICONST_5;
+        }
+        return null;
+    }
+
+    static TokenType NFA_421(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            if (validTypes.contains(TokenType.IAND)) return TokenType.IAND;
+        }
+        return null;
+    }
+
+    static TokenType NFA_422(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'm') {
+            nextStates.set(713);
+        }
+        return null;
+    }
+
+    static TokenType NFA_423(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '0') {
+            if (validTypes.contains(TokenType.DSTORE_0)) return TokenType.DSTORE_0;
+        }
+        return null;
+    }
+
+    static TokenType NFA_424(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(82);
+        }
+        return null;
+    }
+
+    static TokenType NFA_425(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '3') {
+            if (validTypes.contains(TokenType.FLOAD_3)) return TokenType.FLOAD_3;
+        }
+        return null;
+    }
+
+    static TokenType NFA_426(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(469);
+        }
+        return null;
+    }
+
+    static TokenType NFA_427(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(59);
+        }
+        return null;
+    }
+
+    static TokenType NFA_428(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(139);
+        }
+        return null;
+    }
+
+    static TokenType NFA_429(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(180);
+        }
+        return null;
+    }
+
+    static TokenType NFA_430(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'p') {
+            nextStates.set(326);
+        }
+        return null;
+    }
+
+    static TokenType NFA_431(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(305);
+        }
+        return null;
+    }
+
+    static TokenType NFA_432(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '0') {
+            if (validTypes.contains(TokenType.FCONST_0)) return TokenType.FCONST_0;
+        }
+        return null;
+    }
+
+    static TokenType NFA_433(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'p') {
+            nextStates.set(789);
+        }
+        return null;
+    }
+
+    static TokenType NFA_434(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '2') {
+            if (validTypes.contains(TokenType.ILOAD_2)) return TokenType.ILOAD_2;
+        }
+        return null;
+    }
+
+    static TokenType NFA_435(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            nextStates.set(85);
+        }
+        return null;
+    }
+
+    static TokenType NFA_436(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'u') {
+            nextStates.set(586);
+        }
+        return null;
+    }
+
+    static TokenType NFA_437(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            if (validTypes.contains(TokenType.F2L)) return TokenType.F2L;
+        }
+        return null;
+    }
+
+    static TokenType NFA_438(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'h') {
+            nextStates.set(364);
+        }
+        return null;
+    }
+
+    static TokenType NFA_439(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '2') {
+            nextStates.set(950);
+        }
+        return null;
+    }
+
+    static TokenType NFA_440(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            if (validTypes.contains(TokenType.FCONST)) return TokenType.FCONST;
+        }
+        return null;
+    }
+
+    static TokenType NFA_441(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            nextStates.set(875);
+        }
+        return null;
+    }
+
+    static TokenType NFA_442(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(300);
+        }
+        return null;
+    }
+
+    static TokenType NFA_443(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            nextStates.set(753);
+        }
+        return null;
+    }
+
+    static TokenType NFA_444(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(94);
+        }
+        return null;
+    }
+
+    static TokenType NFA_445(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(853);
+        }
+        return null;
+    }
+
+    static TokenType NFA_446(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(1010);
+        }
+        return null;
+    }
+
+    static TokenType NFA_447(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            nextStates.set(191);
+        }
+        return null;
+    }
+
+    static TokenType NFA_448(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(516);
+        }
+        return null;
+    }
+
+    static TokenType NFA_449(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(1032);
+        }
+        return null;
+    }
+
+    static TokenType NFA_450(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'u') {
+            nextStates.set(407);
+        }
+        return null;
+    }
+
+    static TokenType NFA_451(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(1108);
+        }
+        return null;
+    }
+
+    static TokenType NFA_452(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(8);
+        }
+        return null;
+    }
+
+    static TokenType NFA_453(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(426);
+        }
+        return null;
+    }
+
+    static TokenType NFA_454(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            nextStates.set(1006);
+        }
+        return null;
+    }
+
+    static TokenType NFA_455(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(801);
+        }
+        return null;
+    }
+
+    static TokenType NFA_456(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(676);
+        }
+        return null;
+    }
+
+    static TokenType NFA_457(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            if (validTypes.contains(TokenType.I2S)) return TokenType.I2S;
+        }
+        return null;
+    }
+
+    static TokenType NFA_458(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(434);
+        }
+        return null;
+    }
+
+    static TokenType NFA_459(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(645);
+        }
+        return null;
+    }
+
+    static TokenType NFA_460(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'v') {
+            if (validTypes.contains(TokenType.FDIV)) return TokenType.FDIV;
+        }
+        return null;
+    }
+
+    static TokenType NFA_461(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            nextStates.set(735);
+        }
+        return null;
+    }
+
+    static TokenType NFA_462(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'u') {
+            nextStates.set(16);
+        }
+        return null;
+    }
+
+    static TokenType NFA_463(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(749);
+        }
+        return null;
+    }
+
+    static TokenType NFA_464(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(1102);
+        }
+        return null;
+    }
+
+    static TokenType NFA_465(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(90);
+        }
+        return null;
+    }
+
+    static TokenType NFA_466(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            nextStates.set(9);
+        }
+        return null;
+    }
+
+    static TokenType NFA_467(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(405);
+        }
+        return null;
+    }
+
+    static TokenType NFA_468(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(446);
+        }
+        return null;
+    }
+
+    static TokenType NFA_469(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(118);
+        }
+        return null;
+    }
+
+    static TokenType NFA_470(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(628);
+        }
+        return null;
+    }
+
+    static TokenType NFA_471(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(92);
+        }
+        return null;
+    }
+
+    static TokenType NFA_472(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'm') {
+            nextStates.set(684);
+        }
+        return null;
+    }
+
+    static TokenType NFA_473(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '1') {
+            if (validTypes.contains(TokenType.DCONST_1)) return TokenType.DCONST_1;
+        }
+        return null;
+    }
+
+    static TokenType NFA_474(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'v') {
+            if (validTypes.contains(TokenType.IDIV)) return TokenType.IDIV;
+        }
+        return null;
+    }
+
+    static TokenType NFA_475(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(889);
+        }
+        return null;
+    }
+
+    static TokenType NFA_476(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'u') {
+            nextStates.set(803);
+        }
+        return null;
+    }
+
+    static TokenType NFA_477(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(208);
+        }
+        return null;
+    }
+
+    static TokenType NFA_478(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(804);
+        }
+        return null;
+    }
+
+    static TokenType NFA_479(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            nextStates.set(377);
+        }
+        return null;
+    }
+
+    static TokenType NFA_480(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '2') {
+            nextStates.set(279);
+        }
+        return null;
+    }
+
+    static TokenType NFA_481(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            if (validTypes.contains(TokenType.FMUL)) return TokenType.FMUL;
+        }
+        return null;
+    }
+
+    static TokenType NFA_482(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            nextStates.set(112);
+        }
+        return null;
+    }
+
+    static TokenType NFA_483(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(882);
+        }
+        return null;
+    }
+
+    static TokenType NFA_484(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            nextStates.set(960);
+        }
+        return null;
+    }
+
+    static TokenType NFA_485(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'p') {
+            nextStates.set(275);
+        }
+        return null;
+    }
+
+    static TokenType NFA_486(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(871);
+        }
+        return null;
+    }
+
+    static TokenType NFA_487(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            if (validTypes.contains(TokenType.LIMIT)) return TokenType.LIMIT;
+        }
+        return null;
+    }
+
+    static TokenType NFA_488(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'p') {
+            if (validTypes.contains(TokenType.LCMP)) return TokenType.LCMP;
+        }
+        return null;
+    }
+
+    static TokenType NFA_489(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(477);
+        }
+        return null;
+    }
+
+    static TokenType NFA_490(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            if (validTypes.contains(TokenType.END)) return TokenType.END;
+        }
+        return null;
+    }
+
+    static TokenType NFA_491(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(423);
+        }
+        return null;
+    }
+
+    static TokenType NFA_492(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(727);
+        }
+        return null;
+    }
+
+    static TokenType NFA_493(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(32);
+        }
+        return null;
+    }
+
+    static TokenType NFA_494(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            nextStates.set(598);
+        }
+        return null;
+    }
+
+    static TokenType NFA_495(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(70);
+        }
+        return null;
+    }
+
+    static TokenType NFA_496(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            if (validTypes.contains(TokenType.LSHR)) return TokenType.LSHR;
+        }
+        return null;
+    }
+
+    static TokenType NFA_497(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(707);
+        }
+        return null;
+    }
+
+    static TokenType NFA_498(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '"') {
+            if (validTypes.contains(TokenType.QUOTE)) return TokenType.QUOTE;
+        }
+        return null;
+    }
+
+    static TokenType NFA_499(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '3') {
+            if (validTypes.contains(TokenType.ICONST_3)) return TokenType.ICONST_3;
+        }
+        return null;
+    }
+
+    static TokenType NFA_500(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'v') {
+            nextStates.set(429);
+        }
+        return null;
+    }
+
+    static TokenType NFA_501(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(663);
+        }
+        return null;
+    }
+
+    static TokenType NFA_502(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'm') {
+            nextStates.set(1066);
+        }
+        return null;
+    }
+
+    static TokenType NFA_503(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(177);
+        }
+        return null;
+    }
+
+    static TokenType NFA_504(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(935);
+        }
+        return null;
+    }
+
+    static TokenType NFA_505(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'm') {
+            nextStates.set(924);
+        }
+        return null;
+    }
+
+    static TokenType NFA_506(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            nextStates.set(513);
+        }
+        return null;
+    }
+
+    static TokenType NFA_507(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            nextStates.set(667);
+        }
+        return null;
+    }
+
+    static TokenType NFA_508(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            nextStates.set(413);
+        }
+        return null;
+    }
+
+    static TokenType NFA_509(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            nextStates.set(238);
+        }
+        return null;
+    }
+
+    static TokenType NFA_510(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            nextStates.set(1052);
+        }
+        return null;
+    }
+
+    static TokenType NFA_511(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(104);
+        }
+        return null;
+    }
+
+    static TokenType NFA_512(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'b') {
+            nextStates.set(636);
+        }
+        return null;
+    }
+
+    static TokenType NFA_513(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            nextStates.set(880);
+        }
+        return null;
+    }
+
+    static TokenType NFA_514(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(197);
+        }
+        return null;
+    }
+
+    static TokenType NFA_515(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            if (validTypes.contains(TokenType.L2F)) return TokenType.L2F;
+        }
+        return null;
+    }
+
+    static TokenType NFA_516(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            nextStates.set(671);
+        }
+        return null;
+    }
+
+    static TokenType NFA_517(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(894);
+        }
+        return null;
+    }
+
+    static TokenType NFA_518(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(291);
+        }
+        return null;
+    }
+
+    static TokenType NFA_519(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '1') {
+            if (validTypes.contains(TokenType.ILOAD_1)) return TokenType.ILOAD_1;
+        }
+        return null;
+    }
+
+    static TokenType NFA_520(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            nextStates.set(62);
+        }
+        return null;
+    }
+
+    static TokenType NFA_521(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            nextStates.set(352);
+        }
+        return null;
+    }
+
+    static TokenType NFA_522(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            if (validTypes.contains(TokenType.DALOAD)) return TokenType.DALOAD;
+        }
+        return null;
+    }
+
+    static TokenType NFA_523(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            nextStates.set(862);
+        }
+        return null;
+    }
+
+    static TokenType NFA_524(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(644);
+        }
+        return null;
+    }
+
+    static TokenType NFA_525(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(439);
+        }
+        return null;
+    }
+
+    static TokenType NFA_526(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(895);
+        }
+        return null;
+    }
+
+    static TokenType NFA_527(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(452);
+        }
+        return null;
+    }
+
+    static TokenType NFA_528(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '2') {
+            nextStates.set(1122);
+        }
+        return null;
+    }
+
+    static TokenType NFA_529(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            nextStates.set(912);
+        }
+        return null;
+    }
+
+    static TokenType NFA_530(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(440);
+        }
+        return null;
+    }
+
+    static TokenType NFA_531(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            nextStates.set(7);
+        }
+        return null;
+    }
+
+    static TokenType NFA_532(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            nextStates.set(1035);
+        }
+        return null;
+    }
+
+    static TokenType NFA_533(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            nextStates.set(655);
+        }
+        return null;
+    }
+
+    static TokenType NFA_534(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(665);
+        }
+        return null;
+    }
+
+    static TokenType NFA_535(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(226);
+        }
+        return null;
+    }
+
+    static TokenType NFA_536(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(1081);
+        }
+        return null;
+    }
+
+    static TokenType NFA_537(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '0') {
+            if (validTypes.contains(TokenType.ILOAD_0)) return TokenType.ILOAD_0;
+        }
+        return null;
+    }
+
+    static TokenType NFA_538(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            nextStates.set(561);
+        }
+        return null;
+    }
+
+    static TokenType NFA_539(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(217);
+        }
+        return null;
+    }
+
+    static TokenType NFA_540(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            nextStates.set(517);
+        }
+        return null;
+    }
+
+    static TokenType NFA_541(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'm') {
+            nextStates.set(430);
+        }
+        return null;
+    }
+
+    static TokenType NFA_542(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(1095);
+        }
+        return null;
+    }
+
+    static TokenType NFA_543(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            nextStates.set(18);
+        }
+        return null;
+    }
+
+    static TokenType NFA_544(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            nextStates.set(1022);
+        }
+        return null;
+    }
+
+    static TokenType NFA_545(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(1056);
+        }
+        return null;
+    }
+
+    static TokenType NFA_546(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(844);
+        }
+        return null;
+    }
+
+    static TokenType NFA_547(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(466);
+        }
+        return null;
+    }
+
+    static TokenType NFA_548(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(492);
+        }
+        return null;
+    }
+
+    static TokenType NFA_549(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'u') {
+            nextStates.set(485);
+        }
+        return null;
+    }
+
+    static TokenType NFA_550(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'p') {
+            nextStates.set(51);
+        }
+        return null;
+    }
+
+    static TokenType NFA_551(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            nextStates.set(682);
+        }
+        return null;
+    }
+
+    static TokenType NFA_552(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '2') {
+            nextStates.set(45);
+        }
+        return null;
+    }
+
+    static TokenType NFA_553(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            nextStates.set(583);
+        }
+        return null;
+    }
+
+    static TokenType NFA_554(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(409);
+        }
+        return null;
+    }
+
+    static TokenType NFA_555(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(630);
+        }
+        return null;
+    }
+
+    static TokenType NFA_556(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '>') {
+            if (validTypes.contains(TokenType.GREAT)) return TokenType.GREAT;
+        }
+        return null;
+    }
+
+    static TokenType NFA_557(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            nextStates.set(944);
+        }
+        return null;
+    }
+
+    static TokenType NFA_558(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'p') {
+            nextStates.set(653);
+        }
+        return null;
+    }
+
+    static TokenType NFA_559(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(284);
+        }
+        return null;
+    }
+
+    static TokenType NFA_560(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            nextStates.set(242);
+        }
+        return null;
+    }
+
+    static TokenType NFA_561(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            nextStates.set(449);
+        }
+        return null;
+    }
+
+    static TokenType NFA_562(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(945);
+        }
+        return null;
+    }
+
+    static TokenType NFA_563(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            nextStates.set(762);
+        }
+        return null;
+    }
+
+    static TokenType NFA_564(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(565);
+        }
+        return null;
+    }
+
+    static TokenType NFA_565(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(783);
+        }
+        return null;
+    }
+
+    static TokenType NFA_566(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'g') {
+            nextStates.set(169);
+        }
+        return null;
+    }
+
+    static TokenType NFA_567(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'u') {
+            nextStates.set(147);
+        }
+        return null;
+    }
+
+    static TokenType NFA_568(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(265);
+        }
+        return null;
+    }
+
+    static TokenType NFA_569(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '2') {
+            if (validTypes.contains(TokenType.ISTORE_2)) return TokenType.ISTORE_2;
+        }
+        return null;
+    }
+
+    static TokenType NFA_570(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(193);
+        }
+        return null;
+    }
+
+    static TokenType NFA_571(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            nextStates.set(544);
+        }
+        return null;
+    }
+
+    static TokenType NFA_572(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            nextStates.set(1054);
+        }
+        return null;
+    }
+
+    static TokenType NFA_573(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(166);
+        }
+        return null;
+    }
+
+    static TokenType NFA_574(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(937);
+        }
+        return null;
+    }
+
+    static TokenType NFA_575(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'm') {
+            nextStates.set(282);
+        }
+        return null;
+    }
+
+    static TokenType NFA_576(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            nextStates.set(1076);
+        }
+        return null;
+    }
+
+    static TokenType NFA_577(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '.') {
+            if (validTypes.contains(TokenType.DOT)) return TokenType.DOT;
+        }
+        return null;
+    }
+
+    static TokenType NFA_578(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            nextStates.set(1050);
+        }
+        return null;
+    }
+
+    static TokenType NFA_579(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '2') {
+            nextStates.set(1109);
+        }
+        return null;
+    }
+
+    static TokenType NFA_580(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            if (validTypes.contains(TokenType.BASTORE)) return TokenType.BASTORE;
+        }
+        return null;
+    }
+
+    static TokenType NFA_581(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(1031);
+        }
+        return null;
+    }
+
+    static TokenType NFA_582(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(1090);
+        }
+        return null;
+    }
+
+    static TokenType NFA_583(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            nextStates.set(271);
+        }
+        return null;
+    }
+
+    static TokenType NFA_584(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            nextStates.set(313);
+        }
+        return null;
+    }
+
+    static TokenType NFA_585(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(1047);
+        }
+        return null;
+    }
+
+    static TokenType NFA_586(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            nextStates.set(116);
+        }
+        return null;
+    }
+
+    static TokenType NFA_587(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(395);
+        }
+        return null;
+    }
+
+    static TokenType NFA_588(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            nextStates.set(621);
+        }
+        return null;
+    }
+
+    static TokenType NFA_589(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            nextStates.set(256);
+        }
+        return null;
+    }
+
+    static TokenType NFA_590(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            nextStates.set(329);
+        }
+        return null;
+    }
+
+    static TokenType NFA_591(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            if (validTypes.contains(TokenType.FALOAD)) return TokenType.FALOAD;
+        }
+        return null;
+    }
+
+    static TokenType NFA_592(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'p') {
+            nextStates.set(28);
+        }
+        return null;
+    }
+
+    static TokenType NFA_593(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '3') {
+            if (validTypes.contains(TokenType.ALOAD_3)) return TokenType.ALOAD_3;
+        }
+        return null;
+    }
+
+    static TokenType NFA_594(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(363);
+        }
+        return null;
+    }
+
+    static TokenType NFA_595(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(921);
+        }
+        return null;
+    }
+
+    static TokenType NFA_596(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            if (validTypes.contains(TokenType.INVOKEVIRTUAL)) return TokenType.INVOKEVIRTUAL;
+        }
+        return null;
+    }
+
+    static TokenType NFA_597(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if ((ch>='0'&&ch<='9')||((ch>='A'&&ch<='Z')||((ch== '_')||(ch>='a'&&ch<='z')))) {
+            nextStates.set(597);
+            if (validTypes.contains(TokenType.IDENTIFIER)) return TokenType.IDENTIFIER;
+        }
+        return null;
+    }
+
+    static TokenType NFA_598(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(121);
+        }
+        return null;
+    }
+
+    static TokenType NFA_599(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            nextStates.set(411);
+        }
+        return null;
+    }
+
+    static TokenType NFA_600(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            nextStates.set(50);
+        }
+        return null;
+    }
+
+    static TokenType NFA_601(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(38);
+        }
+        return null;
+    }
+
+    static TokenType NFA_602(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            nextStates.set(622);
+        }
+        return null;
+    }
+
+    static TokenType NFA_603(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            nextStates.set(136);
+        }
+        return null;
+    }
+
+    static TokenType NFA_604(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(594);
+        }
+        return null;
+    }
+
+    static TokenType NFA_605(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            if (validTypes.contains(TokenType.L2D)) return TokenType.L2D;
+        }
+        return null;
+    }
+
+    static TokenType NFA_606(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'm') {
+            nextStates.set(161);
+        }
+        return null;
+    }
+
+    static TokenType NFA_607(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            nextStates.set(576);
+        }
+        return null;
+    }
+
+    static TokenType NFA_608(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(1042);
+        }
+        return null;
+    }
+
+    static TokenType NFA_609(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            nextStates.set(672);
+        }
+        return null;
+    }
+
+    static TokenType NFA_610(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'w') {
+            if (validTypes.contains(TokenType.ATHROW)) return TokenType.ATHROW;
+        }
+        return null;
+    }
+
+    static TokenType NFA_611(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(201);
+        }
+        return null;
+    }
+
+    static TokenType NFA_612(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(728);
+        }
+        return null;
+    }
+
+    static TokenType NFA_613(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            if (validTypes.contains(TokenType.LADD)) return TokenType.LADD;
+        }
+        return null;
+    }
+
+    static TokenType NFA_614(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(31);
+        }
+        return null;
+    }
+
+    static TokenType NFA_615(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(822);
+        }
+        return null;
+    }
+
+    static TokenType NFA_616(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'u') {
+            nextStates.set(361);
+        }
+        return null;
+    }
+
+    static TokenType NFA_617(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            if (validTypes.contains(TokenType.INSTANCEOF)) return TokenType.INSTANCEOF;
+        }
+        return null;
+    }
+
+    static TokenType NFA_618(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(239);
+        }
+        return null;
+    }
+
+    static TokenType NFA_619(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(538);
+        }
+        return null;
+    }
+
+    static TokenType NFA_620(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(590);
+        }
+        return null;
+    }
+
+    static TokenType NFA_621(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(98);
+        }
+        return null;
+    }
+
+    static TokenType NFA_622(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            if (validTypes.contains(TokenType.ISTORE)) return TokenType.ISTORE;
+        }
+        return null;
+    }
+
+    static TokenType NFA_623(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            if (validTypes.contains(TokenType.IFNONNULL)) return TokenType.IFNONNULL;
+        }
+        return null;
+    }
+
+    static TokenType NFA_624(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '(') {
+            if (validTypes.contains(TokenType.OPEN_PAREN)) return TokenType.OPEN_PAREN;
+        }
+        return null;
+    }
+
+    static TokenType NFA_625(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'g') {
+            nextStates.set(301);
+        }
+        return null;
+    }
+
+    static TokenType NFA_626(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            if (validTypes.contains(TokenType.PUBLIC)) return TokenType.PUBLIC;
+        }
+        return null;
+    }
+
+    static TokenType NFA_627(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(635);
+        }
+        return null;
+    }
+
+    static TokenType NFA_628(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(499);
+        }
+        return null;
+    }
+
+    static TokenType NFA_629(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '3') {
+            if (validTypes.contains(TokenType.ILOAD_3)) return TokenType.ILOAD_3;
+        }
+        return null;
+    }
+
+    static TokenType NFA_630(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(934);
+        }
+        return null;
+    }
+
+    static TokenType NFA_631(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(60);
+        }
+        return null;
+    }
+
+    static TokenType NFA_632(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            nextStates.set(259);
+        }
+        return null;
+    }
+
+    static TokenType NFA_633(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'm') {
+            nextStates.set(584);
+        }
+        return null;
+    }
+
+    static TokenType NFA_634(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(743);
+        }
+        return null;
+    }
+
+    static TokenType NFA_635(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'h') {
+            if (validTypes.contains(TokenType.ARRAY_LENGTH)) return TokenType.ARRAY_LENGTH;
+        }
+        return null;
+    }
+
+    static TokenType NFA_636(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(771);
+        }
+        return null;
+    }
+
+    static TokenType NFA_637(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(400);
+        }
+        return null;
+    }
+
+    static TokenType NFA_638(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(127);
+        }
+        return null;
+    }
+
+    static TokenType NFA_639(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(920);
+        }
+        return null;
+    }
+
+    static TokenType NFA_640(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(390);
+        }
+        return null;
+    }
+
+    static TokenType NFA_641(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '1') {
+            if (validTypes.contains(TokenType.DLOAD_1)) return TokenType.DLOAD_1;
+        }
+        return null;
+    }
+
+    static TokenType NFA_642(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            nextStates.set(693);
+        }
+        return null;
+    }
+
+    static TokenType NFA_643(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            nextStates.set(251);
+        }
+        return null;
+    }
+
+    static TokenType NFA_644(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'm') {
+            nextStates.set(268);
+        }
+        return null;
+    }
+
+    static TokenType NFA_645(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            nextStates.set(285);
+        }
+        return null;
+    }
+
+    static TokenType NFA_646(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(670);
+        }
+        return null;
+    }
+
+    static TokenType NFA_647(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'u') {
+            nextStates.set(276);
+        }
+        return null;
+    }
+
+    static TokenType NFA_648(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '1') {
+            if (validTypes.contains(TokenType.FSTORE_1)) return TokenType.FSTORE_1;
+        }
+        return null;
+    }
+
+    static TokenType NFA_649(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(557);
+        }
+        return null;
+    }
+
+    static TokenType NFA_650(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            nextStates.set(719);
+        }
+        return null;
+    }
+
+    static TokenType NFA_651(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(113);
+        }
+        return null;
+    }
+
+    static TokenType NFA_652(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(142);
+        }
+        return null;
+    }
+
+    static TokenType NFA_653(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            nextStates.set(391);
+        }
+        return null;
+    }
+
+    static TokenType NFA_654(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(560);
+        }
+        return null;
+    }
+
+    static TokenType NFA_655(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(848);
+        }
+        return null;
+    }
+
+    static TokenType NFA_656(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(750);
+        }
+        return null;
+    }
+
+    static TokenType NFA_657(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            nextStates.set(17);
+        }
+        return null;
+    }
+
+    static TokenType NFA_658(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(415);
+        }
+        return null;
+    }
+
+    static TokenType NFA_659(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(923);
+        }
+        return null;
+    }
+
+    static TokenType NFA_660(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            nextStates.set(555);
+        }
+        return null;
+    }
+
+    static TokenType NFA_661(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            if (validTypes.contains(TokenType.AASTORE)) return TokenType.AASTORE;
+        }
+        return null;
+    }
+
+    static TokenType NFA_662(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(223);
+        }
+        return null;
+    }
+
+    static TokenType NFA_663(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '2') {
+            if (validTypes.contains(TokenType.FLOAD_2)) return TokenType.FLOAD_2;
+        }
+        return null;
+    }
+
+    static TokenType NFA_664(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(479);
+        }
+        return null;
+    }
+
+    static TokenType NFA_665(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            if (validTypes.contains(TokenType.LALOAD)) return TokenType.LALOAD;
+        }
+        return null;
+    }
+
+    static TokenType NFA_666(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(34);
+        }
+        return null;
+    }
+
+    static TokenType NFA_667(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'g') {
+            if (validTypes.contains(TokenType.INEG)) return TokenType.INEG;
+        }
+        return null;
+    }
+
+    static TokenType NFA_668(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(870);
+        }
+        return null;
+    }
+
+    static TokenType NFA_669(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'p') {
+            nextStates.set(231);
+        }
+        return null;
+    }
+
+    static TokenType NFA_670(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(772);
+        }
+        return null;
+    }
+
+    static TokenType NFA_671(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            nextStates.set(168);
+        }
+        return null;
+    }
+
+    static TokenType NFA_672(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            if (validTypes.contains(TokenType.LAND)) return TokenType.LAND;
+        }
+        return null;
+    }
+
+    static TokenType NFA_673(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'p') {
+            if (validTypes.contains(TokenType.DUP)) return TokenType.DUP;
+        }
+        return null;
+    }
+
+    static TokenType NFA_674(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '0') {
+            if (validTypes.contains(TokenType.LCONST_0)) return TokenType.LCONST_0;
+        }
+        return null;
+    }
+
+    static TokenType NFA_675(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(1097);
+        }
+        return null;
+    }
+
+    static TokenType NFA_676(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            nextStates.set(533);
+        }
+        return null;
+    }
+
+    static TokenType NFA_677(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            nextStates.set(19);
+        }
+        return null;
+    }
+
+    static TokenType NFA_678(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            if (validTypes.contains(TokenType.F2D)) return TokenType.F2D;
+        }
+        return null;
+    }
+
+    static TokenType NFA_679(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            if (validTypes.contains(TokenType.ICONST)) return TokenType.ICONST;
+        }
+        return null;
+    }
+
+    static TokenType NFA_680(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(971);
+        }
+        return null;
+    }
+
+    static TokenType NFA_681(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(261);
+        }
+        return null;
+    }
+
+    static TokenType NFA_682(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            if (validTypes.contains(TokenType.DASTORE)) return TokenType.DASTORE;
+        }
+        return null;
+    }
+
+    static TokenType NFA_683(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(10);
+        }
+        return null;
+    }
+
+    static TokenType NFA_684(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            nextStates.set(140);
+        }
+        return null;
+    }
+
+    static TokenType NFA_685(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(1112);
+        }
+        return null;
+    }
+
+    static TokenType NFA_686(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(975);
+        }
+        return null;
+    }
+
+    static TokenType NFA_687(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(588);
+        }
+        return null;
+    }
+
+    static TokenType NFA_688(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(786);
+        }
+        return null;
+    }
+
+    static TokenType NFA_689(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            nextStates.set(490);
+        }
+        return null;
+    }
+
+    static TokenType NFA_690(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(222);
+        }
+        return null;
+    }
+
+    static TokenType NFA_691(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'k') {
+            nextStates.set(632);
+        }
+        return null;
+    }
+
+    static TokenType NFA_692(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(194);
+        }
+        return null;
+    }
+
+    static TokenType NFA_693(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(927);
+        }
+        return null;
+    }
+
+    static TokenType NFA_694(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(769);
+        }
+        return null;
+    }
+
+    static TokenType NFA_695(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(464);
+        }
+        return null;
+    }
+
+    static TokenType NFA_696(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            nextStates.set(957);
+        }
+        return null;
+    }
+
+    static TokenType NFA_697(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(218);
+        }
+        return null;
+    }
+
+    static TokenType NFA_698(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            if (validTypes.contains(TokenType.GETFIELD)) return TokenType.GETFIELD;
+        }
+        return null;
+    }
+
+    static TokenType NFA_699(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(760);
+        }
+        return null;
+    }
+
+    static TokenType NFA_700(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(1038);
+        }
+        return null;
+    }
+
+    static TokenType NFA_701(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '1') {
+            if (validTypes.contains(TokenType.ALOAD_1)) return TokenType.ALOAD_1;
+        }
+        return null;
+    }
+
+    static TokenType NFA_702(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'h') {
+            if (validTypes.contains(TokenType.BIPUSH)) return TokenType.BIPUSH;
+        }
+        return null;
+    }
+
+    static TokenType NFA_703(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'g') {
+            nextStates.set(627);
+        }
+        return null;
+    }
+
+    static TokenType NFA_704(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(312);
+        }
+        return null;
+    }
+
+    static TokenType NFA_705(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'V') {
+            if (validTypes.contains(TokenType.VOID)) return TokenType.VOID;
+        }
+        return null;
+    }
+
+    static TokenType NFA_706(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(573);
+        }
+        return null;
+    }
+
+    static TokenType NFA_707(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(873);
+        }
+        return null;
+    }
+
+    static TokenType NFA_708(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '2') {
+            if (validTypes.contains(TokenType.ASTORE_2)) return TokenType.ASTORE_2;
+        }
+        return null;
+    }
+
+    static TokenType NFA_709(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(679);
+        }
+        return null;
+    }
+
+    static TokenType NFA_710(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(117);
+        }
+        return null;
+    }
+
+    static TokenType NFA_711(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(412);
+        }
+        return null;
+    }
+
+    static TokenType NFA_712(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            nextStates.set(21);
+        }
+        return null;
+    }
+
+    static TokenType NFA_713(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'p') {
+            nextStates.set(134);
+        }
+        return null;
+    }
+
+    static TokenType NFA_714(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            if (validTypes.contains(TokenType.METHOD)) return TokenType.METHOD;
+        }
+        return null;
+    }
+
+    static TokenType NFA_715(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(367);
+        }
+        return null;
+    }
+
+    static TokenType NFA_716(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(899);
+        }
+        return null;
+    }
+
+    static TokenType NFA_717(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(368);
+        }
+        return null;
+    }
+
+    static TokenType NFA_718(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(260);
+        }
+        return null;
+    }
+
+    static TokenType NFA_719(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '2') {
+            nextStates.set(678);
+        }
+        return null;
+    }
+
+    static TokenType NFA_720(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(756);
+        }
+        return null;
+    }
+
+    static TokenType NFA_721(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(207);
+        }
+        return null;
+    }
+
+    static TokenType NFA_722(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(781);
+        }
+        return null;
+    }
+
+    static TokenType NFA_723(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(980);
+        }
+        return null;
+    }
+
+    static TokenType NFA_724(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            nextStates.set(541);
+        }
+        return null;
+    }
+
+    static TokenType NFA_725(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(569);
+        }
+        return null;
+    }
+
+    static TokenType NFA_726(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(1041);
+        }
+        return null;
+    }
+
+    static TokenType NFA_727(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(5);
+        }
+        return null;
+    }
+
+    static TokenType NFA_728(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            nextStates.set(712);
+        }
+        return null;
+    }
+
+    static TokenType NFA_729(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            nextStates.set(221);
+        }
+        return null;
+    }
+
+    static TokenType NFA_730(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            nextStates.set(530);
+        }
+        return null;
+    }
+
+    static TokenType NFA_731(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'j') {
+            nextStates.set(843);
+        }
+        return null;
+    }
+
+    static TokenType NFA_732(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(126);
+        }
+        return null;
+    }
+
+    static TokenType NFA_733(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(15);
+        }
+        return null;
+    }
+
+    static TokenType NFA_734(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            if (validTypes.contains(TokenType.DSTORE)) return TokenType.DSTORE;
+        }
+        return null;
+    }
+
+    static TokenType NFA_735(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            if (validTypes.contains(TokenType.INVOKEINTERFACE)) return TokenType.INVOKEINTERFACE;
+        }
+        return null;
+    }
+
+    static TokenType NFA_736(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(542);
+        }
+        return null;
+    }
+
+    static TokenType NFA_737(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(851);
+        }
+        return null;
+    }
+
+    static TokenType NFA_738(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(724);
+        }
+        return null;
+    }
+
+    static TokenType NFA_739(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            nextStates.set(311);
+        }
+        return null;
+    }
+
+    static TokenType NFA_740(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            if (validTypes.contains(TokenType.ACONST_NULL)) return TokenType.ACONST_NULL;
+        }
+        return null;
+    }
+
+    static TokenType NFA_741(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(1020);
+        }
+        return null;
+    }
+
+    static TokenType NFA_742(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            if (validTypes.contains(TokenType.ISHR)) return TokenType.ISHR;
+        }
+        return null;
+    }
+
+    static TokenType NFA_743(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(643);
+        }
+        return null;
+    }
+
+    static TokenType NFA_744(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '2') {
+            if (validTypes.contains(TokenType.DUP_X2)) return TokenType.DUP_X2;
+        }
+        return null;
+    }
+
+    static TokenType NFA_745(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            if (validTypes.contains(TokenType.I2D)) return TokenType.I2D;
+        }
+        return null;
+    }
+
+    static TokenType NFA_746(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '1') {
+            if (validTypes.contains(TokenType.FCONST_1)) return TokenType.FCONST_1;
+        }
+        return null;
+    }
+
+    static TokenType NFA_747(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(992);
+        }
+        return null;
+    }
+
+    static TokenType NFA_748(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(119);
+        }
+        return null;
+    }
+
+    static TokenType NFA_749(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            nextStates.set(782);
+        }
+        return null;
+    }
+
+    static TokenType NFA_750(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(330);
+        }
+        return null;
+    }
+
+    static TokenType NFA_751(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            nextStates.set(574);
+        }
+        return null;
+    }
+
+    static TokenType NFA_752(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(458);
+        }
+        return null;
+    }
+
+    static TokenType NFA_753(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(662);
+        }
+        return null;
+    }
+
+    static TokenType NFA_754(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(581);
+        }
+        return null;
+    }
+
+    static TokenType NFA_755(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(537);
+        }
+        return null;
+    }
+
+    static TokenType NFA_756(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            nextStates.set(507);
+        }
+        return null;
+    }
+
+    static TokenType NFA_757(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(319);
+        }
+        return null;
+    }
+
+    static TokenType NFA_758(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            if (validTypes.contains(TokenType.DMUL)) return TokenType.DMUL;
+        }
+        return null;
+    }
+
+    static TokenType NFA_759(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(1007);
+        }
+        return null;
+    }
+
+    static TokenType NFA_760(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            nextStates.set(343);
+        }
+        return null;
+    }
+
+    static TokenType NFA_761(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(503);
+        }
+        return null;
+    }
+
+    static TokenType NFA_762(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(996);
+        }
+        return null;
+    }
+
+    static TokenType NFA_763(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            if (validTypes.contains(TokenType.IXOR)) return TokenType.IXOR;
+        }
+        return null;
+    }
+
+    static TokenType NFA_764(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(228);
+        }
+        return null;
+    }
+
+    static TokenType NFA_765(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'b') {
+            nextStates.set(57);
+        }
+        return null;
+    }
+
+    static TokenType NFA_766(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            nextStates.set(715);
+        }
+        return null;
+    }
+
+    static TokenType NFA_767(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(559);
+        }
+        return null;
+    }
+
+    static TokenType NFA_768(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(1073);
+        }
+        return null;
+    }
+
+    static TokenType NFA_769(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(551);
+        }
+        return null;
+    }
+
+    static TokenType NFA_770(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(441);
+        }
+        return null;
+    }
+
+    static TokenType NFA_771(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(171);
+        }
+        return null;
+    }
+
+    static TokenType NFA_772(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(369);
+        }
+        return null;
+    }
+
+    static TokenType NFA_773(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'v') {
+            nextStates.set(1138);
+        }
+        return null;
+    }
+
+    static TokenType NFA_774(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'p') {
+            nextStates.set(308);
+        }
+        return null;
+    }
+
+    static TokenType NFA_775(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(1139);
+        }
+        return null;
+    }
+
+    static TokenType NFA_776(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(984);
+        }
+        return null;
+    }
+
+    static TokenType NFA_777(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            nextStates.set(881);
+        }
+        return null;
+    }
+
+    static TokenType NFA_778(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(629);
+        }
+        return null;
+    }
+
+    static TokenType NFA_779(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'm') {
+            nextStates.set(1107);
+        }
+        return null;
+    }
+
+    static TokenType NFA_780(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '3') {
+            if (validTypes.contains(TokenType.DLOAD_3)) return TokenType.DLOAD_3;
+        }
+        return null;
+    }
+
+    static TokenType NFA_781(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            if (validTypes.contains(TokenType.LDC)) return TokenType.LDC;
+        }
+        return null;
+    }
+
+    static TokenType NFA_782(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            nextStates.set(491);
+        }
+        return null;
+    }
+
+    static TokenType NFA_783(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '0') {
+            if (validTypes.contains(TokenType.FLOAD_0)) return TokenType.FLOAD_0;
+        }
+        return null;
+    }
+
+    static TokenType NFA_784(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            if (validTypes.contains(TokenType.DLOAD)) return TokenType.DLOAD;
+        }
+        return null;
+    }
+
+    static TokenType NFA_785(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(543);
+        }
+        return null;
+    }
+
+    static TokenType NFA_786(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            nextStates.set(721);
+        }
+        return null;
+    }
+
+    static TokenType NFA_787(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            nextStates.set(1004);
+        }
+        return null;
+    }
+
+    static TokenType NFA_788(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(73);
+        }
+        return null;
+    }
+
+    static TokenType NFA_789(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '2') {
+            if (validTypes.contains(TokenType.DUP2)) return TokenType.DUP2;
+        }
+        return null;
+    }
+
+    static TokenType NFA_790(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '2') {
+            if (validTypes.contains(TokenType.DLOAD_2)) return TokenType.DLOAD_2;
+        }
+        return null;
+    }
+
+    static TokenType NFA_791(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(102);
+        }
+        return null;
+    }
+
+    static TokenType NFA_792(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(1089);
+        }
+        return null;
+    }
+
+    static TokenType NFA_793(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            nextStates.set(932);
+        }
+        return null;
+    }
+
+    static TokenType NFA_794(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(795);
+        }
+        return null;
+    }
+
+    static TokenType NFA_795(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(831);
+        }
+        return null;
+    }
+
+    static TokenType NFA_796(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            nextStates.set(687);
+        }
+        return null;
+    }
+
+    static TokenType NFA_797(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            if (validTypes.contains(TokenType.FRETURN)) return TokenType.FRETURN;
+        }
+        return null;
+    }
+
+    static TokenType NFA_798(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(138);
+        }
+        return null;
+    }
+
+    static TokenType NFA_799(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(941);
+        }
+        return null;
+    }
+
+    static TokenType NFA_800(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(240);
+        }
+        return null;
+    }
+
+    static TokenType NFA_801(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(1077);
+        }
+        return null;
+    }
+
+    static TokenType NFA_802(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(296);
+        }
+        return null;
+    }
+
+    static TokenType NFA_803(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'p') {
+            nextStates.set(877);
+        }
+        return null;
+    }
+
+    static TokenType NFA_804(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            nextStates.set(340);
+        }
+        return null;
+    }
+
+    static TokenType NFA_805(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            nextStates.set(817);
+        }
+        return null;
+    }
+
+    static TokenType NFA_806(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            if (validTypes.contains(TokenType.AALOAD)) return TokenType.AALOAD;
+        }
+        return null;
+    }
+
+    static TokenType NFA_807(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'u') {
+            nextStates.set(1017);
+        }
+        return null;
+    }
+
+    static TokenType NFA_808(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            if (validTypes.contains(TokenType.IRETURN)) return TokenType.IRETURN;
+        }
+        return null;
+    }
+
+    static TokenType NFA_809(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(730);
+        }
+        return null;
+    }
+
+    static TokenType NFA_810(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            nextStates.set(689);
+        }
+        return null;
+    }
+
+    static TokenType NFA_811(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            nextStates.set(1055);
+        }
+        return null;
+    }
+
+    static TokenType NFA_812(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(211);
+        }
+        return null;
+    }
+
+    static TokenType NFA_813(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            nextStates.set(444);
+        }
+        return null;
+    }
+
+    static TokenType NFA_814(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(152);
+        }
+        return null;
+    }
+
+    static TokenType NFA_815(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(143);
+        }
+        return null;
+    }
+
+    static TokenType NFA_816(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(947);
+        }
+        return null;
+    }
+
+    static TokenType NFA_817(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(972);
+        }
+        return null;
+    }
+
+    static TokenType NFA_818(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            nextStates.set(608);
+        }
+        return null;
+    }
+
+    static TokenType NFA_819(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(122);
+        }
+        return null;
+    }
+
+    static TokenType NFA_820(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(951);
+        }
+        return null;
+    }
+
+    static TokenType NFA_821(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            if (validTypes.contains(TokenType.IFGT)) return TokenType.IFGT;
+        }
+        return null;
+    }
+
+    static TokenType NFA_822(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(900);
+        }
+        return null;
+    }
+
+    static TokenType NFA_823(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(476);
+        }
+        return null;
+    }
+
+    static TokenType NFA_824(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            if (validTypes.contains(TokenType.INVOKEDYNAMIC)) return TokenType.INVOKEDYNAMIC;
+        }
+        return null;
+    }
+
+    static TokenType NFA_825(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            if (validTypes.contains(TokenType.IINC)) return TokenType.IINC;
+        }
+        return null;
+    }
+
+    static TokenType NFA_826(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(578);
+        }
+        return null;
+    }
+
+    static TokenType NFA_827(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            nextStates.set(111);
+        }
+        return null;
+    }
+
+    static TokenType NFA_828(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            nextStates.set(757);
+        }
+        return null;
+    }
+
+    static TokenType NFA_829(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            if (validTypes.contains(TokenType.IF_ICMPGE)) return TokenType.IF_ICMPGE;
+        }
+        return null;
+    }
+
+    static TokenType NFA_830(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(137);
+        }
+        return null;
+    }
+
+    static TokenType NFA_831(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(215);
+        }
+        return null;
+    }
+
+    static TokenType NFA_832(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'u') {
+            nextStates.set(321);
+        }
+        return null;
+    }
+
+    static TokenType NFA_833(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            nextStates.set(27);
+        }
+        return null;
+    }
+
+    static TokenType NFA_834(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(609);
+        }
+        return null;
+    }
+
+    static TokenType NFA_835(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(732);
+        }
+        return null;
+    }
+
+    static TokenType NFA_836(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(345);
+        }
+        return null;
+    }
+
+    static TokenType NFA_837(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(456);
+        }
+        return null;
+    }
+
+    static TokenType NFA_838(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'm') {
+            nextStates.set(592);
+        }
+        return null;
+    }
+
+    static TokenType NFA_839(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            nextStates.set(335);
+        }
+        return null;
+    }
+
+    static TokenType NFA_840(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(534);
+        }
+        return null;
+    }
+
+    static TokenType NFA_841(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            nextStates.set(159);
+        }
+        return null;
+    }
+
+    static TokenType NFA_842(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(106);
+        }
+        return null;
+    }
+
+    static TokenType NFA_843(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(355);
+        }
+        return null;
+    }
+
+    static TokenType NFA_844(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(432);
+        }
+        return null;
+    }
+
+    static TokenType NFA_845(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(370);
+        }
+        return null;
+    }
+
+    static TokenType NFA_846(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(372);
+        }
+        return null;
+    }
+
+    static TokenType NFA_847(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(761);
+        }
+        return null;
+    }
+
+    static TokenType NFA_848(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '3') {
+            if (validTypes.contains(TokenType.ISTORE_3)) return TokenType.ISTORE_3;
+        }
+        return null;
+    }
+
+    static TokenType NFA_849(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(716);
+        }
+        return null;
+    }
+
+    static TokenType NFA_850(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'u') {
+            nextStates.set(1014);
+        }
+        return null;
+    }
+
+    static TokenType NFA_851(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '2') {
+            nextStates.set(252);
+        }
+        return null;
+    }
+
+    static TokenType NFA_852(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(254);
+        }
+        return null;
+    }
+
+    static TokenType NFA_853(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(2);
+        }
+        return null;
+    }
+
+    static TokenType NFA_854(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            nextStates.set(294);
+        }
+        return null;
+    }
+
+    static TokenType NFA_855(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            nextStates.set(362);
+        }
+        return null;
+    }
+
+    static TokenType NFA_856(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(990);
+        }
+        return null;
+    }
+
+    static TokenType NFA_857(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(309);
+        }
+        return null;
+    }
+
+    static TokenType NFA_858(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            nextStates.set(162);
+        }
+        return null;
+    }
+
+    static TokenType NFA_859(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            nextStates.set(227);
+        }
+        return null;
+    }
+
+    static TokenType NFA_860(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(612);
+        }
+        return null;
+    }
+
+    static TokenType NFA_861(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(837);
+        }
+        return null;
+    }
+
+    static TokenType NFA_862(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            nextStates.set(287);
+        }
+        return null;
+    }
+
+    static TokenType NFA_863(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'p') {
+            nextStates.set(850);
+        }
+        return null;
+    }
+
+    static TokenType NFA_864(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '2') {
+            if (validTypes.contains(TokenType.DUP2_X2)) return TokenType.DUP2_X2;
+        }
+        return null;
+    }
+
+    static TokenType NFA_865(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'h') {
+            nextStates.set(184);
+        }
+        return null;
+    }
+
+    static TokenType NFA_866(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(398);
+        }
+        return null;
+    }
+
+    static TokenType NFA_867(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(181);
+        }
+        return null;
+    }
+
+    static TokenType NFA_868(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            nextStates.set(195);
+        }
+        return null;
+    }
+
+    static TokenType NFA_869(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(546);
+        }
+        return null;
+    }
+
+    static TokenType NFA_870(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(616);
+        }
+        return null;
+    }
+
+    static TokenType NFA_871(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(814);
+        }
+        return null;
+    }
+
+    static TokenType NFA_872(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(124);
+        }
+        return null;
+    }
+
+    static TokenType NFA_873(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(338);
+        }
+        return null;
+    }
+
+    static TokenType NFA_874(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'h') {
+            nextStates.set(408);
+        }
+        return null;
+    }
+
+    static TokenType NFA_875(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'v') {
+            nextStates.set(243);
+        }
+        return null;
+    }
+
+    static TokenType NFA_876(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            nextStates.set(563);
+        }
+        return null;
+    }
+
+    static TokenType NFA_877(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '2') {
+            nextStates.set(128);
+        }
+        return null;
+    }
+
+    static TokenType NFA_878(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(529);
+        }
+        return null;
+    }
+
+    static TokenType NFA_879(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '3') {
+            if (validTypes.contains(TokenType.FCONST_3)) return TokenType.FCONST_3;
+        }
+        return null;
+    }
+
+    static TokenType NFA_880(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            if (validTypes.contains(TokenType.IFNE)) return TokenType.IFNE;
+        }
+        return null;
+    }
+
+    static TokenType NFA_881(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'g') {
+            nextStates.set(946);
+        }
+        return null;
+    }
+
+    static TokenType NFA_882(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(1013);
+        }
+        return null;
+    }
+
+    static TokenType NFA_883(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(473);
+        }
+        return null;
+    }
+
+    static TokenType NFA_884(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(790);
+        }
+        return null;
+    }
+
+    static TokenType NFA_885(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(109);
+        }
+        return null;
+    }
+
+    static TokenType NFA_886(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(366);
+        }
+        return null;
+    }
+
+    static TokenType NFA_887(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(949);
+        }
+        return null;
+    }
+
+    static TokenType NFA_888(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '/') {
+            if (validTypes.contains(TokenType.SLASH)) return TokenType.SLASH;
+        }
+        return null;
+    }
+
+    static TokenType NFA_889(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '0') {
+            if (validTypes.contains(TokenType.DLOAD_0)) return TokenType.DLOAD_0;
+        }
+        return null;
+    }
+
+    static TokenType NFA_890(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            if (validTypes.contains(TokenType.ASTORE)) return TokenType.ASTORE;
+        }
+        return null;
+    }
+
+    static TokenType NFA_891(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '2') {
+            nextStates.set(605);
+        }
+        return null;
+    }
+
+    static TokenType NFA_892(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            nextStates.set(358);
+        }
+        return null;
+    }
+
+    static TokenType NFA_893(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(290);
+        }
+        return null;
+    }
+
+    static TokenType NFA_894(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            nextStates.set(872);
+        }
+        return null;
+    }
+
+    static TokenType NFA_895(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(37);
+        }
+        return null;
+    }
+
+    static TokenType NFA_896(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'k') {
+            nextStates.set(1099);
+        }
+        return null;
+    }
+
+    static TokenType NFA_897(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            nextStates.set(216);
+        }
+        return null;
+    }
+
+    static TokenType NFA_898(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            if (validTypes.contains(TokenType.I2C)) return TokenType.I2C;
+        }
+        return null;
+    }
+
+    static TokenType NFA_899(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(835);
+        }
+        return null;
+    }
+
+    static TokenType NFA_900(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(613);
+        }
+        return null;
+    }
+
+    static TokenType NFA_901(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(241);
+        }
+        return null;
+    }
+
+    static TokenType NFA_902(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(286);
+        }
+        return null;
+    }
+
+    static TokenType NFA_903(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            if (validTypes.contains(TokenType.CASTORE)) return TokenType.CASTORE;
+        }
+        return null;
+    }
+
+    static TokenType NFA_904(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'u') {
+            nextStates.set(673);
+        }
+        return null;
+    }
+
+    static TokenType NFA_905(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            nextStates.set(371);
+        }
+        return null;
+    }
+
+    static TokenType NFA_906(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(638);
+        }
+        return null;
+    }
+
+    static TokenType NFA_907(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '1') {
+            if (validTypes.contains(TokenType.FLOAD_1)) return TokenType.FLOAD_1;
+        }
+        return null;
+    }
+
+    static TokenType NFA_908(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(701);
+        }
+        return null;
+    }
+
+    static TokenType NFA_909(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            nextStates.set(792);
+        }
+        return null;
+    }
+
+    static TokenType NFA_910(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(29);
+        }
+        return null;
+    }
+
+    static TokenType NFA_911(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(741);
+        }
+        return null;
+    }
+
+    static TokenType NFA_912(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'm') {
+            nextStates.set(183);
+        }
+        return null;
+    }
+
+    static TokenType NFA_913(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(955);
+        }
+        return null;
+    }
+
+    static TokenType NFA_914(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'v') {
+            if (validTypes.contains(TokenType.LDIV)) return TokenType.LDIV;
+        }
+        return null;
+    }
+
+    static TokenType NFA_915(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(998);
+        }
+        return null;
+    }
+
+    static TokenType NFA_916(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            if (validTypes.contains(TokenType.IADD)) return TokenType.IADD;
+        }
+        return null;
+    }
+
+    static TokenType NFA_917(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            nextStates.set(394);
+        }
+        return null;
+    }
+
+    static TokenType NFA_918(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(425);
+        }
+        return null;
+    }
+
+    static TokenType NFA_919(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            if (validTypes.contains(TokenType.IF_ICMPLE)) return TokenType.IF_ICMPLE;
+        }
+        return null;
+    }
+
+    static TokenType NFA_920(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(427);
+        }
+        return null;
+    }
+
+    static TokenType NFA_921(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '4') {
+            if (validTypes.contains(TokenType.ICONST_4)) return TokenType.ICONST_4;
+        }
+        return null;
+    }
+
+    static TokenType NFA_922(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(129);
+        }
+        return null;
+    }
+
+    static TokenType NFA_923(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'u') {
+            nextStates.set(993);
+        }
+        return null;
+    }
+
+    static TokenType NFA_924(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'p') {
+            nextStates.set(1068);
+        }
+        return null;
+    }
+
+    static TokenType NFA_925(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'h') {
+            nextStates.set(74);
+        }
+        return null;
+    }
+
+    static TokenType NFA_926(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(173);
+        }
+        return null;
+    }
+
+    static TokenType NFA_927(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(666);
+        }
+        return null;
+    }
+
+    static TokenType NFA_928(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(165);
+        }
+        return null;
+    }
+
+    static TokenType NFA_929(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '2') {
+            nextStates.set(1015);
+        }
+        return null;
+    }
+
+    static TokenType NFA_930(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(378);
+        }
+        return null;
+    }
+
+    static TokenType NFA_931(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            if (validTypes.contains(TokenType.ARETURN)) return TokenType.ARETURN;
+        }
+        return null;
+    }
+
+    static TokenType NFA_932(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(461);
+        }
+        return null;
+    }
+
+    static TokenType NFA_933(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'g') {
+            if (validTypes.contains(TokenType.DCMPG)) return TokenType.DCMPG;
+        }
+        return null;
+    }
+
+    static TokenType NFA_934(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(607);
+        }
+        return null;
+    }
+
+    static TokenType NFA_935(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(356);
+        }
+        return null;
+    }
+
+    static TokenType NFA_936(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            nextStates.set(606);
+        }
+        return null;
+    }
+
+    static TokenType NFA_937(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(3);
+        }
+        return null;
+    }
+
+    static TokenType NFA_938(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(915);
+        }
+        return null;
+    }
+
+    static TokenType NFA_939(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(631);
+        }
+        return null;
+    }
+
+    static TokenType NFA_940(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            nextStates.set(825);
+        }
+        return null;
+    }
+
+    static TokenType NFA_941(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '2') {
+            nextStates.set(745);
+        }
+        return null;
+    }
+
+    static TokenType NFA_942(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(963);
+        }
+        return null;
+    }
+
+    static TokenType NFA_943(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(798);
+        }
+        return null;
+    }
+
+    static TokenType NFA_944(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(698);
+        }
+        return null;
+    }
+
+    static TokenType NFA_945(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            nextStates.set(754);
+        }
+        return null;
+    }
+
+    static TokenType NFA_946(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            if (validTypes.contains(TokenType.IFGE)) return TokenType.IFGE;
+        }
+        return null;
+    }
+
+    static TokenType NFA_947(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(420);
+        }
+        return null;
+    }
+
+    static TokenType NFA_948(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(213);
+        }
+        return null;
+    }
+
+    static TokenType NFA_949(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'x') {
+            nextStates.set(249);
+        }
+        return null;
+    }
+
+    static TokenType NFA_950(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            if (validTypes.contains(TokenType.D2F)) return TokenType.D2F;
+        }
+        return null;
+    }
+
+    static TokenType NFA_951(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(827);
+        }
+        return null;
+    }
+
+    static TokenType NFA_952(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(235);
+        }
+        return null;
+    }
+
+    static TokenType NFA_953(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(978);
+        }
+        return null;
+    }
+
+    static TokenType NFA_954(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '.') {
+            nextStates.set(922);
+        }
+        return null;
+    }
+
+    static TokenType NFA_955(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(474);
+        }
+        return null;
+    }
+
+    static TokenType NFA_956(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== ';') {
+            nextStates.set(970);
+            if (validTypes.contains(TokenType.LINE_COMMENT)) return TokenType.LINE_COMMENT;
+        }
+        return null;
+    }
+
+    static TokenType NFA_957(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(160);
+        }
+        return null;
+    }
+
+    static TokenType NFA_958(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(550);
+        }
+        return null;
+    }
+
+    static TokenType NFA_959(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(23);
+        }
+        return null;
+    }
+
+    static TokenType NFA_960(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(470);
+        }
+        return null;
+    }
+
+    static TokenType NFA_961(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(816);
+        }
+        return null;
+    }
+
+    static TokenType NFA_962(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(386);
+        }
+        return null;
+    }
+
+    static TokenType NFA_963(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(333);
+        }
+        return null;
+    }
+
+    static TokenType NFA_964(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'k') {
+            nextStates.set(414);
+        }
+        return null;
+    }
+
+    static TokenType NFA_965(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(994);
+        }
+        return null;
+    }
+
+    static TokenType NFA_966(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            nextStates.set(709);
+        }
+        return null;
+    }
+
+    static TokenType NFA_967(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(763);
+        }
+        return null;
+    }
+
+    static TokenType NFA_968(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(777);
+        }
+        return null;
+    }
+
+    static TokenType NFA_969(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            nextStates.set(336);
+        }
+        return null;
+    }
+
+    static TokenType NFA_970(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if ((ch>=0x0&&ch<='\t')||((ch== 0xb||ch== '\f')||(ch>=0xe))) {
+            nextStates.set(970);
+            if (validTypes.contains(TokenType.LINE_COMMENT)) return TokenType.LINE_COMMENT;
+        }
+        return null;
+    }
+
+    static TokenType NFA_971(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '0') {
+            if (validTypes.contains(TokenType.DCONST_0)) return TokenType.DCONST_0;
+        }
+        return null;
+    }
+
+    static TokenType NFA_972(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'w') {
+            if (validTypes.contains(TokenType.JSR_W)) return TokenType.JSR_W;
+        }
+        return null;
+    }
+
+    static TokenType NFA_973(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'm') {
+            if (validTypes.contains(TokenType.FREM)) return TokenType.FREM;
+        }
+        return null;
+    }
+
+    static TokenType NFA_974(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(722);
+        }
+        return null;
+    }
+
+    static TokenType NFA_975(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(940);
+        }
+        return null;
+    }
+
+    static TokenType NFA_976(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            nextStates.set(1071);
+        }
+        return null;
+    }
+
+    static TokenType NFA_977(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(328);
+        }
+        return null;
+    }
+
+    static TokenType NFA_978(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(997);
+        }
+        return null;
+    }
+
+    static TokenType NFA_979(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(489);
+        }
+        return null;
+    }
+
+    static TokenType NFA_980(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '2') {
+            nextStates.set(146);
+        }
+        return null;
+    }
+
+    static TokenType NFA_981(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(334);
+        }
+        return null;
+    }
+
+    static TokenType NFA_982(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'u') {
+            nextStates.set(481);
+        }
+        return null;
+    }
+
+    static TokenType NFA_983(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'I') {
+            if (validTypes.contains(TokenType.INT)) return TokenType.INT;
+        }
+        return null;
+    }
+
+    static TokenType NFA_984(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(692);
+        }
+        return null;
+    }
+
+    static TokenType NFA_985(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(453);
+        }
+        return null;
+    }
+
+    static TokenType NFA_986(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'u') {
+            nextStates.set(433);
+        }
+        return null;
+    }
+
+    static TokenType NFA_987(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(376);
+        }
+        return null;
+    }
+
+    static TokenType NFA_988(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            if (validTypes.contains(TokenType.IF_ICMPLT)) return TokenType.IF_ICMPLT;
+        }
+        return null;
+    }
+
+    static TokenType NFA_989(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(522);
+        }
+        return null;
+    }
+
+    static TokenType NFA_990(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(1098);
+        }
+        return null;
+    }
+
+    static TokenType NFA_991(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(105);
+        }
+        return null;
+    }
+
+    static TokenType NFA_992(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(948);
+        }
+        return null;
+    }
+
+    static TokenType NFA_993(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'p') {
+            nextStates.set(510);
+        }
+        return null;
+    }
+
+    static TokenType NFA_994(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(788);
+        }
+        return null;
+    }
+
+    static TokenType NFA_995(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(155);
+        }
+        return null;
+    }
+
+    static TokenType NFA_996(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'u') {
+            nextStates.set(1025);
+        }
+        return null;
+    }
+
+    static TokenType NFA_997(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(908);
+        }
+        return null;
+    }
+
+    static TokenType NFA_998(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(836);
+        }
+        return null;
+    }
+
+    static TokenType NFA_999(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(1075);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1000(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(357);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1001(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(805);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1002(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(97);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1003(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(905);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1004(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'k') {
+            nextStates.set(1116);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1005(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(600);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1006(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            nextStates.set(647);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1007(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'u') {
+            nextStates.set(247);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1008(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(834);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1009(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(341);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1010(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            if (validTypes.contains(TokenType.FLOAD)) return TokenType.FLOAD;
+        }
+        return null;
+    }
+
+    static TokenType NFA_1011(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'h') {
+            nextStates.set(1134);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1012(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            nextStates.set(396);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1013(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(190);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1014(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(702);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1015(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            if (validTypes.contains(TokenType.D2I)) return TokenType.D2I;
+        }
+        return null;
+    }
+
+    static TokenType NFA_1016(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            nextStates.set(718);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1017(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            nextStates.set(797);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1018(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'h') {
+            nextStates.set(1085);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1019(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(75);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1020(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(66);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1021(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(436);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1022(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(617);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1023(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            nextStates.set(416);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1024(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(81);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1025(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            nextStates.set(318);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1026(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(454);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1027(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(236);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1028(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            nextStates.set(69);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1029(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(389);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1030(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(1072);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1031(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(674);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1032(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            nextStates.set(49);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1033(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            nextStates.set(176);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1034(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(264);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1035(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(648);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1036(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(234);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1037(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            nextStates.set(100);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1038(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            if (validTypes.contains(TokenType.INVOKENONVIRTUAL)) return TokenType.INVOKENONVIRTUAL;
+        }
+        return null;
+    }
+
+    static TokenType NFA_1039(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '2') {
+            if (validTypes.contains(TokenType.FSTORE_2)) return TokenType.FSTORE_2;
+        }
+        return null;
+    }
+
+    static TokenType NFA_1040(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '.') {
+            nextStates.set(642);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1041(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'h') {
+            nextStates.set(742);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1042(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'y') {
+            if (validTypes.contains(TokenType.A_NEW_ARRAY)) return TokenType.A_NEW_ARRAY;
+        }
+        return null;
+    }
+
+    static TokenType NFA_1043(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            if (validTypes.contains(TokenType.IFNULL)) return TokenType.IFNULL;
+        }
+        return null;
+    }
+
+    static TokenType NFA_1044(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(1051);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1045(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            nextStates.set(858);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1046(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '1') {
+            if (validTypes.contains(TokenType.DSTORE_1)) return TokenType.DSTORE_1;
+        }
+        return null;
+    }
+
+    static TokenType NFA_1047(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(424);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1048(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(205);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1049(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(174);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1050(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            nextStates.set(354);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1051(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            nextStates.set(779);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1052(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            if (validTypes.contains(TokenType.SUPER)) return TokenType.SUPER;
+        }
+        return null;
+    }
+
+    static TokenType NFA_1053(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'm') {
+            if (validTypes.contains(TokenType.IREM)) return TokenType.IREM;
+        }
+        return null;
+    }
+
+    static TokenType NFA_1054(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '2') {
+            nextStates.set(77);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1055(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(1113);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1056(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(884);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1057(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(224);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1058(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(220);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1059(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(979);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1060(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(511);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1061(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(778);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1062(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            nextStates.set(451);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1063(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(149);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1064(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'g') {
+            nextStates.set(829);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1065(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            nextStates.set(1024);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1066(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(487);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1067(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(641);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1068(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(919);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1069(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'k') {
+            if (validTypes.contains(TokenType.STACK)) return TokenType.STACK;
+        }
+        return null;
+    }
+
+    static TokenType NFA_1070(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'w') {
+            nextStates.set(493);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1071(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            if (validTypes.contains(TokenType.FASTORE)) return TokenType.FASTORE;
+        }
+        return null;
+    }
+
+    static TokenType NFA_1072(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            nextStates.set(387);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1073(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(694);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1074(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            nextStates.set(125);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1075(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(681);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1076(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(351);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1077(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            nextStates.set(532);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1078(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            nextStates.set(1117);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1079(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            nextStates.set(773);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1080(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(288);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1081(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            nextStates.set(293);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1082(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            nextStates.set(248);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1083(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            nextStates.set(1092);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1084(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'x') {
+            nextStates.set(967);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1085(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(714);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1086(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(854);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1087(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(232);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1088(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'L') {
+            if (validTypes.contains(TokenType.ARRAY_IDENTIFIER)) return TokenType.ARRAY_IDENTIFIER;
+        }
+        return null;
+    }
+
+    static TokenType NFA_1089(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(611);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1090(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(593);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1091(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'v') {
+            nextStates.set(1030);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1092(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            nextStates.set(36);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1093(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'h') {
+            nextStates.set(496);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1094(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'a') {
+            nextStates.set(325);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1095(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            nextStates.set(422);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1096(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(776);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1097(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'w') {
+            if (validTypes.contains(TokenType.LDC2_W)) return TokenType.LDC2_W;
+        }
+        return null;
+    }
+
+    static TokenType NFA_1098(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(320);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1099(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            nextStates.set(1016);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1100(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            nextStates.set(999);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1101(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(1079);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1102(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(1094);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1103(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'g') {
+            nextStates.set(253);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1104(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(913);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1105(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(388);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1106(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'n') {
+            nextStates.set(703);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1107(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'p') {
+            nextStates.set(933);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1108(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 't') {
+            nextStates.set(690);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1109(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            if (validTypes.contains(TokenType.I2L)) return TokenType.I2L;
+        }
+        return null;
+    }
+
+    static TokenType NFA_1110(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'g') {
+            if (validTypes.contains(TokenType.FCMPG)) return TokenType.FCMPG;
+        }
+        return null;
+    }
+
+    static TokenType NFA_1111(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            nextStates.set(1065);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1112(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '1') {
+            if (validTypes.contains(TokenType.ASTORE_1)) return TokenType.ASTORE_1;
+        }
+        return null;
+    }
+
+    static TokenType NFA_1113(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(939);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1114(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'f') {
+            nextStates.set(344);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1115(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'g') {
+            nextStates.set(813);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1116(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            nextStates.set(108);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1117(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            nextStates.set(393);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1118(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(726);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1119(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            if (validTypes.contains(TokenType.IOR)) return TokenType.IOR;
+        }
+        return null;
+    }
+
+    static TokenType NFA_1120(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(210);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1121(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            nextStates.set(1069);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1122(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(80);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1123(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'u') {
+            nextStates.set(178);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1124(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(435);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1125(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            if (validTypes.contains(TokenType.IF_ICMPNE)) return TokenType.IF_ICMPNE;
+        }
+        return null;
+    }
+
+    static TokenType NFA_1126(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            nextStates.set(865);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1127(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            nextStates.set(1019);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1128(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'c') {
+            nextStates.set(55);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1129(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '0') {
+            if (validTypes.contains(TokenType.LLOAD_0)) return TokenType.LLOAD_0;
+        }
+        return null;
+    }
+
+    static TokenType NFA_1130(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'j') {
+            nextStates.set(1001);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1131(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            nextStates.set(483);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1132(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'r') {
+            nextStates.set(447);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1133(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'e') {
+            nextStates.set(842);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1134(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'l') {
+            if (validTypes.contains(TokenType.ISHL)) return TokenType.ISHL;
+        }
+        return null;
+    }
+
+    static TokenType NFA_1135(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(1093);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1136(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'd') {
+            nextStates.set(868);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1137(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'i') {
+            nextStates.set(360);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1138(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(691);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1139(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 's') {
+            nextStates.set(1036);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1140(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '_') {
+            nextStates.set(380);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1141(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== 'o') {
+            nextStates.set(79);
+        }
+        return null;
+    }
+
+    static TokenType NFA_1142(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== ' ') {
+            nextStates.set(1);
+            if (validTypes.contains(TokenType.WHITESPACE)) return TokenType.WHITESPACE;
+        }
+        return null;
+    }
+
+    static TokenType NFA_1143(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '\n') {
+            nextStates.set(1);
+            if (validTypes.contains(TokenType.WHITESPACE)) return TokenType.WHITESPACE;
+        }
+        return null;
+    }
+
+    static TokenType NFA_1144(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '\f') {
+            nextStates.set(1);
+            if (validTypes.contains(TokenType.WHITESPACE)) return TokenType.WHITESPACE;
+        }
+        return null;
+    }
+
+    static TokenType NFA_1145(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '\r') {
+            nextStates.set(1);
+            if (validTypes.contains(TokenType.WHITESPACE)) return TokenType.WHITESPACE;
+        }
+        return null;
+    }
+
+    static TokenType NFA_1146(int ch, BitSet nextStates, EnumSet<TokenType> validTypes) {
+        if (ch== '\t') {
+            nextStates.set(1);
+            if (validTypes.contains(TokenType.WHITESPACE)) return TokenType.WHITESPACE;
+        }
+        return null;
+    }
+
     static private void NFA_FUNCTIONS_DEFAULT_init() {
-        NfaFunction[] functions= new NfaFunction[184];
+        NfaFunction[] functions= new NfaFunction[1147];
         functions[0]= JasminParserNfaData::NFA_COMPOSITE_0;
         functions[1]= JasminParserNfaData::NFA_COMPOSITE_1;
-        functions[2]= JasminParserNfaData::NFA_COMPOSITE_2;
+        functions[2]= JasminParserNfaData::NFA_2;
         functions[3]= JasminParserNfaData::NFA_3;
         functions[4]= JasminParserNfaData::NFA_4;
         functions[5]= JasminParserNfaData::NFA_5;
@@ -1628,6 +8551,969 @@ class JasminParserNfaData implements JasminParserConstants {
         functions[181]= JasminParserNfaData::NFA_181;
         functions[182]= JasminParserNfaData::NFA_182;
         functions[183]= JasminParserNfaData::NFA_183;
+        functions[184]= JasminParserNfaData::NFA_184;
+        functions[185]= JasminParserNfaData::NFA_185;
+        functions[186]= JasminParserNfaData::NFA_186;
+        functions[187]= JasminParserNfaData::NFA_187;
+        functions[188]= JasminParserNfaData::NFA_188;
+        functions[189]= JasminParserNfaData::NFA_189;
+        functions[190]= JasminParserNfaData::NFA_190;
+        functions[191]= JasminParserNfaData::NFA_191;
+        functions[192]= JasminParserNfaData::NFA_192;
+        functions[193]= JasminParserNfaData::NFA_193;
+        functions[194]= JasminParserNfaData::NFA_194;
+        functions[195]= JasminParserNfaData::NFA_195;
+        functions[196]= JasminParserNfaData::NFA_196;
+        functions[197]= JasminParserNfaData::NFA_197;
+        functions[198]= JasminParserNfaData::NFA_198;
+        functions[199]= JasminParserNfaData::NFA_199;
+        functions[200]= JasminParserNfaData::NFA_200;
+        functions[201]= JasminParserNfaData::NFA_201;
+        functions[202]= JasminParserNfaData::NFA_202;
+        functions[203]= JasminParserNfaData::NFA_203;
+        functions[204]= JasminParserNfaData::NFA_204;
+        functions[205]= JasminParserNfaData::NFA_205;
+        functions[206]= JasminParserNfaData::NFA_206;
+        functions[207]= JasminParserNfaData::NFA_207;
+        functions[208]= JasminParserNfaData::NFA_208;
+        functions[209]= JasminParserNfaData::NFA_209;
+        functions[210]= JasminParserNfaData::NFA_210;
+        functions[211]= JasminParserNfaData::NFA_211;
+        functions[212]= JasminParserNfaData::NFA_212;
+        functions[213]= JasminParserNfaData::NFA_213;
+        functions[214]= JasminParserNfaData::NFA_214;
+        functions[215]= JasminParserNfaData::NFA_215;
+        functions[216]= JasminParserNfaData::NFA_216;
+        functions[217]= JasminParserNfaData::NFA_217;
+        functions[218]= JasminParserNfaData::NFA_218;
+        functions[219]= JasminParserNfaData::NFA_219;
+        functions[220]= JasminParserNfaData::NFA_220;
+        functions[221]= JasminParserNfaData::NFA_221;
+        functions[222]= JasminParserNfaData::NFA_222;
+        functions[223]= JasminParserNfaData::NFA_223;
+        functions[224]= JasminParserNfaData::NFA_224;
+        functions[225]= JasminParserNfaData::NFA_225;
+        functions[226]= JasminParserNfaData::NFA_226;
+        functions[227]= JasminParserNfaData::NFA_227;
+        functions[228]= JasminParserNfaData::NFA_228;
+        functions[229]= JasminParserNfaData::NFA_229;
+        functions[230]= JasminParserNfaData::NFA_230;
+        functions[231]= JasminParserNfaData::NFA_231;
+        functions[232]= JasminParserNfaData::NFA_232;
+        functions[233]= JasminParserNfaData::NFA_233;
+        functions[234]= JasminParserNfaData::NFA_234;
+        functions[235]= JasminParserNfaData::NFA_235;
+        functions[236]= JasminParserNfaData::NFA_236;
+        functions[237]= JasminParserNfaData::NFA_237;
+        functions[238]= JasminParserNfaData::NFA_238;
+        functions[239]= JasminParserNfaData::NFA_239;
+        functions[240]= JasminParserNfaData::NFA_240;
+        functions[241]= JasminParserNfaData::NFA_241;
+        functions[242]= JasminParserNfaData::NFA_242;
+        functions[243]= JasminParserNfaData::NFA_243;
+        functions[244]= JasminParserNfaData::NFA_244;
+        functions[245]= JasminParserNfaData::NFA_245;
+        functions[246]= JasminParserNfaData::NFA_246;
+        functions[247]= JasminParserNfaData::NFA_247;
+        functions[248]= JasminParserNfaData::NFA_248;
+        functions[249]= JasminParserNfaData::NFA_249;
+        functions[250]= JasminParserNfaData::NFA_250;
+        functions[251]= JasminParserNfaData::NFA_251;
+        functions[252]= JasminParserNfaData::NFA_252;
+        functions[253]= JasminParserNfaData::NFA_253;
+        functions[254]= JasminParserNfaData::NFA_254;
+        functions[255]= JasminParserNfaData::NFA_255;
+        functions[256]= JasminParserNfaData::NFA_256;
+        functions[257]= JasminParserNfaData::NFA_257;
+        functions[258]= JasminParserNfaData::NFA_258;
+        functions[259]= JasminParserNfaData::NFA_259;
+        functions[260]= JasminParserNfaData::NFA_260;
+        functions[261]= JasminParserNfaData::NFA_261;
+        functions[262]= JasminParserNfaData::NFA_262;
+        functions[263]= JasminParserNfaData::NFA_263;
+        functions[264]= JasminParserNfaData::NFA_264;
+        functions[265]= JasminParserNfaData::NFA_265;
+        functions[266]= JasminParserNfaData::NFA_266;
+        functions[267]= JasminParserNfaData::NFA_267;
+        functions[268]= JasminParserNfaData::NFA_268;
+        functions[269]= JasminParserNfaData::NFA_269;
+        functions[270]= JasminParserNfaData::NFA_270;
+        functions[271]= JasminParserNfaData::NFA_271;
+        functions[272]= JasminParserNfaData::NFA_272;
+        functions[273]= JasminParserNfaData::NFA_273;
+        functions[274]= JasminParserNfaData::NFA_274;
+        functions[275]= JasminParserNfaData::NFA_275;
+        functions[276]= JasminParserNfaData::NFA_276;
+        functions[277]= JasminParserNfaData::NFA_277;
+        functions[278]= JasminParserNfaData::NFA_278;
+        functions[279]= JasminParserNfaData::NFA_279;
+        functions[280]= JasminParserNfaData::NFA_280;
+        functions[281]= JasminParserNfaData::NFA_281;
+        functions[282]= JasminParserNfaData::NFA_282;
+        functions[283]= JasminParserNfaData::NFA_283;
+        functions[284]= JasminParserNfaData::NFA_284;
+        functions[285]= JasminParserNfaData::NFA_285;
+        functions[286]= JasminParserNfaData::NFA_286;
+        functions[287]= JasminParserNfaData::NFA_287;
+        functions[288]= JasminParserNfaData::NFA_288;
+        functions[289]= JasminParserNfaData::NFA_289;
+        functions[290]= JasminParserNfaData::NFA_290;
+        functions[291]= JasminParserNfaData::NFA_291;
+        functions[292]= JasminParserNfaData::NFA_292;
+        functions[293]= JasminParserNfaData::NFA_293;
+        functions[294]= JasminParserNfaData::NFA_294;
+        functions[295]= JasminParserNfaData::NFA_295;
+        functions[296]= JasminParserNfaData::NFA_296;
+        functions[297]= JasminParserNfaData::NFA_297;
+        functions[298]= JasminParserNfaData::NFA_298;
+        functions[299]= JasminParserNfaData::NFA_299;
+        functions[300]= JasminParserNfaData::NFA_300;
+        functions[301]= JasminParserNfaData::NFA_301;
+        functions[302]= JasminParserNfaData::NFA_302;
+        functions[303]= JasminParserNfaData::NFA_303;
+        functions[304]= JasminParserNfaData::NFA_304;
+        functions[305]= JasminParserNfaData::NFA_305;
+        functions[306]= JasminParserNfaData::NFA_306;
+        functions[307]= JasminParserNfaData::NFA_307;
+        functions[308]= JasminParserNfaData::NFA_308;
+        functions[309]= JasminParserNfaData::NFA_309;
+        functions[310]= JasminParserNfaData::NFA_310;
+        functions[311]= JasminParserNfaData::NFA_311;
+        functions[312]= JasminParserNfaData::NFA_312;
+        functions[313]= JasminParserNfaData::NFA_313;
+        functions[314]= JasminParserNfaData::NFA_314;
+        functions[315]= JasminParserNfaData::NFA_315;
+        functions[316]= JasminParserNfaData::NFA_316;
+        functions[317]= JasminParserNfaData::NFA_317;
+        functions[318]= JasminParserNfaData::NFA_318;
+        functions[319]= JasminParserNfaData::NFA_319;
+        functions[320]= JasminParserNfaData::NFA_320;
+        functions[321]= JasminParserNfaData::NFA_321;
+        functions[322]= JasminParserNfaData::NFA_322;
+        functions[323]= JasminParserNfaData::NFA_323;
+        functions[324]= JasminParserNfaData::NFA_324;
+        functions[325]= JasminParserNfaData::NFA_325;
+        functions[326]= JasminParserNfaData::NFA_326;
+        functions[327]= JasminParserNfaData::NFA_327;
+        functions[328]= JasminParserNfaData::NFA_328;
+        functions[329]= JasminParserNfaData::NFA_329;
+        functions[330]= JasminParserNfaData::NFA_330;
+        functions[331]= JasminParserNfaData::NFA_331;
+        functions[332]= JasminParserNfaData::NFA_332;
+        functions[333]= JasminParserNfaData::NFA_333;
+        functions[334]= JasminParserNfaData::NFA_334;
+        functions[335]= JasminParserNfaData::NFA_335;
+        functions[336]= JasminParserNfaData::NFA_336;
+        functions[337]= JasminParserNfaData::NFA_337;
+        functions[338]= JasminParserNfaData::NFA_338;
+        functions[339]= JasminParserNfaData::NFA_339;
+        functions[340]= JasminParserNfaData::NFA_340;
+        functions[341]= JasminParserNfaData::NFA_341;
+        functions[342]= JasminParserNfaData::NFA_342;
+        functions[343]= JasminParserNfaData::NFA_343;
+        functions[344]= JasminParserNfaData::NFA_344;
+        functions[345]= JasminParserNfaData::NFA_345;
+        functions[346]= JasminParserNfaData::NFA_346;
+        functions[347]= JasminParserNfaData::NFA_347;
+        functions[348]= JasminParserNfaData::NFA_348;
+        functions[349]= JasminParserNfaData::NFA_349;
+        functions[350]= JasminParserNfaData::NFA_350;
+        functions[351]= JasminParserNfaData::NFA_351;
+        functions[352]= JasminParserNfaData::NFA_352;
+        functions[353]= JasminParserNfaData::NFA_353;
+        functions[354]= JasminParserNfaData::NFA_354;
+        functions[355]= JasminParserNfaData::NFA_355;
+        functions[356]= JasminParserNfaData::NFA_356;
+        functions[357]= JasminParserNfaData::NFA_357;
+        functions[358]= JasminParserNfaData::NFA_358;
+        functions[359]= JasminParserNfaData::NFA_359;
+        functions[360]= JasminParserNfaData::NFA_360;
+        functions[361]= JasminParserNfaData::NFA_361;
+        functions[362]= JasminParserNfaData::NFA_362;
+        functions[363]= JasminParserNfaData::NFA_363;
+        functions[364]= JasminParserNfaData::NFA_364;
+        functions[365]= JasminParserNfaData::NFA_365;
+        functions[366]= JasminParserNfaData::NFA_366;
+        functions[367]= JasminParserNfaData::NFA_367;
+        functions[368]= JasminParserNfaData::NFA_368;
+        functions[369]= JasminParserNfaData::NFA_369;
+        functions[370]= JasminParserNfaData::NFA_370;
+        functions[371]= JasminParserNfaData::NFA_371;
+        functions[372]= JasminParserNfaData::NFA_372;
+        functions[373]= JasminParserNfaData::NFA_373;
+        functions[374]= JasminParserNfaData::NFA_374;
+        functions[375]= JasminParserNfaData::NFA_375;
+        functions[376]= JasminParserNfaData::NFA_376;
+        functions[377]= JasminParserNfaData::NFA_377;
+        functions[378]= JasminParserNfaData::NFA_378;
+        functions[379]= JasminParserNfaData::NFA_379;
+        functions[380]= JasminParserNfaData::NFA_380;
+        functions[381]= JasminParserNfaData::NFA_381;
+        functions[382]= JasminParserNfaData::NFA_382;
+        functions[383]= JasminParserNfaData::NFA_383;
+        functions[384]= JasminParserNfaData::NFA_384;
+        functions[385]= JasminParserNfaData::NFA_385;
+        functions[386]= JasminParserNfaData::NFA_386;
+        functions[387]= JasminParserNfaData::NFA_387;
+        functions[388]= JasminParserNfaData::NFA_388;
+        functions[389]= JasminParserNfaData::NFA_389;
+        functions[390]= JasminParserNfaData::NFA_390;
+        functions[391]= JasminParserNfaData::NFA_391;
+        functions[392]= JasminParserNfaData::NFA_392;
+        functions[393]= JasminParserNfaData::NFA_393;
+        functions[394]= JasminParserNfaData::NFA_394;
+        functions[395]= JasminParserNfaData::NFA_395;
+        functions[396]= JasminParserNfaData::NFA_396;
+        functions[397]= JasminParserNfaData::NFA_397;
+        functions[398]= JasminParserNfaData::NFA_398;
+        functions[399]= JasminParserNfaData::NFA_399;
+        functions[400]= JasminParserNfaData::NFA_400;
+        functions[401]= JasminParserNfaData::NFA_401;
+        functions[402]= JasminParserNfaData::NFA_402;
+        functions[403]= JasminParserNfaData::NFA_403;
+        functions[404]= JasminParserNfaData::NFA_404;
+        functions[405]= JasminParserNfaData::NFA_405;
+        functions[406]= JasminParserNfaData::NFA_406;
+        functions[407]= JasminParserNfaData::NFA_407;
+        functions[408]= JasminParserNfaData::NFA_408;
+        functions[409]= JasminParserNfaData::NFA_409;
+        functions[410]= JasminParserNfaData::NFA_410;
+        functions[411]= JasminParserNfaData::NFA_411;
+        functions[412]= JasminParserNfaData::NFA_412;
+        functions[413]= JasminParserNfaData::NFA_413;
+        functions[414]= JasminParserNfaData::NFA_414;
+        functions[415]= JasminParserNfaData::NFA_415;
+        functions[416]= JasminParserNfaData::NFA_416;
+        functions[417]= JasminParserNfaData::NFA_417;
+        functions[418]= JasminParserNfaData::NFA_418;
+        functions[419]= JasminParserNfaData::NFA_419;
+        functions[420]= JasminParserNfaData::NFA_420;
+        functions[421]= JasminParserNfaData::NFA_421;
+        functions[422]= JasminParserNfaData::NFA_422;
+        functions[423]= JasminParserNfaData::NFA_423;
+        functions[424]= JasminParserNfaData::NFA_424;
+        functions[425]= JasminParserNfaData::NFA_425;
+        functions[426]= JasminParserNfaData::NFA_426;
+        functions[427]= JasminParserNfaData::NFA_427;
+        functions[428]= JasminParserNfaData::NFA_428;
+        functions[429]= JasminParserNfaData::NFA_429;
+        functions[430]= JasminParserNfaData::NFA_430;
+        functions[431]= JasminParserNfaData::NFA_431;
+        functions[432]= JasminParserNfaData::NFA_432;
+        functions[433]= JasminParserNfaData::NFA_433;
+        functions[434]= JasminParserNfaData::NFA_434;
+        functions[435]= JasminParserNfaData::NFA_435;
+        functions[436]= JasminParserNfaData::NFA_436;
+        functions[437]= JasminParserNfaData::NFA_437;
+        functions[438]= JasminParserNfaData::NFA_438;
+        functions[439]= JasminParserNfaData::NFA_439;
+        functions[440]= JasminParserNfaData::NFA_440;
+        functions[441]= JasminParserNfaData::NFA_441;
+        functions[442]= JasminParserNfaData::NFA_442;
+        functions[443]= JasminParserNfaData::NFA_443;
+        functions[444]= JasminParserNfaData::NFA_444;
+        functions[445]= JasminParserNfaData::NFA_445;
+        functions[446]= JasminParserNfaData::NFA_446;
+        functions[447]= JasminParserNfaData::NFA_447;
+        functions[448]= JasminParserNfaData::NFA_448;
+        functions[449]= JasminParserNfaData::NFA_449;
+        functions[450]= JasminParserNfaData::NFA_450;
+        functions[451]= JasminParserNfaData::NFA_451;
+        functions[452]= JasminParserNfaData::NFA_452;
+        functions[453]= JasminParserNfaData::NFA_453;
+        functions[454]= JasminParserNfaData::NFA_454;
+        functions[455]= JasminParserNfaData::NFA_455;
+        functions[456]= JasminParserNfaData::NFA_456;
+        functions[457]= JasminParserNfaData::NFA_457;
+        functions[458]= JasminParserNfaData::NFA_458;
+        functions[459]= JasminParserNfaData::NFA_459;
+        functions[460]= JasminParserNfaData::NFA_460;
+        functions[461]= JasminParserNfaData::NFA_461;
+        functions[462]= JasminParserNfaData::NFA_462;
+        functions[463]= JasminParserNfaData::NFA_463;
+        functions[464]= JasminParserNfaData::NFA_464;
+        functions[465]= JasminParserNfaData::NFA_465;
+        functions[466]= JasminParserNfaData::NFA_466;
+        functions[467]= JasminParserNfaData::NFA_467;
+        functions[468]= JasminParserNfaData::NFA_468;
+        functions[469]= JasminParserNfaData::NFA_469;
+        functions[470]= JasminParserNfaData::NFA_470;
+        functions[471]= JasminParserNfaData::NFA_471;
+        functions[472]= JasminParserNfaData::NFA_472;
+        functions[473]= JasminParserNfaData::NFA_473;
+        functions[474]= JasminParserNfaData::NFA_474;
+        functions[475]= JasminParserNfaData::NFA_475;
+        functions[476]= JasminParserNfaData::NFA_476;
+        functions[477]= JasminParserNfaData::NFA_477;
+        functions[478]= JasminParserNfaData::NFA_478;
+        functions[479]= JasminParserNfaData::NFA_479;
+        functions[480]= JasminParserNfaData::NFA_480;
+        functions[481]= JasminParserNfaData::NFA_481;
+        functions[482]= JasminParserNfaData::NFA_482;
+        functions[483]= JasminParserNfaData::NFA_483;
+        functions[484]= JasminParserNfaData::NFA_484;
+        functions[485]= JasminParserNfaData::NFA_485;
+        functions[486]= JasminParserNfaData::NFA_486;
+        functions[487]= JasminParserNfaData::NFA_487;
+        functions[488]= JasminParserNfaData::NFA_488;
+        functions[489]= JasminParserNfaData::NFA_489;
+        functions[490]= JasminParserNfaData::NFA_490;
+        functions[491]= JasminParserNfaData::NFA_491;
+        functions[492]= JasminParserNfaData::NFA_492;
+        functions[493]= JasminParserNfaData::NFA_493;
+        functions[494]= JasminParserNfaData::NFA_494;
+        functions[495]= JasminParserNfaData::NFA_495;
+        functions[496]= JasminParserNfaData::NFA_496;
+        functions[497]= JasminParserNfaData::NFA_497;
+        functions[498]= JasminParserNfaData::NFA_498;
+        functions[499]= JasminParserNfaData::NFA_499;
+        functions[500]= JasminParserNfaData::NFA_500;
+        functions[501]= JasminParserNfaData::NFA_501;
+        functions[502]= JasminParserNfaData::NFA_502;
+        functions[503]= JasminParserNfaData::NFA_503;
+        functions[504]= JasminParserNfaData::NFA_504;
+        functions[505]= JasminParserNfaData::NFA_505;
+        functions[506]= JasminParserNfaData::NFA_506;
+        functions[507]= JasminParserNfaData::NFA_507;
+        functions[508]= JasminParserNfaData::NFA_508;
+        functions[509]= JasminParserNfaData::NFA_509;
+        functions[510]= JasminParserNfaData::NFA_510;
+        functions[511]= JasminParserNfaData::NFA_511;
+        functions[512]= JasminParserNfaData::NFA_512;
+        functions[513]= JasminParserNfaData::NFA_513;
+        functions[514]= JasminParserNfaData::NFA_514;
+        functions[515]= JasminParserNfaData::NFA_515;
+        functions[516]= JasminParserNfaData::NFA_516;
+        functions[517]= JasminParserNfaData::NFA_517;
+        functions[518]= JasminParserNfaData::NFA_518;
+        functions[519]= JasminParserNfaData::NFA_519;
+        functions[520]= JasminParserNfaData::NFA_520;
+        functions[521]= JasminParserNfaData::NFA_521;
+        functions[522]= JasminParserNfaData::NFA_522;
+        functions[523]= JasminParserNfaData::NFA_523;
+        functions[524]= JasminParserNfaData::NFA_524;
+        functions[525]= JasminParserNfaData::NFA_525;
+        functions[526]= JasminParserNfaData::NFA_526;
+        functions[527]= JasminParserNfaData::NFA_527;
+        functions[528]= JasminParserNfaData::NFA_528;
+        functions[529]= JasminParserNfaData::NFA_529;
+        functions[530]= JasminParserNfaData::NFA_530;
+        functions[531]= JasminParserNfaData::NFA_531;
+        functions[532]= JasminParserNfaData::NFA_532;
+        functions[533]= JasminParserNfaData::NFA_533;
+        functions[534]= JasminParserNfaData::NFA_534;
+        functions[535]= JasminParserNfaData::NFA_535;
+        functions[536]= JasminParserNfaData::NFA_536;
+        functions[537]= JasminParserNfaData::NFA_537;
+        functions[538]= JasminParserNfaData::NFA_538;
+        functions[539]= JasminParserNfaData::NFA_539;
+        functions[540]= JasminParserNfaData::NFA_540;
+        functions[541]= JasminParserNfaData::NFA_541;
+        functions[542]= JasminParserNfaData::NFA_542;
+        functions[543]= JasminParserNfaData::NFA_543;
+        functions[544]= JasminParserNfaData::NFA_544;
+        functions[545]= JasminParserNfaData::NFA_545;
+        functions[546]= JasminParserNfaData::NFA_546;
+        functions[547]= JasminParserNfaData::NFA_547;
+        functions[548]= JasminParserNfaData::NFA_548;
+        functions[549]= JasminParserNfaData::NFA_549;
+        functions[550]= JasminParserNfaData::NFA_550;
+        functions[551]= JasminParserNfaData::NFA_551;
+        functions[552]= JasminParserNfaData::NFA_552;
+        functions[553]= JasminParserNfaData::NFA_553;
+        functions[554]= JasminParserNfaData::NFA_554;
+        functions[555]= JasminParserNfaData::NFA_555;
+        functions[556]= JasminParserNfaData::NFA_556;
+        functions[557]= JasminParserNfaData::NFA_557;
+        functions[558]= JasminParserNfaData::NFA_558;
+        functions[559]= JasminParserNfaData::NFA_559;
+        functions[560]= JasminParserNfaData::NFA_560;
+        functions[561]= JasminParserNfaData::NFA_561;
+        functions[562]= JasminParserNfaData::NFA_562;
+        functions[563]= JasminParserNfaData::NFA_563;
+        functions[564]= JasminParserNfaData::NFA_564;
+        functions[565]= JasminParserNfaData::NFA_565;
+        functions[566]= JasminParserNfaData::NFA_566;
+        functions[567]= JasminParserNfaData::NFA_567;
+        functions[568]= JasminParserNfaData::NFA_568;
+        functions[569]= JasminParserNfaData::NFA_569;
+        functions[570]= JasminParserNfaData::NFA_570;
+        functions[571]= JasminParserNfaData::NFA_571;
+        functions[572]= JasminParserNfaData::NFA_572;
+        functions[573]= JasminParserNfaData::NFA_573;
+        functions[574]= JasminParserNfaData::NFA_574;
+        functions[575]= JasminParserNfaData::NFA_575;
+        functions[576]= JasminParserNfaData::NFA_576;
+        functions[577]= JasminParserNfaData::NFA_577;
+        functions[578]= JasminParserNfaData::NFA_578;
+        functions[579]= JasminParserNfaData::NFA_579;
+        functions[580]= JasminParserNfaData::NFA_580;
+        functions[581]= JasminParserNfaData::NFA_581;
+        functions[582]= JasminParserNfaData::NFA_582;
+        functions[583]= JasminParserNfaData::NFA_583;
+        functions[584]= JasminParserNfaData::NFA_584;
+        functions[585]= JasminParserNfaData::NFA_585;
+        functions[586]= JasminParserNfaData::NFA_586;
+        functions[587]= JasminParserNfaData::NFA_587;
+        functions[588]= JasminParserNfaData::NFA_588;
+        functions[589]= JasminParserNfaData::NFA_589;
+        functions[590]= JasminParserNfaData::NFA_590;
+        functions[591]= JasminParserNfaData::NFA_591;
+        functions[592]= JasminParserNfaData::NFA_592;
+        functions[593]= JasminParserNfaData::NFA_593;
+        functions[594]= JasminParserNfaData::NFA_594;
+        functions[595]= JasminParserNfaData::NFA_595;
+        functions[596]= JasminParserNfaData::NFA_596;
+        functions[597]= JasminParserNfaData::NFA_597;
+        functions[598]= JasminParserNfaData::NFA_598;
+        functions[599]= JasminParserNfaData::NFA_599;
+        functions[600]= JasminParserNfaData::NFA_600;
+        functions[601]= JasminParserNfaData::NFA_601;
+        functions[602]= JasminParserNfaData::NFA_602;
+        functions[603]= JasminParserNfaData::NFA_603;
+        functions[604]= JasminParserNfaData::NFA_604;
+        functions[605]= JasminParserNfaData::NFA_605;
+        functions[606]= JasminParserNfaData::NFA_606;
+        functions[607]= JasminParserNfaData::NFA_607;
+        functions[608]= JasminParserNfaData::NFA_608;
+        functions[609]= JasminParserNfaData::NFA_609;
+        functions[610]= JasminParserNfaData::NFA_610;
+        functions[611]= JasminParserNfaData::NFA_611;
+        functions[612]= JasminParserNfaData::NFA_612;
+        functions[613]= JasminParserNfaData::NFA_613;
+        functions[614]= JasminParserNfaData::NFA_614;
+        functions[615]= JasminParserNfaData::NFA_615;
+        functions[616]= JasminParserNfaData::NFA_616;
+        functions[617]= JasminParserNfaData::NFA_617;
+        functions[618]= JasminParserNfaData::NFA_618;
+        functions[619]= JasminParserNfaData::NFA_619;
+        functions[620]= JasminParserNfaData::NFA_620;
+        functions[621]= JasminParserNfaData::NFA_621;
+        functions[622]= JasminParserNfaData::NFA_622;
+        functions[623]= JasminParserNfaData::NFA_623;
+        functions[624]= JasminParserNfaData::NFA_624;
+        functions[625]= JasminParserNfaData::NFA_625;
+        functions[626]= JasminParserNfaData::NFA_626;
+        functions[627]= JasminParserNfaData::NFA_627;
+        functions[628]= JasminParserNfaData::NFA_628;
+        functions[629]= JasminParserNfaData::NFA_629;
+        functions[630]= JasminParserNfaData::NFA_630;
+        functions[631]= JasminParserNfaData::NFA_631;
+        functions[632]= JasminParserNfaData::NFA_632;
+        functions[633]= JasminParserNfaData::NFA_633;
+        functions[634]= JasminParserNfaData::NFA_634;
+        functions[635]= JasminParserNfaData::NFA_635;
+        functions[636]= JasminParserNfaData::NFA_636;
+        functions[637]= JasminParserNfaData::NFA_637;
+        functions[638]= JasminParserNfaData::NFA_638;
+        functions[639]= JasminParserNfaData::NFA_639;
+        functions[640]= JasminParserNfaData::NFA_640;
+        functions[641]= JasminParserNfaData::NFA_641;
+        functions[642]= JasminParserNfaData::NFA_642;
+        functions[643]= JasminParserNfaData::NFA_643;
+        functions[644]= JasminParserNfaData::NFA_644;
+        functions[645]= JasminParserNfaData::NFA_645;
+        functions[646]= JasminParserNfaData::NFA_646;
+        functions[647]= JasminParserNfaData::NFA_647;
+        functions[648]= JasminParserNfaData::NFA_648;
+        functions[649]= JasminParserNfaData::NFA_649;
+        functions[650]= JasminParserNfaData::NFA_650;
+        functions[651]= JasminParserNfaData::NFA_651;
+        functions[652]= JasminParserNfaData::NFA_652;
+        functions[653]= JasminParserNfaData::NFA_653;
+        functions[654]= JasminParserNfaData::NFA_654;
+        functions[655]= JasminParserNfaData::NFA_655;
+        functions[656]= JasminParserNfaData::NFA_656;
+        functions[657]= JasminParserNfaData::NFA_657;
+        functions[658]= JasminParserNfaData::NFA_658;
+        functions[659]= JasminParserNfaData::NFA_659;
+        functions[660]= JasminParserNfaData::NFA_660;
+        functions[661]= JasminParserNfaData::NFA_661;
+        functions[662]= JasminParserNfaData::NFA_662;
+        functions[663]= JasminParserNfaData::NFA_663;
+        functions[664]= JasminParserNfaData::NFA_664;
+        functions[665]= JasminParserNfaData::NFA_665;
+        functions[666]= JasminParserNfaData::NFA_666;
+        functions[667]= JasminParserNfaData::NFA_667;
+        functions[668]= JasminParserNfaData::NFA_668;
+        functions[669]= JasminParserNfaData::NFA_669;
+        functions[670]= JasminParserNfaData::NFA_670;
+        functions[671]= JasminParserNfaData::NFA_671;
+        functions[672]= JasminParserNfaData::NFA_672;
+        functions[673]= JasminParserNfaData::NFA_673;
+        functions[674]= JasminParserNfaData::NFA_674;
+        functions[675]= JasminParserNfaData::NFA_675;
+        functions[676]= JasminParserNfaData::NFA_676;
+        functions[677]= JasminParserNfaData::NFA_677;
+        functions[678]= JasminParserNfaData::NFA_678;
+        functions[679]= JasminParserNfaData::NFA_679;
+        functions[680]= JasminParserNfaData::NFA_680;
+        functions[681]= JasminParserNfaData::NFA_681;
+        functions[682]= JasminParserNfaData::NFA_682;
+        functions[683]= JasminParserNfaData::NFA_683;
+        functions[684]= JasminParserNfaData::NFA_684;
+        functions[685]= JasminParserNfaData::NFA_685;
+        functions[686]= JasminParserNfaData::NFA_686;
+        functions[687]= JasminParserNfaData::NFA_687;
+        functions[688]= JasminParserNfaData::NFA_688;
+        functions[689]= JasminParserNfaData::NFA_689;
+        functions[690]= JasminParserNfaData::NFA_690;
+        functions[691]= JasminParserNfaData::NFA_691;
+        functions[692]= JasminParserNfaData::NFA_692;
+        functions[693]= JasminParserNfaData::NFA_693;
+        functions[694]= JasminParserNfaData::NFA_694;
+        functions[695]= JasminParserNfaData::NFA_695;
+        functions[696]= JasminParserNfaData::NFA_696;
+        functions[697]= JasminParserNfaData::NFA_697;
+        functions[698]= JasminParserNfaData::NFA_698;
+        functions[699]= JasminParserNfaData::NFA_699;
+        functions[700]= JasminParserNfaData::NFA_700;
+        functions[701]= JasminParserNfaData::NFA_701;
+        functions[702]= JasminParserNfaData::NFA_702;
+        functions[703]= JasminParserNfaData::NFA_703;
+        functions[704]= JasminParserNfaData::NFA_704;
+        functions[705]= JasminParserNfaData::NFA_705;
+        functions[706]= JasminParserNfaData::NFA_706;
+        functions[707]= JasminParserNfaData::NFA_707;
+        functions[708]= JasminParserNfaData::NFA_708;
+        functions[709]= JasminParserNfaData::NFA_709;
+        functions[710]= JasminParserNfaData::NFA_710;
+        functions[711]= JasminParserNfaData::NFA_711;
+        functions[712]= JasminParserNfaData::NFA_712;
+        functions[713]= JasminParserNfaData::NFA_713;
+        functions[714]= JasminParserNfaData::NFA_714;
+        functions[715]= JasminParserNfaData::NFA_715;
+        functions[716]= JasminParserNfaData::NFA_716;
+        functions[717]= JasminParserNfaData::NFA_717;
+        functions[718]= JasminParserNfaData::NFA_718;
+        functions[719]= JasminParserNfaData::NFA_719;
+        functions[720]= JasminParserNfaData::NFA_720;
+        functions[721]= JasminParserNfaData::NFA_721;
+        functions[722]= JasminParserNfaData::NFA_722;
+        functions[723]= JasminParserNfaData::NFA_723;
+        functions[724]= JasminParserNfaData::NFA_724;
+        functions[725]= JasminParserNfaData::NFA_725;
+        functions[726]= JasminParserNfaData::NFA_726;
+        functions[727]= JasminParserNfaData::NFA_727;
+        functions[728]= JasminParserNfaData::NFA_728;
+        functions[729]= JasminParserNfaData::NFA_729;
+        functions[730]= JasminParserNfaData::NFA_730;
+        functions[731]= JasminParserNfaData::NFA_731;
+        functions[732]= JasminParserNfaData::NFA_732;
+        functions[733]= JasminParserNfaData::NFA_733;
+        functions[734]= JasminParserNfaData::NFA_734;
+        functions[735]= JasminParserNfaData::NFA_735;
+        functions[736]= JasminParserNfaData::NFA_736;
+        functions[737]= JasminParserNfaData::NFA_737;
+        functions[738]= JasminParserNfaData::NFA_738;
+        functions[739]= JasminParserNfaData::NFA_739;
+        functions[740]= JasminParserNfaData::NFA_740;
+        functions[741]= JasminParserNfaData::NFA_741;
+        functions[742]= JasminParserNfaData::NFA_742;
+        functions[743]= JasminParserNfaData::NFA_743;
+        functions[744]= JasminParserNfaData::NFA_744;
+        functions[745]= JasminParserNfaData::NFA_745;
+        functions[746]= JasminParserNfaData::NFA_746;
+        functions[747]= JasminParserNfaData::NFA_747;
+        functions[748]= JasminParserNfaData::NFA_748;
+        functions[749]= JasminParserNfaData::NFA_749;
+        functions[750]= JasminParserNfaData::NFA_750;
+        functions[751]= JasminParserNfaData::NFA_751;
+        functions[752]= JasminParserNfaData::NFA_752;
+        functions[753]= JasminParserNfaData::NFA_753;
+        functions[754]= JasminParserNfaData::NFA_754;
+        functions[755]= JasminParserNfaData::NFA_755;
+        functions[756]= JasminParserNfaData::NFA_756;
+        functions[757]= JasminParserNfaData::NFA_757;
+        functions[758]= JasminParserNfaData::NFA_758;
+        functions[759]= JasminParserNfaData::NFA_759;
+        functions[760]= JasminParserNfaData::NFA_760;
+        functions[761]= JasminParserNfaData::NFA_761;
+        functions[762]= JasminParserNfaData::NFA_762;
+        functions[763]= JasminParserNfaData::NFA_763;
+        functions[764]= JasminParserNfaData::NFA_764;
+        functions[765]= JasminParserNfaData::NFA_765;
+        functions[766]= JasminParserNfaData::NFA_766;
+        functions[767]= JasminParserNfaData::NFA_767;
+        functions[768]= JasminParserNfaData::NFA_768;
+        functions[769]= JasminParserNfaData::NFA_769;
+        functions[770]= JasminParserNfaData::NFA_770;
+        functions[771]= JasminParserNfaData::NFA_771;
+        functions[772]= JasminParserNfaData::NFA_772;
+        functions[773]= JasminParserNfaData::NFA_773;
+        functions[774]= JasminParserNfaData::NFA_774;
+        functions[775]= JasminParserNfaData::NFA_775;
+        functions[776]= JasminParserNfaData::NFA_776;
+        functions[777]= JasminParserNfaData::NFA_777;
+        functions[778]= JasminParserNfaData::NFA_778;
+        functions[779]= JasminParserNfaData::NFA_779;
+        functions[780]= JasminParserNfaData::NFA_780;
+        functions[781]= JasminParserNfaData::NFA_781;
+        functions[782]= JasminParserNfaData::NFA_782;
+        functions[783]= JasminParserNfaData::NFA_783;
+        functions[784]= JasminParserNfaData::NFA_784;
+        functions[785]= JasminParserNfaData::NFA_785;
+        functions[786]= JasminParserNfaData::NFA_786;
+        functions[787]= JasminParserNfaData::NFA_787;
+        functions[788]= JasminParserNfaData::NFA_788;
+        functions[789]= JasminParserNfaData::NFA_789;
+        functions[790]= JasminParserNfaData::NFA_790;
+        functions[791]= JasminParserNfaData::NFA_791;
+        functions[792]= JasminParserNfaData::NFA_792;
+        functions[793]= JasminParserNfaData::NFA_793;
+        functions[794]= JasminParserNfaData::NFA_794;
+        functions[795]= JasminParserNfaData::NFA_795;
+        functions[796]= JasminParserNfaData::NFA_796;
+        functions[797]= JasminParserNfaData::NFA_797;
+        functions[798]= JasminParserNfaData::NFA_798;
+        functions[799]= JasminParserNfaData::NFA_799;
+        functions[800]= JasminParserNfaData::NFA_800;
+        functions[801]= JasminParserNfaData::NFA_801;
+        functions[802]= JasminParserNfaData::NFA_802;
+        functions[803]= JasminParserNfaData::NFA_803;
+        functions[804]= JasminParserNfaData::NFA_804;
+        functions[805]= JasminParserNfaData::NFA_805;
+        functions[806]= JasminParserNfaData::NFA_806;
+        functions[807]= JasminParserNfaData::NFA_807;
+        functions[808]= JasminParserNfaData::NFA_808;
+        functions[809]= JasminParserNfaData::NFA_809;
+        functions[810]= JasminParserNfaData::NFA_810;
+        functions[811]= JasminParserNfaData::NFA_811;
+        functions[812]= JasminParserNfaData::NFA_812;
+        functions[813]= JasminParserNfaData::NFA_813;
+        functions[814]= JasminParserNfaData::NFA_814;
+        functions[815]= JasminParserNfaData::NFA_815;
+        functions[816]= JasminParserNfaData::NFA_816;
+        functions[817]= JasminParserNfaData::NFA_817;
+        functions[818]= JasminParserNfaData::NFA_818;
+        functions[819]= JasminParserNfaData::NFA_819;
+        functions[820]= JasminParserNfaData::NFA_820;
+        functions[821]= JasminParserNfaData::NFA_821;
+        functions[822]= JasminParserNfaData::NFA_822;
+        functions[823]= JasminParserNfaData::NFA_823;
+        functions[824]= JasminParserNfaData::NFA_824;
+        functions[825]= JasminParserNfaData::NFA_825;
+        functions[826]= JasminParserNfaData::NFA_826;
+        functions[827]= JasminParserNfaData::NFA_827;
+        functions[828]= JasminParserNfaData::NFA_828;
+        functions[829]= JasminParserNfaData::NFA_829;
+        functions[830]= JasminParserNfaData::NFA_830;
+        functions[831]= JasminParserNfaData::NFA_831;
+        functions[832]= JasminParserNfaData::NFA_832;
+        functions[833]= JasminParserNfaData::NFA_833;
+        functions[834]= JasminParserNfaData::NFA_834;
+        functions[835]= JasminParserNfaData::NFA_835;
+        functions[836]= JasminParserNfaData::NFA_836;
+        functions[837]= JasminParserNfaData::NFA_837;
+        functions[838]= JasminParserNfaData::NFA_838;
+        functions[839]= JasminParserNfaData::NFA_839;
+        functions[840]= JasminParserNfaData::NFA_840;
+        functions[841]= JasminParserNfaData::NFA_841;
+        functions[842]= JasminParserNfaData::NFA_842;
+        functions[843]= JasminParserNfaData::NFA_843;
+        functions[844]= JasminParserNfaData::NFA_844;
+        functions[845]= JasminParserNfaData::NFA_845;
+        functions[846]= JasminParserNfaData::NFA_846;
+        functions[847]= JasminParserNfaData::NFA_847;
+        functions[848]= JasminParserNfaData::NFA_848;
+        functions[849]= JasminParserNfaData::NFA_849;
+        functions[850]= JasminParserNfaData::NFA_850;
+        functions[851]= JasminParserNfaData::NFA_851;
+        functions[852]= JasminParserNfaData::NFA_852;
+        functions[853]= JasminParserNfaData::NFA_853;
+        functions[854]= JasminParserNfaData::NFA_854;
+        functions[855]= JasminParserNfaData::NFA_855;
+        functions[856]= JasminParserNfaData::NFA_856;
+        functions[857]= JasminParserNfaData::NFA_857;
+        functions[858]= JasminParserNfaData::NFA_858;
+        functions[859]= JasminParserNfaData::NFA_859;
+        functions[860]= JasminParserNfaData::NFA_860;
+        functions[861]= JasminParserNfaData::NFA_861;
+        functions[862]= JasminParserNfaData::NFA_862;
+        functions[863]= JasminParserNfaData::NFA_863;
+        functions[864]= JasminParserNfaData::NFA_864;
+        functions[865]= JasminParserNfaData::NFA_865;
+        functions[866]= JasminParserNfaData::NFA_866;
+        functions[867]= JasminParserNfaData::NFA_867;
+        functions[868]= JasminParserNfaData::NFA_868;
+        functions[869]= JasminParserNfaData::NFA_869;
+        functions[870]= JasminParserNfaData::NFA_870;
+        functions[871]= JasminParserNfaData::NFA_871;
+        functions[872]= JasminParserNfaData::NFA_872;
+        functions[873]= JasminParserNfaData::NFA_873;
+        functions[874]= JasminParserNfaData::NFA_874;
+        functions[875]= JasminParserNfaData::NFA_875;
+        functions[876]= JasminParserNfaData::NFA_876;
+        functions[877]= JasminParserNfaData::NFA_877;
+        functions[878]= JasminParserNfaData::NFA_878;
+        functions[879]= JasminParserNfaData::NFA_879;
+        functions[880]= JasminParserNfaData::NFA_880;
+        functions[881]= JasminParserNfaData::NFA_881;
+        functions[882]= JasminParserNfaData::NFA_882;
+        functions[883]= JasminParserNfaData::NFA_883;
+        functions[884]= JasminParserNfaData::NFA_884;
+        functions[885]= JasminParserNfaData::NFA_885;
+        functions[886]= JasminParserNfaData::NFA_886;
+        functions[887]= JasminParserNfaData::NFA_887;
+        functions[888]= JasminParserNfaData::NFA_888;
+        functions[889]= JasminParserNfaData::NFA_889;
+        functions[890]= JasminParserNfaData::NFA_890;
+        functions[891]= JasminParserNfaData::NFA_891;
+        functions[892]= JasminParserNfaData::NFA_892;
+        functions[893]= JasminParserNfaData::NFA_893;
+        functions[894]= JasminParserNfaData::NFA_894;
+        functions[895]= JasminParserNfaData::NFA_895;
+        functions[896]= JasminParserNfaData::NFA_896;
+        functions[897]= JasminParserNfaData::NFA_897;
+        functions[898]= JasminParserNfaData::NFA_898;
+        functions[899]= JasminParserNfaData::NFA_899;
+        functions[900]= JasminParserNfaData::NFA_900;
+        functions[901]= JasminParserNfaData::NFA_901;
+        functions[902]= JasminParserNfaData::NFA_902;
+        functions[903]= JasminParserNfaData::NFA_903;
+        functions[904]= JasminParserNfaData::NFA_904;
+        functions[905]= JasminParserNfaData::NFA_905;
+        functions[906]= JasminParserNfaData::NFA_906;
+        functions[907]= JasminParserNfaData::NFA_907;
+        functions[908]= JasminParserNfaData::NFA_908;
+        functions[909]= JasminParserNfaData::NFA_909;
+        functions[910]= JasminParserNfaData::NFA_910;
+        functions[911]= JasminParserNfaData::NFA_911;
+        functions[912]= JasminParserNfaData::NFA_912;
+        functions[913]= JasminParserNfaData::NFA_913;
+        functions[914]= JasminParserNfaData::NFA_914;
+        functions[915]= JasminParserNfaData::NFA_915;
+        functions[916]= JasminParserNfaData::NFA_916;
+        functions[917]= JasminParserNfaData::NFA_917;
+        functions[918]= JasminParserNfaData::NFA_918;
+        functions[919]= JasminParserNfaData::NFA_919;
+        functions[920]= JasminParserNfaData::NFA_920;
+        functions[921]= JasminParserNfaData::NFA_921;
+        functions[922]= JasminParserNfaData::NFA_922;
+        functions[923]= JasminParserNfaData::NFA_923;
+        functions[924]= JasminParserNfaData::NFA_924;
+        functions[925]= JasminParserNfaData::NFA_925;
+        functions[926]= JasminParserNfaData::NFA_926;
+        functions[927]= JasminParserNfaData::NFA_927;
+        functions[928]= JasminParserNfaData::NFA_928;
+        functions[929]= JasminParserNfaData::NFA_929;
+        functions[930]= JasminParserNfaData::NFA_930;
+        functions[931]= JasminParserNfaData::NFA_931;
+        functions[932]= JasminParserNfaData::NFA_932;
+        functions[933]= JasminParserNfaData::NFA_933;
+        functions[934]= JasminParserNfaData::NFA_934;
+        functions[935]= JasminParserNfaData::NFA_935;
+        functions[936]= JasminParserNfaData::NFA_936;
+        functions[937]= JasminParserNfaData::NFA_937;
+        functions[938]= JasminParserNfaData::NFA_938;
+        functions[939]= JasminParserNfaData::NFA_939;
+        functions[940]= JasminParserNfaData::NFA_940;
+        functions[941]= JasminParserNfaData::NFA_941;
+        functions[942]= JasminParserNfaData::NFA_942;
+        functions[943]= JasminParserNfaData::NFA_943;
+        functions[944]= JasminParserNfaData::NFA_944;
+        functions[945]= JasminParserNfaData::NFA_945;
+        functions[946]= JasminParserNfaData::NFA_946;
+        functions[947]= JasminParserNfaData::NFA_947;
+        functions[948]= JasminParserNfaData::NFA_948;
+        functions[949]= JasminParserNfaData::NFA_949;
+        functions[950]= JasminParserNfaData::NFA_950;
+        functions[951]= JasminParserNfaData::NFA_951;
+        functions[952]= JasminParserNfaData::NFA_952;
+        functions[953]= JasminParserNfaData::NFA_953;
+        functions[954]= JasminParserNfaData::NFA_954;
+        functions[955]= JasminParserNfaData::NFA_955;
+        functions[956]= JasminParserNfaData::NFA_956;
+        functions[957]= JasminParserNfaData::NFA_957;
+        functions[958]= JasminParserNfaData::NFA_958;
+        functions[959]= JasminParserNfaData::NFA_959;
+        functions[960]= JasminParserNfaData::NFA_960;
+        functions[961]= JasminParserNfaData::NFA_961;
+        functions[962]= JasminParserNfaData::NFA_962;
+        functions[963]= JasminParserNfaData::NFA_963;
+        functions[964]= JasminParserNfaData::NFA_964;
+        functions[965]= JasminParserNfaData::NFA_965;
+        functions[966]= JasminParserNfaData::NFA_966;
+        functions[967]= JasminParserNfaData::NFA_967;
+        functions[968]= JasminParserNfaData::NFA_968;
+        functions[969]= JasminParserNfaData::NFA_969;
+        functions[970]= JasminParserNfaData::NFA_970;
+        functions[971]= JasminParserNfaData::NFA_971;
+        functions[972]= JasminParserNfaData::NFA_972;
+        functions[973]= JasminParserNfaData::NFA_973;
+        functions[974]= JasminParserNfaData::NFA_974;
+        functions[975]= JasminParserNfaData::NFA_975;
+        functions[976]= JasminParserNfaData::NFA_976;
+        functions[977]= JasminParserNfaData::NFA_977;
+        functions[978]= JasminParserNfaData::NFA_978;
+        functions[979]= JasminParserNfaData::NFA_979;
+        functions[980]= JasminParserNfaData::NFA_980;
+        functions[981]= JasminParserNfaData::NFA_981;
+        functions[982]= JasminParserNfaData::NFA_982;
+        functions[983]= JasminParserNfaData::NFA_983;
+        functions[984]= JasminParserNfaData::NFA_984;
+        functions[985]= JasminParserNfaData::NFA_985;
+        functions[986]= JasminParserNfaData::NFA_986;
+        functions[987]= JasminParserNfaData::NFA_987;
+        functions[988]= JasminParserNfaData::NFA_988;
+        functions[989]= JasminParserNfaData::NFA_989;
+        functions[990]= JasminParserNfaData::NFA_990;
+        functions[991]= JasminParserNfaData::NFA_991;
+        functions[992]= JasminParserNfaData::NFA_992;
+        functions[993]= JasminParserNfaData::NFA_993;
+        functions[994]= JasminParserNfaData::NFA_994;
+        functions[995]= JasminParserNfaData::NFA_995;
+        functions[996]= JasminParserNfaData::NFA_996;
+        functions[997]= JasminParserNfaData::NFA_997;
+        functions[998]= JasminParserNfaData::NFA_998;
+        functions[999]= JasminParserNfaData::NFA_999;
+        functions[1000]= JasminParserNfaData::NFA_1000;
+        functions[1001]= JasminParserNfaData::NFA_1001;
+        functions[1002]= JasminParserNfaData::NFA_1002;
+        functions[1003]= JasminParserNfaData::NFA_1003;
+        functions[1004]= JasminParserNfaData::NFA_1004;
+        functions[1005]= JasminParserNfaData::NFA_1005;
+        functions[1006]= JasminParserNfaData::NFA_1006;
+        functions[1007]= JasminParserNfaData::NFA_1007;
+        functions[1008]= JasminParserNfaData::NFA_1008;
+        functions[1009]= JasminParserNfaData::NFA_1009;
+        functions[1010]= JasminParserNfaData::NFA_1010;
+        functions[1011]= JasminParserNfaData::NFA_1011;
+        functions[1012]= JasminParserNfaData::NFA_1012;
+        functions[1013]= JasminParserNfaData::NFA_1013;
+        functions[1014]= JasminParserNfaData::NFA_1014;
+        functions[1015]= JasminParserNfaData::NFA_1015;
+        functions[1016]= JasminParserNfaData::NFA_1016;
+        functions[1017]= JasminParserNfaData::NFA_1017;
+        functions[1018]= JasminParserNfaData::NFA_1018;
+        functions[1019]= JasminParserNfaData::NFA_1019;
+        functions[1020]= JasminParserNfaData::NFA_1020;
+        functions[1021]= JasminParserNfaData::NFA_1021;
+        functions[1022]= JasminParserNfaData::NFA_1022;
+        functions[1023]= JasminParserNfaData::NFA_1023;
+        functions[1024]= JasminParserNfaData::NFA_1024;
+        functions[1025]= JasminParserNfaData::NFA_1025;
+        functions[1026]= JasminParserNfaData::NFA_1026;
+        functions[1027]= JasminParserNfaData::NFA_1027;
+        functions[1028]= JasminParserNfaData::NFA_1028;
+        functions[1029]= JasminParserNfaData::NFA_1029;
+        functions[1030]= JasminParserNfaData::NFA_1030;
+        functions[1031]= JasminParserNfaData::NFA_1031;
+        functions[1032]= JasminParserNfaData::NFA_1032;
+        functions[1033]= JasminParserNfaData::NFA_1033;
+        functions[1034]= JasminParserNfaData::NFA_1034;
+        functions[1035]= JasminParserNfaData::NFA_1035;
+        functions[1036]= JasminParserNfaData::NFA_1036;
+        functions[1037]= JasminParserNfaData::NFA_1037;
+        functions[1038]= JasminParserNfaData::NFA_1038;
+        functions[1039]= JasminParserNfaData::NFA_1039;
+        functions[1040]= JasminParserNfaData::NFA_1040;
+        functions[1041]= JasminParserNfaData::NFA_1041;
+        functions[1042]= JasminParserNfaData::NFA_1042;
+        functions[1043]= JasminParserNfaData::NFA_1043;
+        functions[1044]= JasminParserNfaData::NFA_1044;
+        functions[1045]= JasminParserNfaData::NFA_1045;
+        functions[1046]= JasminParserNfaData::NFA_1046;
+        functions[1047]= JasminParserNfaData::NFA_1047;
+        functions[1048]= JasminParserNfaData::NFA_1048;
+        functions[1049]= JasminParserNfaData::NFA_1049;
+        functions[1050]= JasminParserNfaData::NFA_1050;
+        functions[1051]= JasminParserNfaData::NFA_1051;
+        functions[1052]= JasminParserNfaData::NFA_1052;
+        functions[1053]= JasminParserNfaData::NFA_1053;
+        functions[1054]= JasminParserNfaData::NFA_1054;
+        functions[1055]= JasminParserNfaData::NFA_1055;
+        functions[1056]= JasminParserNfaData::NFA_1056;
+        functions[1057]= JasminParserNfaData::NFA_1057;
+        functions[1058]= JasminParserNfaData::NFA_1058;
+        functions[1059]= JasminParserNfaData::NFA_1059;
+        functions[1060]= JasminParserNfaData::NFA_1060;
+        functions[1061]= JasminParserNfaData::NFA_1061;
+        functions[1062]= JasminParserNfaData::NFA_1062;
+        functions[1063]= JasminParserNfaData::NFA_1063;
+        functions[1064]= JasminParserNfaData::NFA_1064;
+        functions[1065]= JasminParserNfaData::NFA_1065;
+        functions[1066]= JasminParserNfaData::NFA_1066;
+        functions[1067]= JasminParserNfaData::NFA_1067;
+        functions[1068]= JasminParserNfaData::NFA_1068;
+        functions[1069]= JasminParserNfaData::NFA_1069;
+        functions[1070]= JasminParserNfaData::NFA_1070;
+        functions[1071]= JasminParserNfaData::NFA_1071;
+        functions[1072]= JasminParserNfaData::NFA_1072;
+        functions[1073]= JasminParserNfaData::NFA_1073;
+        functions[1074]= JasminParserNfaData::NFA_1074;
+        functions[1075]= JasminParserNfaData::NFA_1075;
+        functions[1076]= JasminParserNfaData::NFA_1076;
+        functions[1077]= JasminParserNfaData::NFA_1077;
+        functions[1078]= JasminParserNfaData::NFA_1078;
+        functions[1079]= JasminParserNfaData::NFA_1079;
+        functions[1080]= JasminParserNfaData::NFA_1080;
+        functions[1081]= JasminParserNfaData::NFA_1081;
+        functions[1082]= JasminParserNfaData::NFA_1082;
+        functions[1083]= JasminParserNfaData::NFA_1083;
+        functions[1084]= JasminParserNfaData::NFA_1084;
+        functions[1085]= JasminParserNfaData::NFA_1085;
+        functions[1086]= JasminParserNfaData::NFA_1086;
+        functions[1087]= JasminParserNfaData::NFA_1087;
+        functions[1088]= JasminParserNfaData::NFA_1088;
+        functions[1089]= JasminParserNfaData::NFA_1089;
+        functions[1090]= JasminParserNfaData::NFA_1090;
+        functions[1091]= JasminParserNfaData::NFA_1091;
+        functions[1092]= JasminParserNfaData::NFA_1092;
+        functions[1093]= JasminParserNfaData::NFA_1093;
+        functions[1094]= JasminParserNfaData::NFA_1094;
+        functions[1095]= JasminParserNfaData::NFA_1095;
+        functions[1096]= JasminParserNfaData::NFA_1096;
+        functions[1097]= JasminParserNfaData::NFA_1097;
+        functions[1098]= JasminParserNfaData::NFA_1098;
+        functions[1099]= JasminParserNfaData::NFA_1099;
+        functions[1100]= JasminParserNfaData::NFA_1100;
+        functions[1101]= JasminParserNfaData::NFA_1101;
+        functions[1102]= JasminParserNfaData::NFA_1102;
+        functions[1103]= JasminParserNfaData::NFA_1103;
+        functions[1104]= JasminParserNfaData::NFA_1104;
+        functions[1105]= JasminParserNfaData::NFA_1105;
+        functions[1106]= JasminParserNfaData::NFA_1106;
+        functions[1107]= JasminParserNfaData::NFA_1107;
+        functions[1108]= JasminParserNfaData::NFA_1108;
+        functions[1109]= JasminParserNfaData::NFA_1109;
+        functions[1110]= JasminParserNfaData::NFA_1110;
+        functions[1111]= JasminParserNfaData::NFA_1111;
+        functions[1112]= JasminParserNfaData::NFA_1112;
+        functions[1113]= JasminParserNfaData::NFA_1113;
+        functions[1114]= JasminParserNfaData::NFA_1114;
+        functions[1115]= JasminParserNfaData::NFA_1115;
+        functions[1116]= JasminParserNfaData::NFA_1116;
+        functions[1117]= JasminParserNfaData::NFA_1117;
+        functions[1118]= JasminParserNfaData::NFA_1118;
+        functions[1119]= JasminParserNfaData::NFA_1119;
+        functions[1120]= JasminParserNfaData::NFA_1120;
+        functions[1121]= JasminParserNfaData::NFA_1121;
+        functions[1122]= JasminParserNfaData::NFA_1122;
+        functions[1123]= JasminParserNfaData::NFA_1123;
+        functions[1124]= JasminParserNfaData::NFA_1124;
+        functions[1125]= JasminParserNfaData::NFA_1125;
+        functions[1126]= JasminParserNfaData::NFA_1126;
+        functions[1127]= JasminParserNfaData::NFA_1127;
+        functions[1128]= JasminParserNfaData::NFA_1128;
+        functions[1129]= JasminParserNfaData::NFA_1129;
+        functions[1130]= JasminParserNfaData::NFA_1130;
+        functions[1131]= JasminParserNfaData::NFA_1131;
+        functions[1132]= JasminParserNfaData::NFA_1132;
+        functions[1133]= JasminParserNfaData::NFA_1133;
+        functions[1134]= JasminParserNfaData::NFA_1134;
+        functions[1135]= JasminParserNfaData::NFA_1135;
+        functions[1136]= JasminParserNfaData::NFA_1136;
+        functions[1137]= JasminParserNfaData::NFA_1137;
+        functions[1138]= JasminParserNfaData::NFA_1138;
+        functions[1139]= JasminParserNfaData::NFA_1139;
+        functions[1140]= JasminParserNfaData::NFA_1140;
+        functions[1141]= JasminParserNfaData::NFA_1141;
+        functions[1142]= JasminParserNfaData::NFA_1142;
+        functions[1143]= JasminParserNfaData::NFA_1143;
+        functions[1144]= JasminParserNfaData::NFA_1144;
+        functions[1145]= JasminParserNfaData::NFA_1145;
+        functions[1146]= JasminParserNfaData::NFA_1146;
         nfaFunctions= functions;
     }
 

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="javacc-full">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/JavaCC/javacc-full.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,636 @@
+PARSER_CLASS=JasminParser;
+//IGNORE_CASE = true;
+//MINIMAL_TOKEN;
+TREE_BUILDING_ENABLED=false;
+
+INJECT JasminParser :
+    import Jasmin.*;
+	import java.util.ArrayList;
+{
+	ArrayList listInstr = new ArrayList();
+
+	ArrayList getInstr() {return listInstr;}
+
+    Jasmin jasmin = new Jasmin();
+
+    public void jasminCode(){
+        System.out.println(jasmin.getCode());
+    }
+}
+
+
+SKIP : <WHITESPACE : (" " | "\t" | "\n" | "\r" | "\f")+> ; 
+
+
+
+TOKEN :
+    < INTEGER : (["0"-"9"])+ > |
+    < LONG : (["0"-"9"])+ > |
+    < CLASS : ".class" > |
+    < PUBLIC : "public" > |
+    < SUPER : ".super" > |
+    < SEMICOLON : ";" > |
+    < LINE_COMMENT: ";" (~["\n", "\r"])* ("\n" | "\r" | "\r\n")? > |
+    < DOUBLE_DOT : ":" > |
+    < DOT : "." > |
+    < METHOD : "method" > | 
+    < DOT_METHOD : ".method" > |
+    < END : ".end" > |
+    < STATIC : "static" > |
+    < INT : "I" > |
+    < VOID : "V" > |
+    < ARRAY_IDENTIFIER : "[L"> |
+    < LIMIT : ".limit" > |
+    < SLASH: "/" > | 
+    < OPEN_PAREN : "(" > |
+    < CLOSE_PAREN : ")" > |
+    < LESS : "<" > |
+    < GREAT : ">" > |
+    < LOCALS : "locals" > |
+    < STACK : "stack" > |
+    < GO_TO : "goto" > |
+    < GO_TO_W : "goto_w" > |
+    < A_NEW_ARRAY: "anewarray" > | 
+    < ARRAY_LENGTH: "arraylength"> |
+    < ARETURN: "areturn" > |
+    < AALOAD: "aaload" > |
+    < AASTORE: "aastore" > |
+    < ACONST_NULL: "aconst_null" > |
+    < ALOAD : "aload" > |
+    < ALOAD_0: "aload_0" > |
+    < ALOAD_1: "aload_1" > |
+    < ALOAD_2: "aload_2" > |
+    < ALOAD_3: "aload_3" > |
+    < BALOAD: "baload" > |
+    < CALOAD: "caload" > | 
+    < CASTORE: "castore" > |
+    < CHECKCAST : "checkcast" > |
+    < D2F : "d2f" > |
+    < D2I : "d2i" > |
+    < D2L : "d2l" > |
+    < DADD: "dadd" > |
+    < DALOAD: "daload" > |
+    < DASTORE: "dastore" > |
+    < DCMPG : "dcmpg" > |
+    < DCMPL : "dcmpl" > |
+    < DCONST_0 : "dconst_0" > |
+    < DCONST_1 : "dconst_1" > |
+    < DDIV : "ddiv" > |
+    < DLOAD: "dload" > |
+    < DLOAD_0: "dload_0" > |
+    < DLOAD_1: "dload_1" > |
+    < DLOAD_2: "dload_2" > |
+    < DLOAD_3: "dload_3" > |
+    < DMUL: "dmul" > |
+    < DNEG: "dneg" > |
+    < DREM : "drem" > |
+    < DRETURN: "dreturn" > |
+    < DSTORE : "dstore" > |
+    < DSTORE_0: "dstore_0" > |
+    < DSTORE_1: "dstore_1" > |
+    < DSTORE_2: "dstore_2" > |
+    < DSTORE_3: "dstore_3" > |
+    < DSUB: "dsub" > |
+    < DUP: "dup" > |
+    < DUP_X1: "dup_x1" > |
+    < DUP_X2: "dup_x2" > |
+    < DUP2: "dup2" > |
+    < DUP2_X1: "dup2_x1" > |
+    < DUP2_X2: "dup2_x2" > |
+    < F2D: "f2d" > |
+    < ATHROW: "athrow" > | 
+    < ASTORE : "astore" > |
+    < ASTORE_1: "astore_1" > |
+    < ASTORE_2: "astore_2" > |
+    < ASTORE_3: "astore_3" > |
+    < BASTORE: "bastore" > |
+    < ICONST : "iconst" > |
+    < ICONST_0 : "iconst_0" > |
+    < ICONST_1 : "iconst_1" > |
+    < ICONST_2 : "iconst_2" > |
+    < ICONST_3 : "iconst_3" > |
+    < ICONST_4 : "iconst_4" > |
+    < ICONST_5 : "iconst_5" > |
+    < ISTORE : "istore"> |
+    < ISTORE_1: "istore_1" > |
+    < ISTORE_2 : "istore_2" > |
+    < ISTORE_3 : "istore_3" > |
+    < ILOAD : "iload" > |
+    < ILOAD_0 : "iload_0" > |
+    < ILOAD_1 : "iload_1" > |
+    < ILOAD_2 : "iload_2" > |
+    < ILOAD_3 : "iload_3" > |
+    < IF_ACMPEQ : "if_acmpeq" > |
+    < IF_ACMPNE : "if_acmpne" > |
+    < IF_ICMPEQ : "if_icmpeq" > |
+    < IF_ICMPNE : "if_icmpne" > |
+    < IF_ICMPLT : "if_icmplt" > |
+    < IF_ICMPGE : "if_icmpge" > |
+    < IF_ICMPGT : "if_icmpgt" > |
+    < IF_ICMPLE : "if_icmple" > |
+    < IFEQ : "ifeq" > |
+    < IFNE : "ifne" > |
+    < IFLT : "iflt" > |
+    < IFGE : "ifge" > |
+    < IFGT : "ifgt" > |
+    < IFLE : "ifle" > |
+    < IFNONNULL : "ifnonnull" > |
+    < IFNULL : "ifnull" > |
+    < IADD : "iadd" > |
+    < IINC : "iinc" > |
+    < NEW : "new" > |
+    < BIPUSH : "bipush" > | 
+    < F2I : "f2i" > | 
+    < F2L : "f2l" > | 
+    < FADD : "fadd" > |
+    < FALOAD : "faload" > |
+    < FASTORE : "fastore" > |
+    < FCMPG : "fcmpg" > |
+    < FCMPL : "fcmpl" > |
+    < FCONST : "fconst" > |
+    < FCONST_0 : "fconst_0" > |
+    < FCONST_1 : "fconst_1" > |
+    < FCONST_2 : "fconst_2" > |
+    < FCONST_3 : "fconst_3" > |
+    < FDIV : "fdiv" > |
+    < FLOAD : "fload" > |
+    < FLOAD_0 : "fload_0" > |
+    < FLOAD_1 : "fload_1" > |
+    < FLOAD_2 : "fload_2" > |
+    < FLOAD_3 : "fload_3" > |
+    < FMUL : "fmul" > |
+    < FNEG : "fneg" > |
+    < FREM : "frem" > |
+    < FRETURN : "freturn" > |
+    < FSTORE : "fstore" > |
+    < FSTORE_0 : "fstore_0" > |
+    < FSTORE_1 : "fstore_1" > |
+    < FSTORE_2 : "fstore_2" > |
+    < FSTORE_3 : "fstore_3" > |
+    < FSUB : "fsub" > |
+    < GETFIELD : "getfield" > |
+    < GETSTATIC : "getstatic" > |
+    < I2B : "i2b" > |
+    < I2C : "i2c" > |
+    < I2D : "i2d" > |
+    < I2F : "i2f" > |
+    < I2L : "i2l" > |
+    < I2S : "i2s" > |
+    < IALOAD : "iaload" > |
+    < IAND : "iand" > |
+    < IASTORE : "iastore" > |
+    < IDIV : "idiv" > |
+    < INEG : "ineg"> |
+    < IMUL : "imul" > |
+    < INSTANCEOF: "instanceof"> |
+    < INVOKEDYNAMIC : "invokedynamic"> |
+    < INVOKEINTERFACE: "invokeinterface"> |
+    < INVOKESPECIAL : "invokespecial"> |
+    < INVOKESTATIC: "invokestatic"> |
+    < INVOKEVIRTUAL : "invokevirtual"> |
+    < INVOKENONVIRTUAL : "invokenonvirtual"> |
+    < IOR : "ior"> |
+    < IREM : "irem"> |
+    < ISHL : "ishl"> |
+    < ISHR : "ishr"> |
+    < ISUB : "isub"> |
+    < IUSHR: "iushr"> |
+    < IXOR : "ixor"> |
+    < JSR : "jsr"> |
+    < JSR_W : "jsr_w"> |
+    < L2D : "l2d"> |
+    < L2F : "l2f"> |
+    < L2I : "l2i"> |
+    < LADD : "ladd"> |
+    < LALOAD : "laload"> |
+    < LAND : "land"> |
+    < LASTORE : "lastore"> |
+    < LCMP : "lcmp"> |
+    < LCONST_0 : "lconst_0"> |
+    < LCONST_1 : "lconst_1"> |
+    < LDC : "ldc"> |
+    < LDC_W : "ldc_w"> |
+    < LDC2_W : "ldc2_w"> |
+    < LDIV : "ldiv"> |
+    < LLOAD : "lload"> |
+    < LLOAD_0 : "lload_0"> |
+    < LLOAD_1 : "lload_1"> |
+    < LLOAD_2 : "lload_2"> |
+    < LLOAD_3 : "lload_3"> |
+    < LMUL : "lmul"> |
+    < LNEG : "lneg"> |
+    < LOOKUPSWITCH : "lookupswitch"> |
+    < LREM: "lrem"> |
+    < LRETURN: "lreturn"> |
+    < LSHL: "lshl"> |
+    < LSHR: "lshr"> |
+    < LOR: "lor"> |
+    < LSTORE: "lstore"> |
+    < LSTORE_0: "lstore_0"> |
+    < LSTORE_1: "lstore_1"> |
+    < LSTORE_2: "lstore_2"> |
+    < LSTORE_3: "lstore_3"> |
+    < LSUB: "lsub"> |
+    < LUSHR: "lushr"> |
+    < LXOR: "lxor"> |
+    < MONITORENTER: "monitorenter"> |
+    < MONITOREXIT: "monitorexit"> |
+    < MULTIANEWARRAY: "multianewarray"> |
+    < NOP: "nop"> |
+    < POP: "pop"> |
+    < POP_2: "pop_2"> |
+    < PUTFIELD: "putfield"> |
+    < PUTSTATIC: "putstaic"> |
+    < RET: "ret"> |
+    < SALOAD: "saload"> |
+    < SASTORE: "sastore"> |
+    < SIPUSH: "sipush"> |
+    < SWAP: "swap"> |
+    < TABLESWITCH: "tabelswitch"> |
+    < WIDE: "wide"> |
+    < IRETURN : "ireturn" > |
+    < RETURN : "return" >
+;
+
+TOKEN: 
+<QUOTED: 
+    "\"" 
+    (
+         "\\" ~[]     //any escaped character
+    |                 //or
+        ~["\"","\\"]  //any character except quote or backslash
+    )* 
+    "\"" > 
+;
+	
+TOKEN:
+	< IDENTIFIER : (["A"-"Z","a"-"z"])(["0"-"9","A"-"Z","a"-"z","_"])* > 
+;
+
+
+Start: 
+    (<LINE_COMMENT>)* <CLASS> <PUBLIC> <IDENTIFIER> {jasmin.setClassName(getToken(0).getImage());}
+    (<LINE_COMMENT>)* (SuperDeclaration)?
+    (<LINE_COMMENT>)* (MethodDeclaration)* (<LINE_COMMENT>)*
+;
+
+ClassDeclaration: 
+	<CLASS> <PUBLIC> <IDENTIFIER>
+;
+
+SuperDeclaration: 
+	<SUPER> <IDENTIFIER> {jasmin.setSuperClassName(getToken(0).getImage());}
+    (<SLASH> {jasmin.setSuperClassName(getToken(0).getImage());}
+    <IDENTIFIER> {jasmin.setSuperClassName(getToken(0).getImage());} )* 
+;
+
+Instruction:
+    <NEW> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} (NewInst)  |
+    <BIPUSH> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}  
+        <INTEGER> {jasmin.addOperandInst(getToken(0).getImage());}  |
+    <A_NEW_ARRAY> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} (NewArrayInst) |
+    <ARRAY_LENGTH> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <ATHROW> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <ALOAD_0> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <ALOAD_1> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <ALOAD_2> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <ALOAD_3> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <BALOAD> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <CALOAD> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <CASTORE> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <CHECKCAST> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} (CheckCastInst)  |
+    <LDC> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} (LdcInst)  |
+    <ASTORE> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} 
+        <INTEGER> {jasmin.addOperandInst(getToken(0).getImage());} |
+    <ASTORE_1> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <ASTORE_2> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <ASTORE_3> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}  |
+    <BASTORE> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <ICONST> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} 
+        <INTEGER> {jasmin.addOperandInst(getToken(0).getImage());}  |
+    <ICONST_0> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <ICONST_1> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <ICONST_2> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <ICONST_3> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <ICONST_4> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <ICONST_5> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <ISTORE_1> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <ISTORE_2> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <ISTORE_3> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <D2F> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <D2I> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <D2L> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <DADD> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <DALOAD> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <DASTORE> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <DCMPG> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <DCMPL> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}  |
+    <DCONST_0> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <DCONST_1> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}  |
+    <DDIV> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}  |
+    <DLOAD> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} 
+        <INTEGER> {jasmin.addOperandInst(getToken(0).getImage());}  |
+    <DLOAD_0> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <DLOAD_1> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <DLOAD_2> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <DLOAD_3> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <DMUL> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}  |
+    <DNEG> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <DREM> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <DRETURN> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <DSTORE> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} 
+        <INTEGER> {jasmin.addOperandInst(getToken(0).getImage());}  |
+    <DSTORE_0> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <DSTORE_1> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <DSTORE_2> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <DSTORE_3> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <DSUB> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <DUP> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <DUP_X1> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <DUP_X2> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}  |
+    <DUP2> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}  |
+    <DUP2_X1> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <DUP2_X2> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <F2D> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <ALOAD> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}  
+        <INTEGER> {jasmin.addOperandInst(getToken(0).getImage());}  |
+    <ILOAD> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} 
+        <INTEGER> {jasmin.addOperandInst(getToken(0).getImage());}  |
+    <ILOAD_0> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <ILOAD_1> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <ILOAD_2> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <ILOAD_3> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <IF_ACMPEQ> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} 
+        <IDENTIFIER> {jasmin.addOperandInst(getToken(0).getImage());}  |
+    <IF_ACMPNE> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} 
+        <IDENTIFIER> {jasmin.addOperandInst(getToken(0).getImage());}  |
+    <IF_ICMPEQ> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} 
+        <IDENTIFIER> {jasmin.addOperandInst(getToken(0).getImage());}  |
+    <IF_ICMPNE> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} 
+        <IDENTIFIER> {jasmin.addOperandInst(getToken(0).getImage());}  |
+    <IF_ICMPLT> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} 
+        <IDENTIFIER> {jasmin.addOperandInst(getToken(0).getImage());}  |
+    <IF_ICMPGE> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} 
+        <IDENTIFIER> {jasmin.addOperandInst(getToken(0).getImage());}  |
+    <IF_ICMPGT> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} 
+        <IDENTIFIER> {jasmin.addOperandInst(getToken(0).getImage());}  |
+    <IF_ICMPLE> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} 
+        <IDENTIFIER> {jasmin.addOperandInst(getToken(0).getImage());}  |
+    <IFEQ> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} 
+        <IDENTIFIER> {jasmin.addOperandInst(getToken(0).getImage());}  |
+    <IFNE> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} 
+        <IDENTIFIER> {jasmin.addOperandInst(getToken(0).getImage());}  |
+    <IFLT> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} 
+        <IDENTIFIER> {jasmin.addOperandInst(getToken(0).getImage());}  |
+    <IFGE> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} 
+        <IDENTIFIER> {jasmin.addOperandInst(getToken(0).getImage());}  |
+    <IFGT> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} 
+        <IDENTIFIER> {jasmin.addOperandInst(getToken(0).getImage());}  |
+    <IFLE> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} 
+        <IDENTIFIER> {jasmin.addOperandInst(getToken(0).getImage());}  |
+    <IFNONNULL> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} 
+        <IDENTIFIER> {jasmin.addOperandInst(getToken(0).getImage());}  |
+    <IFNULL> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} 
+        <IDENTIFIER> {jasmin.addOperandInst(getToken(0).getImage());}  |
+    <IADD> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <IINC> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} 
+        (<INTEGER> {jasmin.addOperandInst(getToken(0).getImage());}) 
+        (<INTEGER> {jasmin.addOperandInst(getToken(0).getImage());})  |
+    <INVOKEDYNAMIC> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <INVOKEINTERFACE> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <INVOKENONVIRTUAL> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} (InvokeArgument)?  |
+    <INVOKESPECIAL> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} (InvokeArgument)?  |
+    <INVOKESTATIC> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} (InvokeArgument)? |
+    <INVOKEVIRTUAL> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} (InvokeArgument)?  |
+    <GO_TO> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} 
+        <IDENTIFIER> {jasmin.addOperandInst(getToken(0).getImage());}  |
+    <GO_TO_W> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} 
+        <IDENTIFIER> {jasmin.addOperandInst(getToken(0).getImage());}  |    
+    <F2I> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}  |
+    <F2L> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}  |
+    <FADD> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}   |
+    <FALOAD> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}  |
+    <FASTORE> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}   |
+    <FCMPG> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}  |
+    <FCMPL> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <FCONST> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} 
+        <INTEGER> {jasmin.addOperandInst(getToken(0).getImage());}  |
+    <FCONST_0> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <FCONST_1> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <FCONST_2> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <FCONST_3> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <FDIV> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}  |
+    <FLOAD> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}  
+        <INTEGER> {jasmin.addOperandInst(getToken(0).getImage());}  |
+    <FLOAD_0> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <FLOAD_1> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <FLOAD_2> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <FLOAD_3> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <FMUL> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}  |
+    <FNEG> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}  |
+    <FREM> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <FRETURN> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}  |
+    <FSTORE> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}  
+        <INTEGER> {jasmin.addOperandInst(getToken(0).getImage());} |
+    <FSTORE_0> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <FSTORE_1> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <FSTORE_2> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <FSTORE_3> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <FSUB> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}  |
+    <I2B> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}  |
+    <I2C> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}  |
+    <I2D> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}  |
+    <I2F> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}  |
+    <I2L> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}   | 
+    <I2S> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}   | 
+    <IALOAD> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} | 
+    <IAND> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} | 
+    <IASTORE> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}  | 
+    <IDIV> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}   | 
+    <INEG> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}  | 
+    <IMUL> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} | 
+    <RETURN> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <ARETURN> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <IRETURN> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}|
+    <INSTANCEOF> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <IOR> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <IREM> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <ISHL> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <ISHR> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <ISTORE> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <ISUB> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <IUSHR> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <IXOR> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <JSR> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <JSR_W> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <L2D> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <L2F> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <L2I> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |  
+    <LADD> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}  |
+    <LALOAD> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}  |
+    <LAND> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}  |
+    <LASTORE> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}  |
+    <LCMP> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <LCONST_0> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <LCONST_1> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <LDC> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <LDC_W > {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |  
+    <LDC2_W > {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |  
+    <LDIV > {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}   |  
+    <LLOAD> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <LLOAD_0> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <LLOAD_1> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <LLOAD_2> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <LLOAD_3> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <LMUL> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}  |
+    <LNEG> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}  |
+    <LDIV> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}   |
+    <LOOKUPSWITCH> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} 
+        <INTEGER> {jasmin.addOperandInst(getToken(0).getImage());}  |
+    <LOR> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}  |
+    <LREM> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}   |
+    <LDIV> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}  |
+    <LRETURN> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}  |
+    <LSHL> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}  |
+    <LSHR> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}  |
+    <LSTORE> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}
+        <LONG> {jasmin.addOperandInst(getToken(0).getImage());} |
+    <LSTORE_0> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <LSTORE_1> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <LSTORE_2> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <LSTORE_3> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <LSUB> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}  |
+    <LUSHR> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <LXOR> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}  |
+    <MONITORENTER> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <MONITOREXIT> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <MULTIANEWARRAY> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <NOP> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <POP> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}  |
+    <POP_2> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}  |
+    <GETFIELD> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} (FieldInst)  |
+    <GETSTATIC> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} (FieldInst)  |
+    <PUTFIELD> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} (FieldInst)  |
+    <PUTSTATIC> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} (FieldInst)  |
+    <RET> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <SALOAD> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <SASTORE> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}  |
+    <SIPUSH> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());} |
+    <SWAP> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}  |
+    <TABLESWITCH> {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}
+        <INTEGER> {jasmin.addOperandInst(getToken(0).getImage());}  |
+    <WIDE>  {jasmin.addInstruction(getToken(0).getImage(),getToken(-1).getImage(),getToken(-2).getImage());}
+;
+
+
+
+
+Label:
+    <IDENTIFIER> <DOUBLE_DOT>;
+
+Path1:
+    <IDENTIFIER> (<SLASH> | <DOT>) ((Path1) | (MethodName) (MethodArguments));
+
+MethodDeclaration: 
+    (StartMethod)  (MethodName) {if(getToken(0).getImage().equals(">")) jasmin.setMethodName("<init>");
+    else jasmin.setMethodName(getToken(0).getImage());}
+     (MethodArguments) (<LINE_COMMENT>)* (MethodBody)* (<LINE_COMMENT>)* EndMethod;
+
+StartMethod:
+    <DOT_METHOD> <PUBLIC> {jasmin.setMethodAccessModifier(getToken(0).getImage());}
+     (<STATIC>)? {if(getToken(0).getImage().equals("static")) jasmin.setMethodStatic();}
+;
+
+MethodName:
+    (<LESS> <IDENTIFIER> <GREAT>|
+    <IDENTIFIER>);
+
+MethodArguments:
+    <OPEN_PAREN> (MethodArgumentNormalType)* (MethodArgumentArrayType)
+    (<CLOSE_PAREN>  (ReturnTypeNormalType | ReturnArray) | <LINE_COMMENT> {jasmin.setParameter(getToken(0).getImage());});
+
+MethodArgumentNormalType:
+    <INT> {jasmin.setParameter(getToken(0).getImage());};
+
+MethodArgumentArrayType:
+    (<ARRAY_IDENTIFIER>{jasmin.setParameter(getToken(0).getImage());})?
+      (<IDENTIFIER> {jasmin.setParameter(getToken(0).getImage());}
+       | <SLASH>{jasmin.setParameter(getToken(0).getImage());})*;
+
+ReturnTypeNormalType:
+    <INT> | <VOID>;
+
+ReturnArray:
+    (<ARRAY_IDENTIFIER> {jasmin.addOperandInstPath(getToken(0).getImage());})? 
+    (<IDENTIFIER> {jasmin.addOperandInstPath(getToken(0).getImage());} | 
+    <SLASH> {jasmin.addOperandInstPath(getToken(0).getImage());})* 
+    (<LINE_COMMENT> {jasmin.addOperandInstPath(getToken(0).getImage());})?;
+
+MethodBody:
+    (<LINE_COMMENT>)* (Instruction |LimitInstructions| Label) (<LINE_COMMENT>)* ;
+
+InvokeMethodName:
+    (<LESS> {jasmin.addOperandInstPath(getToken(0).getImage());} 
+    <IDENTIFIER> {jasmin.addOperandInstPath(getToken(0).getImage());} 
+    <GREAT> {jasmin.addOperandInstPath(getToken(0).getImage());}|
+    <IDENTIFIER> {jasmin.addOperandInstPath(getToken(0).getImage());});    
+
+InvokeArgument:
+    (<IDENTIFIER> {jasmin.addOperandInstPath(getToken(0).getImage());} | 
+    <SLASH> {jasmin.addOperandInstPath(getToken(0).getImage());} )* 
+    (<DOT> {jasmin.addOperandInstPath(getToken(0).getImage());})? 
+    (InvokeMethodName) (InvokeMethodArguments);
+
+InvokeMethodArguments:
+    <OPEN_PAREN> {jasmin.addOperandInstPath(getToken(0).getImage());} 
+    (InvokeMethodArgumentNormalType)* 
+    (InvokeMethodArgumentArrayType)
+    (<CLOSE_PAREN> {jasmin.addOperandInstPath(getToken(0).getImage());}  
+    (ReturnTypeNormalType {jasmin.addOperandInstPath(getToken(0).getImage());}  | ReturnArray) | 
+    <LINE_COMMENT> {jasmin.addOperandInstPath(getToken(0).getImage());});
+
+InvokeMethodArgumentNormalType:
+    <INT> {jasmin.addOperandInstPath(getToken(0).getImage());};
+
+InvokeMethodArgumentArrayType:
+    (<ARRAY_IDENTIFIER> {jasmin.addOperandInstPath(getToken(0).getImage());})?
+      (<IDENTIFIER> {jasmin.addOperandInstPath(getToken(0).getImage());} 
+       | <SLASH> {jasmin.addOperandInstPath(getToken(0).getImage());})* ;    
+
+NewInst:
+    (<IDENTIFIER> {jasmin.addOperandInstPath(getToken(0).getImage());} | 
+    <SLASH> {jasmin.addOperandInstPath(getToken(0).getImage());})*;
+
+LdcInst:
+    (<QUOTED> {jasmin.addOperandInst(getToken(0).getImage());}
+     | <INTEGER> {jasmin.addOperandInst(getToken(0).getImage());});
+
+CheckCastInst:
+    (<IDENTIFIER> {jasmin.addOperandInstPath(getToken(0).getImage());}
+    (<SLASH> {jasmin.addOperandInstPath(getToken(0).getImage());}|
+    <DOT> {jasmin.addOperandInstPath(getToken(0).getImage());})?)*;
+
+NewArrayInst:
+    (<ARRAY_IDENTIFIER> {jasmin.addOperandInstPath(getToken(0).getImage());})?  
+    (<IDENTIFIER> {jasmin.addOperandInstPath(getToken(0).getImage());} 
+    (<SLASH> {jasmin.addOperandInstPath(getToken(0).getImage());}|<DOT> {jasmin.addOperandInstPath(getToken(0).getImage());})?)* 
+    (<SEMICOLON> {jasmin.addOperandInstPath(getToken(0).getImage());})?;
+
+FieldInst:
+    (<IDENTIFIER> {if(getToken(0).getImage().equals("Ljava") || getToken(0).getImage().equals("java")) 
+        jasmin.addOperandInstPath(" " + getToken(0).getImage());
+    else jasmin.addOperandInstPath(getToken(0).getImage());}
+    (<DOT> {jasmin.addOperandInstPath(getToken(0).getImage());})? | 
+    <SLASH> {jasmin.addOperandInstPath(getToken(0).getImage());})*;
+
+LimitInstructions:
+    <LIMIT> LimitStatementFactorization;
+
+LimitStatementFactorization:
+    <STACK> <INTEGER> {jasmin.setStack(getToken(0).getImage());}
+    | 
+    <LOCALS> <INTEGER> {jasmin.setLocals(getToken(0).getImage());};
+
+EndMethod:
+	<END> <METHOD>
+;

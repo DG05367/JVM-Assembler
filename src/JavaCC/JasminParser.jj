@@ -1,36 +1,74 @@
+PARSER_CLASS=JasminParser;
+//IGNORE_CASE = true;
+//MINIMAL_TOKEN;
+TREE_BUILDING_ENABLED=false;
 
-INJECT JasminParser : {
+
+
+INJECT JasminParser : 
+	import java.util.ArrayList;
+{
+	
+	ArrayList listInstr = new ArrayList();
+	
+	ArrayList getInstr() {return listInstr;}
+	
+	
     static public void main(String[] args) {
-       if (args.length == 0) {
-           System.out.println("Usage: java JasminParser <input>");
-           System.exit(-1);
-       }
-       String input = "";
-       for (String arg : args) input += arg;
-       JasminParser parser = new JasminParser(input);
-       parser.Start();
+		JasminParser parser;
+		
+		if(args.length == 0){
+			System.out.println("Jasmin Parser:  Reading from standard input . . .");
+			parser = new JasminParser(System.in);
+		} else if(args.length == 1){
+			System.out.println("Jasmin Parser:  Reading from file " + args[0] + " . . ." );
+			try {
+				parser = new JasminParser(new java.io.FileInputStream(args[0]));
+			} catch(java.io.FileNotFoundException e){
+				System.out.println("Jasmin Parser:  File " + args[0] + " not found.");
+				return;
+			}
+		} else {
+			System.out.println("Jasmin Parser:  Usage is one of:");
+			System.out.println("         java JasminParser < inputfile");
+			System.out.println("OR");
+			System.out.println("         java JasminParser inputfile");
+			return ;
+		}
+      
+		try {
+			parser.Start();
+			System.out.println("Jasmin Parser:  Jasmin file parsed successfully.");
+		} catch(ParseException e){
+			System.out.println("Jasmin Parser:  Encountered errors during parse.");
+			e.printStackTrace();
+		}
+    
+		System.out.println(parser.getInstr().toString());
     }
 }
 
+SKIP : <WHITESPACE : (" " | "\t" | "\n" | "\r" | "\f")+> ; 
 
-
-SKIP : " " | "\t" | "\r" | "\n";
-
+SPECIAL_TOKEN : < LINE_COMMENT: ";" (~["\r","\n"])* > ;
+   
 TOKEN :
-
-    < INTEGER : (["0" - "9"])+ > |
-    < DOT : "." > |
-    < CLASS : "class" > |
+    < INTEGER : (["0"-"9"])+ > |
+    < CLASS : ".class" > |
     < PUBLIC : "public" > |
-    < SUPER : "super" > |
+    < SUPER : ".super" > |
     < SEMICOLON : ";" > |
     < DOUBLE_DOT : ":" > |
-    < METHOD : "method" > |
-    < END : "end" > |
+    < QUOTE : "\"" > |
+    < DOT : "." > |
+    < METHOD : "method" > | 
+    < DOT_METHOD : ".method" > |
+    < END : ".end" > |
     < STATIC : "static" > |
     < INT : "I" > |
     < VOID : "V" > |
-    < LIMIT : "limit" > |
+    < ARRAY_IDENTIFIER : "[L"> |
+    < LIMIT : ".limit" > |
     < SLASH: "/" > | 
     < OPEN_PAREN : "(" > |
     < CLOSE_PAREN : ")" > |
@@ -38,75 +76,480 @@ TOKEN :
     < GREAT : ">" > |
     < LOCALS : "locals" > |
     < STACK : "stack" > |
-    < LOOP : "loop" > |
-    < ENDLOOP : "endloop" > |
     < GO_TO : "goto" > |
+    < GO_TO_W : "goto_w" > |
+    < A_NEW_ARRAY: "anewarray" > | 
+    < ARRAY_LENGTH: "arraylength"> |
+    < ARETURN: "areturn" > |
+    < AALOAD: "aaload" > |
+    < AASTORE: "aastore" > |
+    < ACONST_NULL: "aconst_null" > |
+    < ALOAD : "aload" > |
+    < ALOAD_0: "aload_0" > |
+    < ALOAD_1: "aload_1" > |
+    < ALOAD_2: "aload_2" > |
+    < ALOAD_3: "aload_3" > |
+    < BALOAD: "baload" > |
+    < CALOAD: "caload" > | 
+    < CASTORE: "castore" > |
+    < CHECKCAST : "checkcast" > |
+    < D2F : "d2f" > |
+    < D2I : "d2i" > |
+    < D2L : "d2l" > |
+    < DADD: "dadd" > |
+    < DALOAD: "daload" > |
+    < DASTORE: "dastore" > |
+    < DCMPG : "dcmpg" > |
+    < DCMPL : "dcmpl" > |
+    < DCONST_0 : "dconst_0" > |
+    < DCONST_1 : "dconst_1" > |
+    < DDIV : "ddiv" > |
+    < DLOAD: "dload" > |
+    < DLOAD_0: "dload_0" > |
+    < DLOAD_1: "dload_1" > |
+    < DLOAD_2: "dload_2" > |
+    < DLOAD_3: "dload_3" > |
+    < DMUL: "dmul" > |
+    < DNEG: "dneg" > |
+    < DREM : "drem" > |
+    < DRETURN: "dreturn" > |
+    < DSTORE : "dstore" > |
+    < DSTORE_0: "dstore_0" > |
+    < DSTORE_1: "dstore_1" > |
+    < DSTORE_2: "dstore_2" > |
+    < DSTORE_3: "dstore_3" > |
+    < DSUB: "dsub" > |
+    < DUP: "dup" > |
+    < DUP_X1: "dup_x1" > |
+    < DUP_X2: "dup_x2" > |
+    < DUP2: "dup2" > |
+    < DUP2_X1: "dup2_x1" > |
+    < DUP2_X2: "dup2_x2" > |
+    < F2D: "f2d" > |
+    < ATHROW: "athrow" > | 
+    < ASTORE : "astore" > |
+    < ASTORE_1: "astore_1" > |
+    < ASTORE_2: "astore_2" > |
+    < ASTORE_3: "astore_3" > |
+    < BASTORE: "bastore" > |
+    < ICONST : "iconst" > |
     < ICONST_0 : "iconst_0" > |
+    < ICONST_1 : "iconst_1" > |
+    < ICONST_2 : "iconst_2" > |
+    < ICONST_3 : "iconst_3" > |
+    < ICONST_4 : "iconst_4" > |
+    < ICONST_5 : "iconst_5" > |
+    < ISTORE : "istore"> |
     < ISTORE_2 : "istore_2" > |
     < ISTORE_3 : "istore_3" > |
+    < ILOAD : "iload" > |
+    < ILOAD_0 : "iload_0" > |
     < ILOAD_1 : "iload_1" > |
     < ILOAD_2 : "iload_2" > |
     < ILOAD_3 : "iload_3" > |
+    < IF_ACMPEQ : "if_acmpeq" > |
+    < IF_ACMPNE : "if_acmpne" > |
+    < IF_ICMPEQ : "if_icmpeq" > |
+    < IF_ICMPNE : "if_icmpne" > |
+    < IF_ICMPLT : "if_icmplt" > |
     < IF_ICMPGE : "if_icmpge" > |
+    < IF_ICMPGT : "if_icmpgt" > |
+    < IF_ICMPLE : "if_icmple" > |
+    < IFEQ : "ifeq" > |
+    < IFNE : "ifne" > |
+    < IFLT : "iflt" > |
+    < IFGE : "ifge" > |
+    < IFGT : "ifgt" > |
+    < IFLE : "ifle" > |
+    < IFNONNULL : "ifnonnull" > |
+    < IFNULL : "ifnull" > |
     < IADD : "iadd" > |
     < IINC : "iinc" > |
+    < INVOKENONVIRTUAL : "invokenonvirtual"> |
+    < NEW : "new" > |
+    < BIPUSH : "bipush" > | 
+    < F2I : "f2i" > | 
+    < F2L : "f2l" > | 
+    < FADD : "fadd" > |
+    < FALOAD : "faload" > |
+    < FASTORE : "fastore" > |
+    < FCMPG : "fcmpg" > |
+    < FCMPL : "fcmpl" > |
+    < FCONST : "fconst" > |
+    < FCONST_0 : "fconst_0" > |
+    < FCONST_1 : "fconst_1" > |
+    < FCONST_2 : "fconst_2" > |
+    < FCONST_3 : "fconst_3" > |
+    < FDIV : "fdiv" > |
+    < FLOAD : "fload" > |
+    < FLOAD_0 : "fload_0" > |
+    < FLOAD_1 : "fload_1" > |
+    < FLOAD_2 : "fload_2" > |
+    < FLOAD_3 : "fload_3" > |
+    < FMUL : "fmul" > |
+    < FNEG : "fneg" > |
+    < FREM : "frem" > |
+    < FRETURN : "freturn" > |
+    < FSTORE : "fstore" > |
+    < FSTORE_0 : "fstore_0" > |
+    < FSTORE_1 : "fstore_1" > |
+    < FSTORE_2 : "fstore_2" > |
+    < FSTORE_3 : "fstore_3" > |
+    < FSUB : "fsub" > |
+    < GETFIELD : "getfield" > |
+    < GETSTATIC : "getstatic" > |
+    < I2B : "i2b" > |
+    < I2C : "i2c" > |
+    < I2D : "i2d" > |
+    < I2F : "i2f" > |
+    < I2L : "i2l" > |
+    < I2S : "i2s" > |
+    < IALOAD : "iaload" > |
+    < IAND : "iand" > |
+    < IASTORE : "iastore" > |
+    < IDIV : "idiv" > |
+    < INEG : "ineg"> |
+    < IMUL : "imul" > |
+    < INSTANCEOF: "instanceof"> |
+    < INVOKEDYNAMIC : "invokedynamic"> |
+    < INVOKEINTERFACE: "invokeinterface"> |
+    < INVOKESPECIAL : "invokespecial"> |
+    < INVOKESTATIC: "invokestatic"> |
+    < INVOKEVIRTUAL : "invokevirtual"> |
+    < IOR : "ior"> |
+    < IREM : "irem"> |
+    < ISHL : "ishl"> |
+    < ISHR : "ishr"> |
+    < ISUB : "isub"> |
+    < IUSHR: "iushr"> |
+    < IXOR : "ixor"> |
+    < JSR : "jsr"> |
+    < JSR_W : "jsr_w"> |
+    < L2D : "l2d"> |
+    < L2F : "l2f"> |
+    < L2I : "l2i"> |
+    < LADD : "ladd"> |
+    < LALOAD : "laload"> |
+    < LAND : "land"> |
+    < LASTORE : "lastore"> |
+    < LCMP : "lcmp"> |
+    < LCONST_0 : "lconst_0"> |
+    < LCONST_1 : "lconst_1"> |
+    < LDC : "ldc"> |
+    < LDC_W : "ldc_w"> |
+    < LDC2_W : "ldc2_w"> |
+    < LDIV : "ldiv"> |
+    < LLOAD : "lload"> |
+    < LLOAD_0 : "lload_0"> |
+    < LLOAD_1 : "lload_1"> |
+    < LLOAD_2 : "lload_2"> |
+    < LLOAD_3 : "lload_3"> |
+    < LMUL : "lmul"> |
+    < LNEG : "lneg"> |
+    < LOOKUPSWITCH : "lookupswitch"> |
+    < LOR: "lor"> |
+    < LREM: "lrem"> |
+    < LRETURN: "lreturn"> |
+    < LSHL: "lshl"> |
+    < LSHR: "lshr"> |
+    < LOR: "lor"> |
+    < LSTORE: "lstore"> |
+    < LSTORE_0: "lstore_0"> |
+    < LSTORE_1: "lstore_1"> |
+    < LSTORE_2: "lstore_2"> |
+    < LSTORE_3: "lstore_3"> |
+    < LSUB: "lsub"> |
+    < LUSHR: "lushr"> |
+    < LXOR: "lxor"> |
+    < MONITORENTER: "monitorenter"> |
+    < MONITOREXIT: "monitorexit"> |
+    < MULTIANEWARRAY: "multianewarray"> |
+    < NEW: "new"> |
+    < NEWARRAY: "newarray"> |
+    < NOP: "nop"> |
+    < POP: "pop"> |
+    < POP_2: "pop_2"> |
+    < PUTFIELD: "putfield"> |
+    < PUTSTATIC: "putstaic"> |
+    < POP: "pop"> |
+    < RET: "ret"> |
+    < RETURN: "return"> |
+    < SALOAD: "saload"> |
+    < SASTORE: "sastore"> |
+    < SIPUSH: "sipush"> |
+    < SWAP: "swap"> |
+    < TABLESWITCH: "tabelswitch"> |
+    < WIDE: "wide"> |
     < IRETURN : "ireturn" > |
-    < ALOAD_0 : "aload_0" > |
-    < INVOKENONVIRTUAL : "invokenonvirtual" > |
-    < RETURN : "return" > |
-    < IDENTIFIER : (["A" - "Z"] | ["a"-"z"]) (["0"-"9"] | ["A" - "Z"] | ["a"-"z"] | "_")* >;
+    < RETURN : "return" >
+;
+	
+TOKEN:
+	< IDENTIFIER : (["A"-"Z","a"-"z"])(["0"-"9","A"-"Z","a"-"z","_"])* > 
+;
 
 
-Start: <DOT> ClassDeclaration (SuperDeclaration)?;
+Start: 
+<CLASS> <PUBLIC> <IDENTIFIER>(SuperDeclaration)? (MethodDeclaration)*
+	//(ClassDeclaration) (SuperDeclaration)? (MethodDeclaration)*
+;
 
+ClassDeclaration: 
+	<CLASS> <PUBLIC> <IDENTIFIER>
+;
 
-ClassDeclaration: <CLASS> <PUBLIC> <IDENTIFIER>;
-
-SuperDeclaration: <DOT> <SUPER> <IDENTIFIER> (<SLASH> <IDENTIFIER>)* (MethodDeclaration) <OPEN_PAREN> <CLOSE_PAREN> ;
+SuperDeclaration: 
+	<SUPER> <IDENTIFIER> (<SLASH> <IDENTIFIER>)* 
+;
 
 Instruction:
-    (<ALOAD_0> |
-    <ICONST_0> |
-    <ISTORE_2> |
-    <ISTORE_3> |
-    <ILOAD_1> |
-    <ILOAD_2> |
-    <ILOAD_3> |
-    <IF_ICMPGE> |
-    <IADD> |
-    <IINC> (<INTEGER>)? (<INTEGER>)? |
-    <ALOAD_0> |
-    <RETURN> |
-    <IRETURN> |
-    <DOT> <LIMIT> <LOCALS> (<INTEGER>)? |
-    <DOT> <LIMIT> <STACK> (<INTEGER>)? |
-    <INVOKENONVIRTUAL> (Path1)? ) (<IDENTIFIER>)? (<IDENTIFIER>)?;
+    <NEW> <IDENTIFIER> {listInstr.add(getToken(0).getImage());} |
+    <BIPUSH> <INTEGER> {listInstr.add(getToken(0).getImage());} |
+    <A_NEW_ARRAY> (<ARRAY_IDENTIFIER>)? (<IDENTIFIER> (<SLASH>|<DOT>)?)* (<SEMICOLON>)? {listInstr.add(getToken(0).getImage());} |
+    <ARRAY_LENGTH> {listInstr.add(getToken(0).getImage());} |
+    <ATHROW> {listInstr.add(getToken(0).getImage());} |
+    <ALOAD_0> {listInstr.add(getToken(0).getImage());} |
+    <ALOAD_1> {listInstr.add(getToken(0).getImage());} |
+    <ALOAD_2> {listInstr.add(getToken(0).getImage());} |
+    <ALOAD_3> {listInstr.add(getToken(0).getImage());} |
+    <BALOAD> {listInstr.add(getToken(0).getImage());} |
+    <CALOAD> {listInstr.add(getToken(0).getImage());} |
+    <CASTORE> {listInstr.add(getToken(0).getImage());} |
+    <CHECKCAST> (<IDENTIFIER> (<SLASH>|<DOT>)?)* {listInstr.add(getToken(0).getImage());} |
+    <LDC> (<QUOTE> <IDENTIFIER> <QUOTE> | <INTEGER>) {listInstr.add(getToken(0).getImage());} |
+    <ASTORE> <INTEGER> {listInstr.add(getToken(0).getImage());} |
+    <ASTORE_1> {listInstr.add(getToken(0).getImage());} |
+    <ASTORE_2> {listInstr.add(getToken(0).getImage());} |
+    <ASTORE_3> {listInstr.add(getToken(0).getImage());} |
+    <BASTORE> {listInstr.add(getToken(0).getImage());} |
+    <ICONST> <INTEGER> {listInstr.add(getToken(0).getImage());} |
+    <ICONST_0> {listInstr.add(getToken(0).getImage());} |
+    <ICONST_1> {listInstr.add(getToken(0).getImage());} |
+    <ICONST_2> {listInstr.add(getToken(0).getImage());} |
+    <ICONST_3> {listInstr.add(getToken(0).getImage());} |
+    <ICONST_4> {listInstr.add(getToken(0).getImage());} |
+    <ICONST_5> {listInstr.add(getToken(0).getImage());} |
+    <ISTORE_2> {listInstr.add(getToken(0).getImage());} |
+    <ISTORE_3> {listInstr.add(getToken(0).getImage());} |
+    <D2F> {listInstr.add(getToken(0).getImage());} |
+    <D2I> {listInstr.add(getToken(0).getImage());} |
+    <D2L> {listInstr.add(getToken(0).getImage());} |
+    <DADD> {listInstr.add(getToken(0).getImage());} |
+    <DALOAD> {listInstr.add(getToken(0).getImage());} |
+    <DASTORE> {listInstr.add(getToken(0).getImage());} |
+    <DCMPG> {listInstr.add(getToken(0).getImage());} |
+    <DCMPL> {listInstr.add(getToken(0).getImage());} |
+    <DCONST_0> {listInstr.add(getToken(0).getImage());} |
+    <DCONST_1> {listInstr.add(getToken(0).getImage());} |
+    <DDIV> {listInstr.add(getToken(0).getImage());} |
+    <DLOAD> <INTEGER> {listInstr.add(getToken(0).getImage());} |
+    <DLOAD_0> {listInstr.add(getToken(0).getImage());} |
+    <DLOAD_1> {listInstr.add(getToken(0).getImage());} |
+    <DLOAD_2> {listInstr.add(getToken(0).getImage());} |
+    <DLOAD_3> {listInstr.add(getToken(0).getImage());} |
+    <DMUL> {listInstr.add(getToken(0).getImage());} |
+    <DNEG> {listInstr.add(getToken(0).getImage());} |
+    <DREM> {listInstr.add(getToken(0).getImage());} |
+    <DRETURN> {listInstr.add(getToken(0).getImage());} |
+    <DSTORE> <INTEGER> {listInstr.add(getToken(0).getImage());} |
+    <DSTORE_0> {listInstr.add(getToken(0).getImage());} |
+    <DSTORE_1> {listInstr.add(getToken(0).getImage());} |
+    <DSTORE_2> {listInstr.add(getToken(0).getImage());} |
+    <DSTORE_3> {listInstr.add(getToken(0).getImage());} |
+    <DSUB> {listInstr.add(getToken(0).getImage());} |
+    <DUP> {listInstr.add(getToken(0).getImage());} |
+    <DUP_X1> {listInstr.add(getToken(0).getImage());} |
+    <DUP_X2> {listInstr.add(getToken(0).getImage());} |
+    <DUP2> {listInstr.add(getToken(0).getImage());} |
+    <DUP2_X1> {listInstr.add(getToken(0).getImage());} |
+    <DUP2_X2> {listInstr.add(getToken(0).getImage());} |
+    <F2D> {listInstr.add(getToken(0).getImage());} |
+    <ALOAD> <INTEGER> {listInstr.add(getToken(0).getImage());} |
+    <ILOAD> <INTEGER> {listInstr.add(getToken(0).getImage());} |
+    <ILOAD_0> {listInstr.add(getToken(0).getImage());} |
+    <ILOAD_1> {listInstr.add(getToken(0).getImage());} |
+    <ILOAD_2> {listInstr.add(getToken(0).getImage());} |
+    <ILOAD_3> {listInstr.add(getToken(0).getImage());} |
+    <IF_ACMPEQ> <IDENTIFIER> <IDENTIFIER> {listInstr.add(getToken(0).getImage());} |
+    <IF_ACMPNE> <IDENTIFIER> <IDENTIFIER> {listInstr.add(getToken(0).getImage());} |
+    <IF_ICMPEQ> <IDENTIFIER> {listInstr.add(getToken(0).getImage());} |
+    <IF_ICMPNE> <IDENTIFIER> {listInstr.add(getToken(0).getImage());} |
+    <IF_ICMPLT> <IDENTIFIER> {listInstr.add(getToken(0).getImage());} |
+    <IF_ICMPGE> <IDENTIFIER> {listInstr.add(getToken(0).getImage());} |
+    <IF_ICMPGT> <IDENTIFIER> {listInstr.add(getToken(0).getImage());} |
+    <IF_ICMPLE> <IDENTIFIER> {listInstr.add(getToken(0).getImage());} |
+    <IFEQ> <IDENTIFIER> {listInstr.add(getToken(0).getImage());} |
+    <IFNE> <IDENTIFIER> {listInstr.add(getToken(0).getImage());} |
+    <IFLT> <IDENTIFIER> {listInstr.add(getToken(0).getImage());} |
+    <IFGE> <IDENTIFIER> {listInstr.add(getToken(0).getImage());} |
+    <IFGT> <IDENTIFIER> {listInstr.add(getToken(0).getImage());} |
+    <IFLE> <IDENTIFIER> {listInstr.add(getToken(0).getImage());} |
+    <IFNONNULL> <IDENTIFIER> {listInstr.add(getToken(0).getImage());} |
+    <IFNULL> <IDENTIFIER> {listInstr.add(getToken(0).getImage());} |
+    <IADD> {listInstr.add(getToken(0).getImage());} |
+    <IINC> (<INTEGER>) (<INTEGER>) {listInstr.add(getToken(0).getImage());} |
+    <INVOKENONVIRTUAL> (Path1)? {listInstr.add(getToken(0).getImage());} |
+    <INVOKESPECIAL> (Path1)? {listInstr.add(getToken(0).getImage());} |
+    <GO_TO> <IDENTIFIER> {listInstr.add(getToken(0).getImage());} |
+    <GO_TO_W> <IDENTIFIER> {listInstr.add(getToken(0).getImage());} |    
+    <F2I> <INTEGER> {listInstr.add(getToken(0).getImage());} |
+    <F2L> <INTEGER> {listInstr.add(getToken(0).getImage());} |
+    <FADD> <INTEGER> <INTEGER> {listInstr.add(getToken(0).getImage());} |
+    <FALOAD> <INTEGER> <INTEGER> {listInstr.add(getToken(0).getImage());} |
+    <FASTORE> <INTEGER> <INTEGER> <INTEGER> {listInstr.add(getToken(0).getImage());} |
+    <FCMPG> <INTEGER> <INTEGER> {listInstr.add(getToken(0).getImage());} |
+    <FCMPL> <INTEGER> <INTEGER> {listInstr.add(getToken(0).getImage());} |
+    <FCONST> <INTEGER> {listInstr.add(getToken(0).getImage());} |
+    <FCONST_0> {listInstr.add(getToken(0).getImage());} |
+    <FCONST_1> {listInstr.add(getToken(0).getImage());} |
+    <FCONST_2> {listInstr.add(getToken(0).getImage());} |
+    <FCONST_3> {listInstr.add(getToken(0).getImage());} |
+    <FDIV> <INTEGER> <INTEGER> {listInstr.add(getToken(0).getImage());} |
+    <FLOAD> <INTEGER> {listInstr.add(getToken(0).getImage());} |
+    <FLOAD_0> {listInstr.add(getToken(0).getImage());} |
+    <FLOAD_1> {listInstr.add(getToken(0).getImage());} |
+    <FLOAD_2> {listInstr.add(getToken(0).getImage());} |
+    <FLOAD_3> {listInstr.add(getToken(0).getImage());} |
+    <FMUL> <INTEGER> <INTEGER> {listInstr.add(getToken(0).getImage());} |
+    <FNEG> <INTEGER> {listInstr.add(getToken(0).getImage());} |
+    <FNEG> <INTEGER> <INTEGER> {listInstr.add(getToken(0).getImage());} |
+    <FREM> <INTEGER> <INTEGER> {listInstr.add(getToken(0).getImage());} |
+    <FRETURN> <INTEGER> {listInstr.add(getToken(0).getImage());} |
+    <FSTORE> <INTEGER> {listInstr.add(getToken(0).getImage());} |
+    <FSTORE_0> {listInstr.add(getToken(0).getImage());} |
+    <FSTORE_1> {listInstr.add(getToken(0).getImage());} |
+    <FSTORE_2> {listInstr.add(getToken(0).getImage());} |
+    <FSTORE_3> {listInstr.add(getToken(0).getImage());} |
+    <FSUB> <INTEGER> <INTEGER> {listInstr.add(getToken(0).getImage());} |
+    <GETFIELD> <INTEGER> {listInstr.add(getToken(0).getImage());} |
+    <GETSTATIC> {listInstr.add(getToken(0).getImage());} |
+    <I2B> <INTEGER> {listInstr.add(getToken(0).getImage());} |
+    <I2C> <INTEGER> {listInstr.add(getToken(0).getImage());} |
+    <I2D> <INTEGER> {listInstr.add(getToken(0).getImage());} |
+    <I2F> <INTEGER> {listInstr.add(getToken(0).getImage());} |
+    <I2L> <INTEGER> {listInstr.add(getToken(0).getImage());} | 
+    <I2S> <INTEGER> {listInstr.add(getToken(0).getImage());} | 
+    <IALOAD> <INTEGER> <INTEGER> {listInstr.add(getToken(0).getImage());} | 
+    <IAND> <INTEGER> <INTEGER> {listInstr.add(getToken(0).getImage());} | 
+    <IASTORE> <INTEGER> <INTEGER> <INTEGER> {listInstr.add(getToken(0).getImage());} | 
+    <IDIV> <INTEGER> <INTEGER> {listInstr.add(getToken(0).getImage());} | 
+    <INEG> <INTEGER> {listInstr.add(getToken(0).getImage());} | 
+    <IMUL> <INTEGER> <INTEGER> {listInstr.add(getToken(0).getImage());} | 
+    <RETURN> {listInstr.add(getToken(0).getImage());} |
+    <ARETURN> {listInstr.add(getToken(0).getImage());} |
+    <IRETURN> {listInstr.add(getToken(0).getImage());}|
+    <INSTANCEOF> {listInstr.add(getToken(0).getImage());} |
+    <INVOKEDYNAMIC> {listInstr.add(getToken(0).getImage());} |
+    <INVOKEINTERFACE> {listInstr.add(getToken(0).getImage());} |
+    <INVOKESPECIAL> {listInstr.add(getToken(0).getImage());} |
+    <INVOKESTATIC> {listInstr.add(getToken(0).getImage());} |
+    <INVOKEVIRTUAL> {listInstr.add(getToken(0).getImage());} |
+    <IOR> {listInstr.add(getToken(0).getImage());} |
+    <IREM> {listInstr.add(getToken(0).getImage());} |
+    <ISHL> {listInstr.add(getToken(0).getImage());} |
+    <ISHR> {listInstr.add(getToken(0).getImage());} |
+    <ISTORE> {listInstr.add(getToken(0).getImage());} |
+    <ISUB> {listInstr.add(getToken(0).getImage());} |
+    <IUSHR> {listInstr.add(getToken(0).getImage());} |
+    <IXOR> {listInstr.add(getToken(0).getImage());} |
+    <JSR> {listInstr.add(getToken(0).getImage());} |
+    <JSR_W> {listInstr.add(getToken(0).getImage());} |
+    <L2D> {listInstr.add(getToken(0).getImage());} |
+    <L2F> {listInstr.add(getToken(0).getImage());} |
+    <L2I> {listInstr.add(getToken(0).getImage());} |  
+    <LADD> <LONG> <LONG> {listInstr.add(getToken(0).getImage());} |
+    <LALOAD> <LONG> <LONG> {listInstr.add(getToken(0).getImage());} |
+    <LAND> <LONG> <LONG> {listInstr.add(getToken(0).getImage());} |
+    <LASTORE> <LONG> <INTEGER> <LONG>{listInstr.add(getToken(0).getImage());} |
+    <LCMP> <LONG> <LONG> {listInstr.add(getToken(0).getImage());} |
+    <LCONST_0> {listInstr.add(getToken(0).getImage());} |
+    <LCONST_1> {listInstr.add(getToken(0).getImage());} |
+    <LDC> {listInstr.add(getToken(0).getImage());} |
+    <LDC_W > {listInstr.add(getToken(0).getImage());} |  
+    <LDC2_W > {listInstr.add(getToken(0).getImage());} |  
+    <LDIV > <LONG> <LONG> {listInstr.add(getToken(0).getImage());} |  
+    <LLOAD> {listInstr.add(getToken(0).getImage());} |
+    <LLOAD_0> {listInstr.add(getToken(0).getImage());} |
+    <LLOAD_1> {listInstr.add(getToken(0).getImage());} |
+    <LLOAD_2> {listInstr.add(getToken(0).getImage());} |
+    <LLOAD_3> {listInstr.add(getToken(0).getImage());} |
+    <LMULT> <LONG> <LONG> {listInstr.add(getToken(0).getImage());} |
+    <LNEG> <LONG> {listInstr.add(getToken(0).getImage());} |
+    <LDIV> <LONG> <LONG> {listInstr.add(getToken(0).getImage());} |
+    <LOOKUPSWITCH> <INTEGER> {listInstr.add(getToken(0).getImage());} |
+    <LOR> <LONG> <LONG> {listInstr.add(getToken(0).getImage());} |
+    <LREM> <LONG> <LONG> {listInstr.add(getToken(0).getImage());} |
+    <LDIV> <LONG> <LONG> {listInstr.add(getToken(0).getImage());} |
+    <LRETURN> <LONG> {listInstr.add(getToken(0).getImage());} |
+    <LSHL> <LONG> <LONG> {listInstr.add(getToken(0).getImage());} |
+    <LSHR> <LONG> <LONG> {listInstr.add(getToken(0).getImage());} |
+    <LSTORE> <LONG> {listInstr.add(getToken(0).getImage());} |
+    <LSTORE_0> {listInstr.add(getToken(0).getImage());} |
+    <LSTORE_1> {listInstr.add(getToken(0).getImage());} |
+    <LSTORE_2> {listInstr.add(getToken(0).getImage());} |
+    <LSTORE_3> {listInstr.add(getToken(0).getImage());} |
+    <LSUB> <LONG> <LONG> {listInstr.add(getToken(0).getImage());} |
+    <LUSHR> <LONG> <LONG> {listInstr.add(getToken(0).getImage());} |
+    <LXOR> <LONG> <LONG> {listInstr.add(getToken(0).getImage());} |
+    <MONITORENTER> <LONG> {listInstr.add(getToken(0).getImage());} |
+    <MONITOREXIT> <LONG> {listInstr.add(getToken(0).getImage());} |
+    <MULTIANEWARRAY> {listInstr.add(getToken(0).getImage());} |
+    <NEW> {listInstr.add(getToken(0).getImage());} |
+    <NEWARRAY>  (<ARRAY_IDENTIFIER>)? (<IDENTIFIER> (<SLASH>|<DOT>)?)* (<SEMICOLON>)? {listInstr.add(getToken(0).getImage());} |
+    <NOP> {listInstr.add(getToken(0).getImage());} |
+    <POP> <LONG> {listInstr.add(getToken(0).getImage());} |
+    <POP_2> <LONG> <LONG> {listInstr.add(getToken(0).getImage());} |
+    <PUTFIELD> <INTEGER> <LONG> {listInstr.add(getToken(0).getImage());} |
+    <PUTSTATIC> <LONG> {listInstr.add(getToken(0).getImage());} |
+    <RET> {listInstr.add(getToken(0).getImage());} |
+    <RETURN> {listInstr.add(getToken(0).getImage());} |
+    <SALOAD> <LONG> <INTEGER> {listInstr.add(getToken(0).getImage());} |
+    <SASTORE> <LONG> <INTEGER> <LONG> {listInstr.add(getToken(0).getImage());} |
+    <SIPUSH> {listInstr.add(getToken(0).getImage());} |
+    <SWAP> <LONG> <LONG> {listInstr.add(getToken(0).getImage());} |
+    <TABLESWITCH> <INTEGER> {listInstr.add(getToken(0).getImage());} |
+    <WIDE> {listInstr.add(getToken(0).getImage());} 
+;
+
+
 
 
 Label:
     <IDENTIFIER> <DOUBLE_DOT>;
 
 Path1:
-    <IDENTIFIER> (<SLASH>) ((Path1) | (MethodName) (MethodArguments));
+    <IDENTIFIER> (<SLASH> | <DOT>) ((Path1) | (MethodName) (MethodArguments));
+
+
+
+
 
 
 MethodDeclaration: 
-    <DOT> (StartMethod)  (MethodName) (MethodArguments) (MethodBody)*
-    MethodFinal ;
+    (StartMethod)  (MethodName) (MethodArguments) (MethodBody)* EndMethod;
 
 StartMethod:
-    <METHOD> <PUBLIC> (<STATIC>)?;
+    <DOT_METHOD> <PUBLIC> (<STATIC>)?
+;
 
 MethodName:
     (<LESS> <IDENTIFIER> <GREAT> |
     <IDENTIFIER>);
 
 MethodArguments:
-    <OPEN_PAREN> (<INT> | <VOID>)? <CLOSE_PAREN> (<INT> | <VOID>)?;
-
+    <OPEN_PAREN> (<ARRAY_IDENTIFIER>)? (<IDENTIFIER> | <SLASH>)* <CLOSE_PAREN> (<INT> | <VOID>);
 
 MethodBody:
-    (Instruction | Label) ;
-    
-MethodFinal:
-    <DOT> <END> <METHOD> ;
+    (Instruction |LimitInstructions| Label) ;
+
+LimitInstructions:
+    <LIMIT> LimitStatementFactorization;
+
+LimitStatementFactorization:
+    <STACK> <INTEGER> 
+    | 
+    <LOCALS> <INTEGER>;
+
+EndMethod:
+	<END> <METHOD>
+;

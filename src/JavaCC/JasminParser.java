@@ -13,17 +13,46 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.charset.Charset;
+import java.util.ArrayList;
 @SuppressWarnings("unused")
 public class JasminParser implements JasminParserConstants {
+    ArrayList listInstr= new ArrayList();
+    ArrayList getInstr() {
+        return listInstr;
+    }
+
     static public void main(String[] args) {
+        JasminParser parser;
         if (args.length== 0) {
-            System.out.println("Usage: java JasminParser <input>");
-            System.exit(-1);
+            System.out.println("Jasmin Parser:  Reading from standard input . . .");
+            parser= new JasminParser(System.in);
         }
-        String input= "";
-        for (String arg : args) input+=arg;
-        JasminParser parser= new JasminParser(input);
-        parser.Start();
+        else if (args.length== 1) {
+            System.out.println("Jasmin Parser:  Reading from file "+args[0]+" . . .");
+            try {
+                parser= new JasminParser(new java.io.FileInputStream(args[0]));
+            }
+            catch(java.io.FileNotFoundException e) {
+                System.out.println("Jasmin Parser:  File "+args[0]+" not found.");
+                return;
+            }
+        }
+        else  {
+            System.out.println("Jasmin Parser:  Usage is one of:");
+            System.out.println("         java JasminParser < inputfile");
+            System.out.println("OR");
+            System.out.println("         java JasminParser inputfile");
+            return;
+        }
+        try {
+            parser.Start();
+            System.out.println("Jasmin Parser:  Jasmin file parsed successfully.");
+        }
+        catch(ParseException e) {
+            System.out.println("Jasmin Parser:  Encountered errors during parse.");
+            e.printStackTrace();
+        }
+        System.out.println(parser.getInstr().toString());
     }
 
     static final int UNLIMITED= Integer.MAX_VALUE;
@@ -188,418 +217,953 @@ public class JasminParser implements JasminParserConstants {
         return result;
     }
 
-    // JasminParser.jj:60:1
+    // JasminParser.jj:258:1
     final public void Start() {
         if (cancelled) throw new CancellationException();
         String prevProduction= currentlyParsedProduction;
         this.currentlyParsedProduction= "Start";
-        Start Start1= null;
-        if (buildTree) {
-            Start1= new Start();
-            openNodeScope(Start1);
-        }
-        ParseException parseException1= null;
-        int callStackSize2= parsingStack.size();
-        try {
-            if (false) throw new ParseException("Never happens!");
-            // Code for RegexpRef specified at:
-            // JasminParser.jj:60:8
-            consumeToken(TokenType.DOT);
+        // Code for RegexpRef specified at:
+        // JasminParser.jj:259:1
+        consumeToken(TokenType.CLASS);
+        // Code for RegexpRef specified at:
+        // JasminParser.jj:259:9
+        consumeToken(TokenType.PUBLIC);
+        // Code for RegexpRef specified at:
+        // JasminParser.jj:259:18
+        consumeToken(TokenType.IDENTIFIER);
+        // Code for ZeroOrOne specified at:
+        // JasminParser.jj:259:30
+        if (nextTokenType()== TokenType.SUPER) {
             // Code for NonTerminal specified at:
-            // JasminParser.jj:60:14
-            pushOntoCallStack("Start", "JasminParser.jj", 1505);
+            // JasminParser.jj:259:31
+            pushOntoCallStack("Start", "JasminParser.jj", 7591);
             try {
-                ClassDeclaration();
+                SuperDeclaration();
             }
             finally {
                 popCallStack();
             }
-            // Code for ZeroOrOne specified at:
-            // JasminParser.jj:60:31
-            if (nextTokenType()== TokenType.DOT) {
-                // Code for NonTerminal specified at:
-                // JasminParser.jj:60:32
-                pushOntoCallStack("Start", "JasminParser.jj", 1523);
-                try {
-                    SuperDeclaration();
-                }
-                finally {
-                    popCallStack();
-                }
-            }
         }
-        catch(ParseException e) {
-            parseException1= e;
-            throw e;
-        }
-        finally {
-            restoreCallStack(callStackSize2);
-            if (Start1!=null) {
-                if (parseException1== null) {
-                    closeNodeScope(Start1, nodeArity()> 1);
-                }
-                else  {
-                    clearNodeScope();
-                }
-            }
-            this.currentlyParsedProduction= prevProduction;
-        }
-    }
-
-    // JasminParser.jj:63:1
-    final public void ClassDeclaration() {
-        if (cancelled) throw new CancellationException();
-        String prevProduction= currentlyParsedProduction;
-        this.currentlyParsedProduction= "ClassDeclaration";
-        ClassDeclaration ClassDeclaration2= null;
-        if (buildTree) {
-            ClassDeclaration2= new ClassDeclaration();
-            openNodeScope(ClassDeclaration2);
-        }
-        ParseException parseException19= null;
-        int callStackSize20= parsingStack.size();
-        try {
-            if (false) throw new ParseException("Never happens!");
-            // Code for RegexpRef specified at:
-            // JasminParser.jj:63:19
-            consumeToken(TokenType.CLASS);
-            // Code for RegexpRef specified at:
-            // JasminParser.jj:63:27
-            consumeToken(TokenType.PUBLIC);
-            // Code for RegexpRef specified at:
-            // JasminParser.jj:63:36
-            consumeToken(TokenType.IDENTIFIER);
-        }
-        catch(ParseException e) {
-            parseException19= e;
-            throw e;
-        }
-        finally {
-            restoreCallStack(callStackSize20);
-            if (ClassDeclaration2!=null) {
-                if (parseException19== null) {
-                    closeNodeScope(ClassDeclaration2, nodeArity()> 1);
-                }
-                else  {
-                    clearNodeScope();
-                }
-            }
-            this.currentlyParsedProduction= prevProduction;
-        }
-    }
-
-    // JasminParser.jj:65:1
-    final public void SuperDeclaration() {
-        if (cancelled) throw new CancellationException();
-        String prevProduction= currentlyParsedProduction;
-        this.currentlyParsedProduction= "SuperDeclaration";
-        SuperDeclaration SuperDeclaration3= null;
-        if (buildTree) {
-            SuperDeclaration3= new SuperDeclaration();
-            openNodeScope(SuperDeclaration3);
-        }
-        ParseException parseException31= null;
-        int callStackSize32= parsingStack.size();
-        try {
-            if (false) throw new ParseException("Never happens!");
-            // Code for RegexpRef specified at:
-            // JasminParser.jj:65:19
-            consumeToken(TokenType.DOT);
-            // Code for RegexpRef specified at:
-            // JasminParser.jj:65:25
-            consumeToken(TokenType.SUPER);
-            // Code for ZeroOrMore specified at:
-            // JasminParser.jj:65:33
-            while (true) {
-                if (!(nextTokenType()== TokenType.IDENTIFIER)) break;
-                // Code for RegexpRef specified at:
-                // JasminParser.jj:65:34
-                consumeToken(TokenType.IDENTIFIER);
-                // Code for RegexpRef specified at:
-                // JasminParser.jj:65:47
-                consumeToken(TokenType.SLASH);
-            }
+        // Code for ZeroOrMore specified at:
+        // JasminParser.jj:259:50
+        while (true) {
+            if (!(nextTokenType()== TokenType.DOT_METHOD)) break;
             // Code for NonTerminal specified at:
-            // JasminParser.jj:65:58
-            pushOntoCallStack("SuperDeclaration", "JasminParser.jj", 1652);
+            // JasminParser.jj:259:51
+            pushOntoCallStack("Start", "JasminParser.jj", 7611);
             try {
                 MethodDeclaration();
             }
             finally {
                 popCallStack();
             }
-            // Code for RegexpRef specified at:
-            // JasminParser.jj:65:77
-            consumeToken(TokenType.OPEN_PAREN);
-            // Code for RegexpRef specified at:
-            // JasminParser.jj:65:90
-            consumeToken(TokenType.CLOSE_PAREN);
-        }
-        catch(ParseException e) {
-            parseException31= e;
-            throw e;
-        }
-        finally {
-            restoreCallStack(callStackSize32);
-            if (SuperDeclaration3!=null) {
-                if (parseException31== null) {
-                    closeNodeScope(SuperDeclaration3, nodeArity()> 1);
-                }
-                else  {
-                    clearNodeScope();
-                }
-            }
-            this.currentlyParsedProduction= prevProduction;
         }
     }
 
-    // JasminParser.jj:67:1
+    // JasminParser.jj:263:1
+    final public void ClassDeclaration() {
+        if (cancelled) throw new CancellationException();
+        String prevProduction= currentlyParsedProduction;
+        this.currentlyParsedProduction= "ClassDeclaration";
+        // Code for RegexpRef specified at:
+        // JasminParser.jj:264:9
+        consumeToken(TokenType.CLASS);
+        // Code for RegexpRef specified at:
+        // JasminParser.jj:264:17
+        consumeToken(TokenType.PUBLIC);
+        // Code for RegexpRef specified at:
+        // JasminParser.jj:264:26
+        consumeToken(TokenType.IDENTIFIER);
+    }
+
+    // JasminParser.jj:267:1
+    final public void SuperDeclaration() {
+        if (cancelled) throw new CancellationException();
+        String prevProduction= currentlyParsedProduction;
+        this.currentlyParsedProduction= "SuperDeclaration";
+        // Code for RegexpRef specified at:
+        // JasminParser.jj:268:9
+        consumeToken(TokenType.SUPER);
+        // Code for RegexpRef specified at:
+        // JasminParser.jj:268:17
+        consumeToken(TokenType.IDENTIFIER);
+        // Code for ZeroOrMore specified at:
+        // JasminParser.jj:268:30
+        while (true) {
+            if (!(nextTokenType()== TokenType.SLASH)) break;
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:268:31
+            consumeToken(TokenType.SLASH);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:268:39
+            consumeToken(TokenType.IDENTIFIER);
+        }
+    }
+
+    static private final EnumSet<TokenType> Instruction_FIRST_SET= Instruction_FIRST_SET_init();
+    static private EnumSet<TokenType> Instruction_FIRST_SET_init() {
+        return tokenTypeSet(TokenType.GO_TO, TokenType.GO_TO_W, TokenType.A_NEW_ARRAY, TokenType.ARRAY_LENGTH, TokenType.ARETURN, TokenType.ALOAD, TokenType.ALOAD_0, TokenType.ALOAD_1, TokenType.ALOAD_2, TokenType.ALOAD_3, TokenType.BALOAD, TokenType.CALOAD, TokenType.CASTORE, TokenType.CHECKCAST, TokenType.D2F, TokenType.D2I, TokenType.D2L, TokenType.DADD, TokenType.DALOAD, TokenType.DASTORE, TokenType.DCMPG, TokenType.DCMPL, TokenType.DCONST_0, TokenType.DCONST_1, TokenType.DDIV, TokenType.DLOAD, TokenType.DLOAD_0, TokenType.DLOAD_1, TokenType.DLOAD_2, TokenType.DLOAD_3, TokenType.DMUL, TokenType.DNEG, TokenType.DREM, TokenType.DRETURN, TokenType.DSTORE, TokenType.DSTORE_0, TokenType.DSTORE_1, TokenType.DSTORE_2, TokenType.DSTORE_3, TokenType.DSUB, TokenType.DUP, TokenType.DUP_X1, TokenType.DUP_X2, TokenType.DUP2, TokenType.DUP2_X1, TokenType.DUP2_X2, TokenType.F2D, TokenType.ATHROW, TokenType.ASTORE, TokenType.ASTORE_1, TokenType.ASTORE_2, TokenType.ASTORE_3, TokenType.BASTORE, TokenType.ICONST, TokenType.ICONST_0, TokenType.ICONST_1, TokenType.ICONST_2, TokenType.ICONST_3, TokenType.ICONST_4, TokenType.ICONST_5, TokenType.ISTORE, TokenType.ISTORE_2, TokenType.ISTORE_3, TokenType.ILOAD, TokenType.ILOAD_0, TokenType.ILOAD_1, TokenType.ILOAD_2, TokenType.ILOAD_3, TokenType.IF_ACMPEQ, TokenType.IF_ACMPNE, TokenType.IF_ICMPEQ, TokenType.IF_ICMPNE, TokenType.IF_ICMPLT, TokenType.IF_ICMPGE, TokenType.IF_ICMPGT, TokenType.IF_ICMPLE, TokenType.IFEQ, TokenType.IFNE, TokenType.IFLT, TokenType.IFGE, TokenType.IFGT, TokenType.IFLE, TokenType.IFNONNULL, TokenType.IFNULL, TokenType.IADD, TokenType.IINC, TokenType.INVOKENONVIRTUAL, TokenType.NEW, TokenType.BIPUSH, TokenType.F2I, TokenType.F2L, TokenType.FADD, TokenType.FALOAD, TokenType.FASTORE, TokenType.FCMPG, TokenType.FCMPL, TokenType.FCONST, TokenType.FCONST_0, TokenType.FCONST_1, TokenType.FCONST_2, TokenType.FCONST_3, TokenType.FDIV, TokenType.FLOAD, TokenType.FLOAD_0, TokenType.FLOAD_1, TokenType.FLOAD_2, TokenType.FLOAD_3, TokenType.FMUL, TokenType.FNEG, TokenType.FREM, TokenType.FRETURN, TokenType.FSTORE, TokenType.FSTORE_0, TokenType.FSTORE_1, TokenType.FSTORE_2, TokenType.FSTORE_3, TokenType.FSUB, TokenType.GETFIELD, TokenType.GETSTATIC, TokenType.I2B, TokenType.I2C, TokenType.I2D, TokenType.I2F, TokenType.I2L, TokenType.I2S, TokenType.IALOAD, TokenType.IAND, TokenType.IASTORE, TokenType.IDIV, TokenType.INEG, TokenType.IMUL, TokenType.INSTANCEOF, TokenType.INVOKEDYNAMIC, TokenType.INVOKEINTERFACE, TokenType.INVOKESPECIAL, TokenType.INVOKESTATIC, TokenType.INVOKEVIRTUAL, TokenType.IOR, TokenType.IREM, TokenType.ISHL, TokenType.ISHR, TokenType.ISUB, TokenType.IUSHR, TokenType.IXOR, TokenType.JSR, TokenType.JSR_W, TokenType.L2D, TokenType.L2F, TokenType.L2I, TokenType.LALOAD, TokenType.LAND, TokenType.LASTORE, TokenType.LCMP, TokenType.LCONST_0, TokenType.LCONST_1, TokenType.LDC, TokenType.LDC_W, TokenType.LADD, TokenType.IRETURN, TokenType.RETURN);
+    }
+
+    // JasminParser.jj:271:1
     final public void Instruction() {
         if (cancelled) throw new CancellationException();
         String prevProduction= currentlyParsedProduction;
         this.currentlyParsedProduction= "Instruction";
-        Instruction Instruction4= null;
-        if (buildTree) {
-            Instruction4= new Instruction();
-            openNodeScope(Instruction4);
+        // Code for ExpansionChoice specified at:
+        // JasminParser.jj:272:5
+        if (nextTokenType()== TokenType.NEW) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:272:5
+            consumeToken(TokenType.NEW);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:272:11
+            consumeToken(TokenType.IDENTIFIER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:272:24
+            listInstr.add(getToken(0).getImage());
         }
-        ParseException parseException65= null;
-        int callStackSize66= parsingStack.size();
-        try {
-            if (false) throw new ParseException("Never happens!");
-            if (nextTokenType()== TokenType.ALOAD_0) {
+        else if (nextTokenType()== TokenType.BIPUSH) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:273:5
+            consumeToken(TokenType.BIPUSH);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:273:14
+            consumeToken(TokenType.INTEGER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:273:24
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.A_NEW_ARRAY) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:274:5
+            consumeToken(TokenType.A_NEW_ARRAY);
+            // Code for ZeroOrOne specified at:
+            // JasminParser.jj:274:19
+            if (nextTokenType()== TokenType.ARRAY_IDENTIFIER) {
                 // Code for RegexpRef specified at:
-                // JasminParser.jj:68:6
-                consumeToken(TokenType.ALOAD_0);
+                // JasminParser.jj:274:20
+                consumeToken(TokenType.ARRAY_IDENTIFIER);
             }
-            else if (nextTokenType()== TokenType.ICONST_0) {
+            // Code for ZeroOrMore specified at:
+            // JasminParser.jj:274:41
+            while (true) {
+                if (!(nextTokenType()== TokenType.IDENTIFIER)) break;
                 // Code for RegexpRef specified at:
-                // JasminParser.jj:69:5
-                consumeToken(TokenType.ICONST_0);
-            }
-            else if (nextTokenType()== TokenType.ISTORE_2) {
-                // Code for RegexpRef specified at:
-                // JasminParser.jj:70:5
-                consumeToken(TokenType.ISTORE_2);
-            }
-            else if (nextTokenType()== TokenType.ISTORE_3) {
-                // Code for RegexpRef specified at:
-                // JasminParser.jj:71:5
-                consumeToken(TokenType.ISTORE_3);
-            }
-            else if (nextTokenType()== TokenType.ILOAD_1) {
-                // Code for RegexpRef specified at:
-                // JasminParser.jj:72:5
-                consumeToken(TokenType.ILOAD_1);
-            }
-            else if (nextTokenType()== TokenType.ILOAD_2) {
-                // Code for RegexpRef specified at:
-                // JasminParser.jj:73:5
-                consumeToken(TokenType.ILOAD_2);
-            }
-            else if (nextTokenType()== TokenType.ILOAD_3) {
-                // Code for RegexpRef specified at:
-                // JasminParser.jj:74:5
-                consumeToken(TokenType.ILOAD_3);
-            }
-            else if (nextTokenType()== TokenType.IF_ICMPGE) {
-                // Code for RegexpRef specified at:
-                // JasminParser.jj:75:5
-                consumeToken(TokenType.IF_ICMPGE);
-            }
-            else if (nextTokenType()== TokenType.IADD) {
-                // Code for RegexpRef specified at:
-                // JasminParser.jj:76:5
-                consumeToken(TokenType.IADD);
-            }
-            else if (nextTokenType()== TokenType.IINC) {
-                // Code for RegexpRef specified at:
-                // JasminParser.jj:77:5
-                consumeToken(TokenType.IINC);
+                // JasminParser.jj:274:42
+                consumeToken(TokenType.IDENTIFIER);
                 // Code for ZeroOrOne specified at:
-                // JasminParser.jj:77:12
-                if (nextTokenType()== TokenType.INTEGER) {
+                // JasminParser.jj:274:55
+                // Code for ExpansionChoice specified at:
+                // JasminParser.jj:274:56
+                if (nextTokenType()== TokenType.SLASH) {
                     // Code for RegexpRef specified at:
-                    // JasminParser.jj:77:13
-                    consumeToken(TokenType.INTEGER);
+                    // JasminParser.jj:274:56
+                    consumeToken(TokenType.SLASH);
                 }
-                // Code for ZeroOrOne specified at:
-                // JasminParser.jj:77:25
-                if (nextTokenType()== TokenType.INTEGER) {
+                else if (nextTokenType()== TokenType.DOT) {
                     // Code for RegexpRef specified at:
-                    // JasminParser.jj:77:26
-                    consumeToken(TokenType.INTEGER);
+                    // JasminParser.jj:274:64
+                    consumeToken(TokenType.DOT);
                 }
             }
-            else if (nextTokenType()== TokenType.ALOAD_0) {
+            // Code for ZeroOrOne specified at:
+            // JasminParser.jj:274:74
+            if (nextTokenType()== TokenType.SEMICOLON) {
                 // Code for RegexpRef specified at:
-                // JasminParser.jj:78:5
-                consumeToken(TokenType.ALOAD_0);
+                // JasminParser.jj:274:75
+                consumeToken(TokenType.SEMICOLON);
             }
-            else if (nextTokenType()== TokenType.RETURN) {
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:274:89
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.ARRAY_LENGTH) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:275:5
+            consumeToken(TokenType.ARRAY_LENGTH);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:275:20
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.ATHROW) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:276:5
+            consumeToken(TokenType.ATHROW);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:276:14
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.ALOAD_0) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:277:5
+            consumeToken(TokenType.ALOAD_0);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:277:15
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.ALOAD_1) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:278:5
+            consumeToken(TokenType.ALOAD_1);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:278:15
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.ALOAD_2) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:279:5
+            consumeToken(TokenType.ALOAD_2);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:279:15
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.ALOAD_3) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:280:5
+            consumeToken(TokenType.ALOAD_3);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:280:15
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.BALOAD) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:281:5
+            consumeToken(TokenType.BALOAD);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:281:14
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.CALOAD) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:282:5
+            consumeToken(TokenType.CALOAD);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:282:14
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.CASTORE) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:283:5
+            consumeToken(TokenType.CASTORE);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:283:15
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.CHECKCAST) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:284:5
+            consumeToken(TokenType.CHECKCAST);
+            // Code for ZeroOrMore specified at:
+            // JasminParser.jj:284:17
+            while (true) {
+                if (!(nextTokenType()== TokenType.IDENTIFIER)) break;
                 // Code for RegexpRef specified at:
-                // JasminParser.jj:79:5
-                consumeToken(TokenType.RETURN);
-            }
-            else if (nextTokenType()== TokenType.IRETURN) {
-                // Code for RegexpRef specified at:
-                // JasminParser.jj:80:5
-                consumeToken(TokenType.IRETURN);
-            }
-            else if (nextTokenType()== TokenType.DOT) {
-                // Code for RegexpRef specified at:
-                // JasminParser.jj:81:5
-                consumeToken(TokenType.DOT);
-                // Code for RegexpRef specified at:
-                // JasminParser.jj:81:11
-                consumeToken(TokenType.LIMIT);
-                // Code for RegexpRef specified at:
-                // JasminParser.jj:81:19
-                consumeToken(TokenType.LOCALS);
+                // JasminParser.jj:284:18
+                consumeToken(TokenType.IDENTIFIER);
                 // Code for ZeroOrOne specified at:
-                // JasminParser.jj:81:28
-                if (nextTokenType()== TokenType.INTEGER) {
+                // JasminParser.jj:284:31
+                // Code for ExpansionChoice specified at:
+                // JasminParser.jj:284:32
+                if (nextTokenType()== TokenType.SLASH) {
                     // Code for RegexpRef specified at:
-                    // JasminParser.jj:81:29
-                    consumeToken(TokenType.INTEGER);
+                    // JasminParser.jj:284:32
+                    consumeToken(TokenType.SLASH);
                 }
-            }
-            else if (nextTokenType()== TokenType.DOT) {
-                // Code for RegexpRef specified at:
-                // JasminParser.jj:82:5
-                consumeToken(TokenType.DOT);
-                // Code for RegexpRef specified at:
-                // JasminParser.jj:82:11
-                consumeToken(TokenType.LIMIT);
-                // Code for RegexpRef specified at:
-                // JasminParser.jj:82:19
-                consumeToken(TokenType.STACK);
-                // Code for ZeroOrOne specified at:
-                // JasminParser.jj:82:27
-                if (nextTokenType()== TokenType.INTEGER) {
+                else if (nextTokenType()== TokenType.DOT) {
                     // Code for RegexpRef specified at:
-                    // JasminParser.jj:82:28
-                    consumeToken(TokenType.INTEGER);
+                    // JasminParser.jj:284:40
+                    consumeToken(TokenType.DOT);
                 }
             }
-            else if (nextTokenType()== TokenType.INVOKENONVIRTUAL) {
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:284:50
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.LDC) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:285:5
+            consumeToken(TokenType.LDC);
+            if (nextTokenType()== TokenType.QUOTE) {
                 // Code for RegexpRef specified at:
-                // JasminParser.jj:83:5
-                consumeToken(TokenType.INVOKENONVIRTUAL);
-                // Code for ZeroOrOne specified at:
-                // JasminParser.jj:83:24
-                if (nextTokenType()== TokenType.IDENTIFIER) {
-                    // Code for NonTerminal specified at:
-                    // JasminParser.jj:83:25
-                    pushOntoCallStack("Instruction", "JasminParser.jj", 2054);
-                    try {
-                        Path1();
-                    }
-                    finally {
-                        popCallStack();
-                    }
-                }
+                // JasminParser.jj:285:12
+                consumeToken(TokenType.QUOTE);
+                // Code for RegexpRef specified at:
+                // JasminParser.jj:285:20
+                consumeToken(TokenType.IDENTIFIER);
+                // Code for RegexpRef specified at:
+                // JasminParser.jj:285:33
+                consumeToken(TokenType.QUOTE);
+            }
+            else if (nextTokenType()== TokenType.INTEGER) {
+                // Code for RegexpRef specified at:
+                // JasminParser.jj:285:43
+                consumeToken(TokenType.INTEGER);
             }
             else  {
-                pushOntoCallStack("Instruction", "JasminParser.jj", 1719);
-                throw new ParseException(this, first_set$JasminParser_jj$68$6, parsingStack);
+                pushOntoCallStack("Instruction", "JasminParser.jj", 8734);
+                throw new ParseException(this, first_set$JasminParser_jj$285$12, parsingStack);
             }
-            // Code for ZeroOrOne specified at:
-            // JasminParser.jj:83:35
-            if (nextTokenType()== TokenType.IDENTIFIER) {
-                // Code for RegexpRef specified at:
-                // JasminParser.jj:83:36
-                consumeToken(TokenType.IDENTIFIER);
-            }
-            // Code for ZeroOrOne specified at:
-            // JasminParser.jj:83:51
-            if (nextTokenType()== TokenType.IDENTIFIER) {
-                // Code for RegexpRef specified at:
-                // JasminParser.jj:83:52
-                consumeToken(TokenType.IDENTIFIER);
-            }
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:285:54
+            listInstr.add(getToken(0).getImage());
         }
-        catch(ParseException e) {
-            parseException65= e;
-            throw e;
-        }
-        finally {
-            restoreCallStack(callStackSize66);
-            if (Instruction4!=null) {
-                if (parseException65== null) {
-                    closeNodeScope(Instruction4, nodeArity()> 1);
-                }
-                else  {
-                    clearNodeScope();
-                }
-            }
-            this.currentlyParsedProduction= prevProduction;
-        }
-    }
-
-    // JasminParser.jj:86:1
-    final public void Label() {
-        if (cancelled) throw new CancellationException();
-        String prevProduction= currentlyParsedProduction;
-        this.currentlyParsedProduction= "Label";
-        Label Label5= null;
-        if (buildTree) {
-            Label5= new Label();
-            openNodeScope(Label5);
-        }
-        ParseException parseException243= null;
-        int callStackSize244= parsingStack.size();
-        try {
-            if (false) throw new ParseException("Never happens!");
+        else if (nextTokenType()== TokenType.ASTORE) {
             // Code for RegexpRef specified at:
-            // JasminParser.jj:87:5
+            // JasminParser.jj:286:5
+            consumeToken(TokenType.ASTORE);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:286:14
+            consumeToken(TokenType.INTEGER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:286:24
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.ASTORE_1) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:287:5
+            consumeToken(TokenType.ASTORE_1);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:287:16
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.ASTORE_2) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:288:5
+            consumeToken(TokenType.ASTORE_2);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:288:16
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.ASTORE_3) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:289:5
+            consumeToken(TokenType.ASTORE_3);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:289:16
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.BASTORE) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:290:5
+            consumeToken(TokenType.BASTORE);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:290:15
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.ICONST) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:291:5
+            consumeToken(TokenType.ICONST);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:291:14
+            consumeToken(TokenType.INTEGER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:291:24
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.ICONST_0) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:292:5
+            consumeToken(TokenType.ICONST_0);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:292:16
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.ICONST_1) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:293:5
+            consumeToken(TokenType.ICONST_1);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:293:16
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.ICONST_2) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:294:5
+            consumeToken(TokenType.ICONST_2);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:294:16
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.ICONST_3) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:295:5
+            consumeToken(TokenType.ICONST_3);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:295:16
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.ICONST_4) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:296:5
+            consumeToken(TokenType.ICONST_4);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:296:16
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.ICONST_5) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:297:5
+            consumeToken(TokenType.ICONST_5);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:297:16
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.ISTORE_2) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:298:5
+            consumeToken(TokenType.ISTORE_2);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:298:16
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.ISTORE_3) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:299:5
+            consumeToken(TokenType.ISTORE_3);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:299:16
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.D2F) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:300:5
+            consumeToken(TokenType.D2F);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:300:11
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.D2I) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:301:5
+            consumeToken(TokenType.D2I);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:301:11
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.D2L) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:302:5
+            consumeToken(TokenType.D2L);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:302:11
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.DADD) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:303:5
+            consumeToken(TokenType.DADD);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:303:12
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.DALOAD) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:304:5
+            consumeToken(TokenType.DALOAD);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:304:14
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.DASTORE) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:305:5
+            consumeToken(TokenType.DASTORE);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:305:15
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.DCMPG) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:306:5
+            consumeToken(TokenType.DCMPG);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:306:13
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.DCMPL) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:307:5
+            consumeToken(TokenType.DCMPL);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:307:13
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.DCONST_0) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:308:5
+            consumeToken(TokenType.DCONST_0);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:308:16
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.DCONST_1) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:309:5
+            consumeToken(TokenType.DCONST_1);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:309:16
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.DDIV) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:310:5
+            consumeToken(TokenType.DDIV);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:310:12
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.DLOAD) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:311:5
+            consumeToken(TokenType.DLOAD);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:311:13
+            consumeToken(TokenType.INTEGER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:311:23
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.DLOAD_0) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:312:5
+            consumeToken(TokenType.DLOAD_0);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:312:15
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.DLOAD_1) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:313:5
+            consumeToken(TokenType.DLOAD_1);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:313:15
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.DLOAD_2) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:314:5
+            consumeToken(TokenType.DLOAD_2);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:314:15
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.DLOAD_3) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:315:5
+            consumeToken(TokenType.DLOAD_3);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:315:15
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.DMUL) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:316:5
+            consumeToken(TokenType.DMUL);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:316:12
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.DNEG) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:317:5
+            consumeToken(TokenType.DNEG);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:317:12
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.DREM) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:318:5
+            consumeToken(TokenType.DREM);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:318:12
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.DRETURN) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:319:5
+            consumeToken(TokenType.DRETURN);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:319:15
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.DSTORE) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:320:5
+            consumeToken(TokenType.DSTORE);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:320:14
+            consumeToken(TokenType.INTEGER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:320:24
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.DSTORE_0) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:321:5
+            consumeToken(TokenType.DSTORE_0);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:321:16
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.DSTORE_1) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:322:5
+            consumeToken(TokenType.DSTORE_1);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:322:16
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.DSTORE_2) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:323:5
+            consumeToken(TokenType.DSTORE_2);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:323:16
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.DSTORE_3) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:324:5
+            consumeToken(TokenType.DSTORE_3);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:324:16
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.DSUB) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:325:5
+            consumeToken(TokenType.DSUB);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:325:12
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.DUP) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:326:5
+            consumeToken(TokenType.DUP);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:326:11
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.DUP_X1) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:327:5
+            consumeToken(TokenType.DUP_X1);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:327:14
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.DUP_X2) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:328:5
+            consumeToken(TokenType.DUP_X2);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:328:14
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.DUP2) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:329:5
+            consumeToken(TokenType.DUP2);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:329:12
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.DUP2_X1) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:330:5
+            consumeToken(TokenType.DUP2_X1);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:330:15
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.DUP2_X2) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:331:5
+            consumeToken(TokenType.DUP2_X2);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:331:15
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.F2D) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:332:5
+            consumeToken(TokenType.F2D);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:332:11
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.ALOAD) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:333:5
+            consumeToken(TokenType.ALOAD);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:333:13
+            consumeToken(TokenType.INTEGER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:333:23
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.ILOAD) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:334:5
+            consumeToken(TokenType.ILOAD);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:334:13
+            consumeToken(TokenType.INTEGER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:334:23
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.ILOAD_0) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:335:5
+            consumeToken(TokenType.ILOAD_0);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:335:15
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.ILOAD_1) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:336:5
+            consumeToken(TokenType.ILOAD_1);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:336:15
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.ILOAD_2) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:337:5
+            consumeToken(TokenType.ILOAD_2);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:337:15
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.ILOAD_3) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:338:5
+            consumeToken(TokenType.ILOAD_3);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:338:15
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.IF_ACMPEQ) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:339:5
+            consumeToken(TokenType.IF_ACMPEQ);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:339:17
             consumeToken(TokenType.IDENTIFIER);
             // Code for RegexpRef specified at:
-            // JasminParser.jj:87:18
-            consumeToken(TokenType.DOUBLE_DOT);
+            // JasminParser.jj:339:30
+            consumeToken(TokenType.IDENTIFIER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:339:43
+            listInstr.add(getToken(0).getImage());
         }
-        catch(ParseException e) {
-            parseException243= e;
-            throw e;
-        }
-        finally {
-            restoreCallStack(callStackSize244);
-            if (Label5!=null) {
-                if (parseException243== null) {
-                    closeNodeScope(Label5, nodeArity()> 1);
-                }
-                else  {
-                    clearNodeScope();
-                }
-            }
-            this.currentlyParsedProduction= prevProduction;
-        }
-    }
-
-    // JasminParser.jj:89:1
-    final public void Path1() {
-        if (cancelled) throw new CancellationException();
-        String prevProduction= currentlyParsedProduction;
-        this.currentlyParsedProduction= "Path1";
-        Path1 Path16= null;
-        if (buildTree) {
-            Path16= new Path1();
-            openNodeScope(Path16);
-        }
-        ParseException parseException252= null;
-        int callStackSize253= parsingStack.size();
-        try {
-            if (false) throw new ParseException("Never happens!");
+        else if (nextTokenType()== TokenType.IF_ACMPNE) {
             // Code for RegexpRef specified at:
-            // JasminParser.jj:90:5
+            // JasminParser.jj:340:5
+            consumeToken(TokenType.IF_ACMPNE);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:340:17
             consumeToken(TokenType.IDENTIFIER);
             // Code for RegexpRef specified at:
-            // JasminParser.jj:90:18
-            consumeToken(TokenType.SLASH);
+            // JasminParser.jj:340:30
+            consumeToken(TokenType.IDENTIFIER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:340:43
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.IF_ICMPEQ) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:341:5
+            consumeToken(TokenType.IF_ICMPEQ);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:341:17
+            consumeToken(TokenType.IDENTIFIER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:341:30
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.IF_ICMPNE) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:342:5
+            consumeToken(TokenType.IF_ICMPNE);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:342:17
+            consumeToken(TokenType.IDENTIFIER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:342:30
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.IF_ICMPLT) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:343:5
+            consumeToken(TokenType.IF_ICMPLT);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:343:17
+            consumeToken(TokenType.IDENTIFIER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:343:30
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.IF_ICMPGE) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:344:5
+            consumeToken(TokenType.IF_ICMPGE);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:344:17
+            consumeToken(TokenType.IDENTIFIER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:344:30
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.IF_ICMPGT) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:345:5
+            consumeToken(TokenType.IF_ICMPGT);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:345:17
+            consumeToken(TokenType.IDENTIFIER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:345:30
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.IF_ICMPLE) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:346:5
+            consumeToken(TokenType.IF_ICMPLE);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:346:17
+            consumeToken(TokenType.IDENTIFIER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:346:30
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.IFEQ) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:347:5
+            consumeToken(TokenType.IFEQ);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:347:12
+            consumeToken(TokenType.IDENTIFIER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:347:25
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.IFNE) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:348:5
+            consumeToken(TokenType.IFNE);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:348:12
+            consumeToken(TokenType.IDENTIFIER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:348:25
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.IFLT) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:349:5
+            consumeToken(TokenType.IFLT);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:349:12
+            consumeToken(TokenType.IDENTIFIER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:349:25
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.IFGE) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:350:5
+            consumeToken(TokenType.IFGE);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:350:12
+            consumeToken(TokenType.IDENTIFIER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:350:25
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.IFGT) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:351:5
+            consumeToken(TokenType.IFGT);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:351:12
+            consumeToken(TokenType.IDENTIFIER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:351:25
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.IFLE) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:352:5
+            consumeToken(TokenType.IFLE);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:352:12
+            consumeToken(TokenType.IDENTIFIER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:352:25
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.IFNONNULL) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:353:5
+            consumeToken(TokenType.IFNONNULL);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:353:17
+            consumeToken(TokenType.IDENTIFIER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:353:30
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.IFNULL) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:354:5
+            consumeToken(TokenType.IFNULL);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:354:14
+            consumeToken(TokenType.IDENTIFIER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:354:27
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.IADD) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:355:5
+            consumeToken(TokenType.IADD);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:355:12
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.IINC) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:356:5
+            consumeToken(TokenType.IINC);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:356:13
+            consumeToken(TokenType.INTEGER);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:356:25
+            consumeToken(TokenType.INTEGER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:356:36
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.INVOKENONVIRTUAL) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:357:5
+            consumeToken(TokenType.INVOKENONVIRTUAL);
+            // Code for ZeroOrOne specified at:
+            // JasminParser.jj:357:24
             if (nextTokenType()== TokenType.IDENTIFIER) {
                 // Code for NonTerminal specified at:
-                // JasminParser.jj:90:28
-                pushOntoCallStack("Path1", "JasminParser.jj", 2172);
+                // JasminParser.jj:357:25
+                pushOntoCallStack("Instruction", "JasminParser.jj", 13161);
                 try {
                     Path1();
                 }
@@ -607,78 +1171,834 @@ public class JasminParser implements JasminParserConstants {
                     popCallStack();
                 }
             }
-            else if (nextTokenType()== TokenType.LESS||nextTokenType== TokenType.IDENTIFIER) {
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:357:33
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.INVOKESPECIAL) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:358:5
+            consumeToken(TokenType.INVOKESPECIAL);
+            // Code for ZeroOrOne specified at:
+            // JasminParser.jj:358:21
+            if (nextTokenType()== TokenType.IDENTIFIER) {
                 // Code for NonTerminal specified at:
-                // JasminParser.jj:90:38
-                pushOntoCallStack("Path1", "JasminParser.jj", 2182);
+                // JasminParser.jj:358:22
+                pushOntoCallStack("Instruction", "JasminParser.jj", 13233);
                 try {
-                    MethodName();
+                    Path1();
                 }
                 finally {
                     popCallStack();
                 }
-                // Code for NonTerminal specified at:
-                // JasminParser.jj:90:51
-                pushOntoCallStack("Path1", "JasminParser.jj", 2195);
-                try {
-                    MethodArguments();
-                }
-                finally {
-                    popCallStack();
-                }
             }
-            else  {
-                pushOntoCallStack("Path1", "JasminParser.jj", 2171);
-                throw new ParseException(this, first_set$JasminParser_jj$90$27, parsingStack);
-            }
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:358:30
+            listInstr.add(getToken(0).getImage());
         }
-        catch(ParseException e) {
-            parseException252= e;
-            throw e;
+        else if (nextTokenType()== TokenType.GO_TO) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:359:5
+            consumeToken(TokenType.GO_TO);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:359:13
+            consumeToken(TokenType.IDENTIFIER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:359:26
+            listInstr.add(getToken(0).getImage());
         }
-        finally {
-            restoreCallStack(callStackSize253);
-            if (Path16!=null) {
-                if (parseException252== null) {
-                    closeNodeScope(Path16, nodeArity()> 1);
-                }
-                else  {
-                    clearNodeScope();
-                }
-            }
-            this.currentlyParsedProduction= prevProduction;
+        else if (nextTokenType()== TokenType.GO_TO_W) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:360:5
+            consumeToken(TokenType.GO_TO_W);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:360:15
+            consumeToken(TokenType.IDENTIFIER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:360:28
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.F2I) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:361:5
+            consumeToken(TokenType.F2I);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:361:11
+            consumeToken(TokenType.INTEGER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:361:21
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.F2L) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:362:5
+            consumeToken(TokenType.F2L);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:362:11
+            consumeToken(TokenType.INTEGER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:362:21
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.FADD) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:363:5
+            consumeToken(TokenType.FADD);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:363:12
+            consumeToken(TokenType.INTEGER);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:363:22
+            consumeToken(TokenType.INTEGER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:363:32
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.FALOAD) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:364:5
+            consumeToken(TokenType.FALOAD);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:364:14
+            consumeToken(TokenType.INTEGER);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:364:24
+            consumeToken(TokenType.INTEGER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:364:34
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.FASTORE) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:365:5
+            consumeToken(TokenType.FASTORE);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:365:15
+            consumeToken(TokenType.INTEGER);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:365:25
+            consumeToken(TokenType.INTEGER);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:365:35
+            consumeToken(TokenType.INTEGER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:365:45
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.FCMPG) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:366:5
+            consumeToken(TokenType.FCMPG);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:366:13
+            consumeToken(TokenType.INTEGER);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:366:23
+            consumeToken(TokenType.INTEGER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:366:33
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.FCMPL) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:367:5
+            consumeToken(TokenType.FCMPL);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:367:13
+            consumeToken(TokenType.INTEGER);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:367:23
+            consumeToken(TokenType.INTEGER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:367:33
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.FCONST) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:368:5
+            consumeToken(TokenType.FCONST);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:368:14
+            consumeToken(TokenType.INTEGER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:368:24
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.FCONST_0) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:369:5
+            consumeToken(TokenType.FCONST_0);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:369:16
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.FCONST_1) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:370:5
+            consumeToken(TokenType.FCONST_1);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:370:16
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.FCONST_2) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:371:5
+            consumeToken(TokenType.FCONST_2);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:371:16
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.FCONST_3) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:372:5
+            consumeToken(TokenType.FCONST_3);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:372:16
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.FDIV) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:373:5
+            consumeToken(TokenType.FDIV);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:373:12
+            consumeToken(TokenType.INTEGER);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:373:22
+            consumeToken(TokenType.INTEGER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:373:32
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.FLOAD) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:374:5
+            consumeToken(TokenType.FLOAD);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:374:13
+            consumeToken(TokenType.INTEGER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:374:23
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.FLOAD_0) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:375:5
+            consumeToken(TokenType.FLOAD_0);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:375:15
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.FLOAD_1) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:376:5
+            consumeToken(TokenType.FLOAD_1);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:376:15
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.FLOAD_2) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:377:5
+            consumeToken(TokenType.FLOAD_2);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:377:15
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.FLOAD_3) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:378:5
+            consumeToken(TokenType.FLOAD_3);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:378:15
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.FMUL) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:379:5
+            consumeToken(TokenType.FMUL);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:379:12
+            consumeToken(TokenType.INTEGER);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:379:22
+            consumeToken(TokenType.INTEGER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:379:32
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.FNEG) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:380:5
+            consumeToken(TokenType.FNEG);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:380:12
+            consumeToken(TokenType.INTEGER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:380:22
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.FNEG) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:381:5
+            consumeToken(TokenType.FNEG);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:381:12
+            consumeToken(TokenType.INTEGER);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:381:22
+            consumeToken(TokenType.INTEGER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:381:32
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.FREM) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:382:5
+            consumeToken(TokenType.FREM);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:382:12
+            consumeToken(TokenType.INTEGER);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:382:22
+            consumeToken(TokenType.INTEGER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:382:32
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.FRETURN) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:383:5
+            consumeToken(TokenType.FRETURN);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:383:15
+            consumeToken(TokenType.INTEGER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:383:25
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.FSTORE) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:384:5
+            consumeToken(TokenType.FSTORE);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:384:14
+            consumeToken(TokenType.INTEGER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:384:24
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.FSTORE_0) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:385:5
+            consumeToken(TokenType.FSTORE_0);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:385:16
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.FSTORE_1) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:386:5
+            consumeToken(TokenType.FSTORE_1);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:386:16
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.FSTORE_2) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:387:5
+            consumeToken(TokenType.FSTORE_2);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:387:16
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.FSTORE_3) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:388:5
+            consumeToken(TokenType.FSTORE_3);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:388:16
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.FSUB) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:389:5
+            consumeToken(TokenType.FSUB);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:389:12
+            consumeToken(TokenType.INTEGER);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:389:22
+            consumeToken(TokenType.INTEGER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:389:32
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.GETFIELD) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:390:5
+            consumeToken(TokenType.GETFIELD);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:390:16
+            consumeToken(TokenType.INTEGER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:390:26
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.GETSTATIC) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:391:5
+            consumeToken(TokenType.GETSTATIC);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:391:17
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.I2B) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:392:5
+            consumeToken(TokenType.I2B);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:392:11
+            consumeToken(TokenType.INTEGER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:392:21
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.I2C) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:393:5
+            consumeToken(TokenType.I2C);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:393:11
+            consumeToken(TokenType.INTEGER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:393:21
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.I2D) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:394:5
+            consumeToken(TokenType.I2D);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:394:11
+            consumeToken(TokenType.INTEGER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:394:21
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.I2F) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:395:5
+            consumeToken(TokenType.I2F);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:395:11
+            consumeToken(TokenType.INTEGER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:395:21
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.I2L) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:396:5
+            consumeToken(TokenType.I2L);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:396:11
+            consumeToken(TokenType.INTEGER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:396:21
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.I2S) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:397:5
+            consumeToken(TokenType.I2S);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:397:11
+            consumeToken(TokenType.INTEGER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:397:21
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.IALOAD) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:398:5
+            consumeToken(TokenType.IALOAD);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:398:14
+            consumeToken(TokenType.INTEGER);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:398:24
+            consumeToken(TokenType.INTEGER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:398:34
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.IAND) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:399:5
+            consumeToken(TokenType.IAND);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:399:12
+            consumeToken(TokenType.INTEGER);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:399:22
+            consumeToken(TokenType.INTEGER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:399:32
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.IASTORE) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:400:5
+            consumeToken(TokenType.IASTORE);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:400:15
+            consumeToken(TokenType.INTEGER);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:400:25
+            consumeToken(TokenType.INTEGER);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:400:35
+            consumeToken(TokenType.INTEGER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:400:45
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.IDIV) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:401:5
+            consumeToken(TokenType.IDIV);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:401:12
+            consumeToken(TokenType.INTEGER);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:401:22
+            consumeToken(TokenType.INTEGER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:401:32
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.INEG) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:402:5
+            consumeToken(TokenType.INEG);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:402:12
+            consumeToken(TokenType.INTEGER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:402:22
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.IMUL) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:403:5
+            consumeToken(TokenType.IMUL);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:403:12
+            consumeToken(TokenType.INTEGER);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:403:22
+            consumeToken(TokenType.INTEGER);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:403:32
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.RETURN) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:404:5
+            consumeToken(TokenType.RETURN);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:404:14
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.ARETURN) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:405:5
+            consumeToken(TokenType.ARETURN);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:405:15
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.IRETURN) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:406:5
+            consumeToken(TokenType.IRETURN);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:406:15
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.INSTANCEOF) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:407:5
+            consumeToken(TokenType.INSTANCEOF);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:407:18
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.INVOKEDYNAMIC) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:408:5
+            consumeToken(TokenType.INVOKEDYNAMIC);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:408:21
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.INVOKEINTERFACE) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:409:5
+            consumeToken(TokenType.INVOKEINTERFACE);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:409:23
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.INVOKESPECIAL) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:410:5
+            consumeToken(TokenType.INVOKESPECIAL);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:410:21
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.INVOKESTATIC) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:411:5
+            consumeToken(TokenType.INVOKESTATIC);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:411:20
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.INVOKEVIRTUAL) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:412:5
+            consumeToken(TokenType.INVOKEVIRTUAL);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:412:21
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.IOR) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:413:5
+            consumeToken(TokenType.IOR);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:413:11
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.IREM) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:414:5
+            consumeToken(TokenType.IREM);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:414:12
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.ISHL) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:415:5
+            consumeToken(TokenType.ISHL);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:415:12
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.ISHR) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:416:5
+            consumeToken(TokenType.ISHR);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:416:12
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.ISTORE) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:417:5
+            consumeToken(TokenType.ISTORE);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:417:14
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.ISUB) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:418:5
+            consumeToken(TokenType.ISUB);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:418:12
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.IUSHR) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:419:5
+            consumeToken(TokenType.IUSHR);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:419:13
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.IXOR) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:420:5
+            consumeToken(TokenType.IXOR);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:420:12
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.JSR) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:421:5
+            consumeToken(TokenType.JSR);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:421:11
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.JSR_W) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:422:5
+            consumeToken(TokenType.JSR_W);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:422:13
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.L2D) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:423:5
+            consumeToken(TokenType.L2D);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:423:11
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.L2F) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:424:5
+            consumeToken(TokenType.L2F);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:424:11
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.L2I) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:425:5
+            consumeToken(TokenType.L2I);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:425:11
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.LADD) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:426:5
+            consumeToken(TokenType.LADD);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:426:12
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.LALOAD) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:427:5
+            consumeToken(TokenType.LALOAD);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:427:14
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.LAND) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:428:5
+            consumeToken(TokenType.LAND);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:428:12
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.LASTORE) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:429:5
+            consumeToken(TokenType.LASTORE);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:429:15
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.LCMP) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:430:5
+            consumeToken(TokenType.LCMP);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:430:12
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.LCONST_0) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:431:5
+            consumeToken(TokenType.LCONST_0);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:431:16
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.LCONST_1) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:432:5
+            consumeToken(TokenType.LCONST_1);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:432:16
+            listInstr.add(getToken(0).getImage());
+        }
+        else if (nextTokenType()== TokenType.LDC_W) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:433:5
+            consumeToken(TokenType.LDC_W);
+            // Code for CodeBlock specified at:
+            // JasminParser.jj:433:15
+            listInstr.add(getToken(0).getImage());
+        }
+        else  {
+            pushOntoCallStack("Instruction", "JasminParser.jj", 7857);
+            throw new ParseException(this, Instruction_FIRST_SET, parsingStack);
         }
     }
 
-    // JasminParser.jj:93:1
-    final public void MethodDeclaration() {
+    // JasminParser.jj:439:1
+    final public void Label() {
         if (cancelled) throw new CancellationException();
         String prevProduction= currentlyParsedProduction;
-        this.currentlyParsedProduction= "MethodDeclaration";
-        MethodDeclaration MethodDeclaration7= null;
-        if (buildTree) {
-            MethodDeclaration7= new MethodDeclaration();
-            openNodeScope(MethodDeclaration7);
-        }
-        ParseException parseException292= null;
-        int callStackSize293= parsingStack.size();
-        try {
-            if (false) throw new ParseException("Never happens!");
+        this.currentlyParsedProduction= "Label";
+        // Code for RegexpRef specified at:
+        // JasminParser.jj:440:5
+        consumeToken(TokenType.IDENTIFIER);
+        // Code for RegexpRef specified at:
+        // JasminParser.jj:440:18
+        consumeToken(TokenType.DOUBLE_DOT);
+    }
+
+    // JasminParser.jj:442:1
+    final public void Path1() {
+        if (cancelled) throw new CancellationException();
+        String prevProduction= currentlyParsedProduction;
+        this.currentlyParsedProduction= "Path1";
+        // Code for RegexpRef specified at:
+        // JasminParser.jj:443:5
+        consumeToken(TokenType.IDENTIFIER);
+        if (nextTokenType()== TokenType.SLASH) {
             // Code for RegexpRef specified at:
-            // JasminParser.jj:94:5
+            // JasminParser.jj:443:19
+            consumeToken(TokenType.SLASH);
+        }
+        else if (nextTokenType()== TokenType.DOT) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:443:29
             consumeToken(TokenType.DOT);
+        }
+        else  {
+            pushOntoCallStack("Path1", "JasminParser.jj", 18053);
+            throw new ParseException(this, first_set$JasminParser_jj$443$19, parsingStack);
+        }
+        if (nextTokenType()== TokenType.IDENTIFIER) {
             // Code for NonTerminal specified at:
-            // JasminParser.jj:94:12
-            pushOntoCallStack("MethodDeclaration", "JasminParser.jj", 2247);
+            // JasminParser.jj:443:38
+            pushOntoCallStack("Path1", "JasminParser.jj", 18072);
             try {
-                StartMethod();
+                Path1();
             }
             finally {
                 popCallStack();
             }
+        }
+        else if (nextTokenType()== TokenType.LESS||nextTokenType== TokenType.IDENTIFIER) {
             // Code for NonTerminal specified at:
-            // JasminParser.jj:94:27
-            pushOntoCallStack("MethodDeclaration", "JasminParser.jj", 2262);
+            // JasminParser.jj:443:48
+            pushOntoCallStack("Path1", "JasminParser.jj", 18082);
             try {
                 MethodName();
             }
@@ -686,343 +2006,302 @@ public class JasminParser implements JasminParserConstants {
                 popCallStack();
             }
             // Code for NonTerminal specified at:
-            // JasminParser.jj:94:40
-            pushOntoCallStack("MethodDeclaration", "JasminParser.jj", 2275);
+            // JasminParser.jj:443:61
+            pushOntoCallStack("Path1", "JasminParser.jj", 18095);
             try {
                 MethodArguments();
             }
             finally {
                 popCallStack();
             }
-            // Code for ZeroOrMore specified at:
-            // JasminParser.jj:94:57
-            while (true) {
-                if (!(first_set$JasminParser_jj$94$58.contains(nextTokenType()))) break;
-                // Code for NonTerminal specified at:
-                // JasminParser.jj:94:58
-                pushOntoCallStack("MethodDeclaration", "JasminParser.jj", 2293);
-                try {
-                    MethodBody();
-                }
-                finally {
-                    popCallStack();
-                }
-            }
+        }
+        else  {
+            pushOntoCallStack("Path1", "JasminParser.jj", 18071);
+            throw new ParseException(this, first_set$JasminParser_jj$443$37, parsingStack);
+        }
+    }
+
+    // JasminParser.jj:450:1
+    final public void MethodDeclaration() {
+        if (cancelled) throw new CancellationException();
+        String prevProduction= currentlyParsedProduction;
+        this.currentlyParsedProduction= "MethodDeclaration";
+        // Code for NonTerminal specified at:
+        // JasminParser.jj:451:6
+        pushOntoCallStack("MethodDeclaration", "JasminParser.jj", 18145);
+        try {
+            StartMethod();
+        }
+        finally {
+            popCallStack();
+        }
+        // Code for NonTerminal specified at:
+        // JasminParser.jj:451:21
+        pushOntoCallStack("MethodDeclaration", "JasminParser.jj", 18160);
+        try {
+            MethodName();
+        }
+        finally {
+            popCallStack();
+        }
+        // Code for NonTerminal specified at:
+        // JasminParser.jj:451:34
+        pushOntoCallStack("MethodDeclaration", "JasminParser.jj", 18173);
+        try {
+            MethodArguments();
+        }
+        finally {
+            popCallStack();
+        }
+        // Code for ZeroOrMore specified at:
+        // JasminParser.jj:451:51
+        while (true) {
+            if (!(first_set$JasminParser_jj$451$52.contains(nextTokenType()))) break;
             // Code for NonTerminal specified at:
-            // JasminParser.jj:95:5
-            pushOntoCallStack("MethodDeclaration", "JasminParser.jj", 2310);
+            // JasminParser.jj:451:52
+            pushOntoCallStack("MethodDeclaration", "JasminParser.jj", 18191);
             try {
-                MethodFinal();
+                MethodBody();
             }
             finally {
                 popCallStack();
             }
         }
-        catch(ParseException e) {
-            parseException292= e;
-            throw e;
+        // Code for NonTerminal specified at:
+        // JasminParser.jj:451:65
+        pushOntoCallStack("MethodDeclaration", "JasminParser.jj", 18204);
+        try {
+            EndMethod();
         }
         finally {
-            restoreCallStack(callStackSize293);
-            if (MethodDeclaration7!=null) {
-                if (parseException292== null) {
-                    closeNodeScope(MethodDeclaration7, nodeArity()> 1);
-                }
-                else  {
-                    clearNodeScope();
-                }
-            }
-            this.currentlyParsedProduction= prevProduction;
+            popCallStack();
         }
     }
 
-    // JasminParser.jj:97:1
+    // JasminParser.jj:453:1
     final public void StartMethod() {
         if (cancelled) throw new CancellationException();
         String prevProduction= currentlyParsedProduction;
         this.currentlyParsedProduction= "StartMethod";
-        StartMethod StartMethod8= null;
-        if (buildTree) {
-            StartMethod8= new StartMethod();
-            openNodeScope(StartMethod8);
-        }
-        ParseException parseException331= null;
-        int callStackSize332= parsingStack.size();
-        try {
-            if (false) throw new ParseException("Never happens!");
+        // Code for RegexpRef specified at:
+        // JasminParser.jj:454:5
+        consumeToken(TokenType.DOT_METHOD);
+        // Code for RegexpRef specified at:
+        // JasminParser.jj:454:18
+        consumeToken(TokenType.PUBLIC);
+        // Code for ZeroOrOne specified at:
+        // JasminParser.jj:454:27
+        if (nextTokenType()== TokenType.STATIC) {
             // Code for RegexpRef specified at:
-            // JasminParser.jj:98:5
-            consumeToken(TokenType.METHOD);
-            // Code for RegexpRef specified at:
-            // JasminParser.jj:98:14
-            consumeToken(TokenType.PUBLIC);
-            // Code for ZeroOrOne specified at:
-            // JasminParser.jj:98:23
-            if (nextTokenType()== TokenType.STATIC) {
-                // Code for RegexpRef specified at:
-                // JasminParser.jj:98:24
-                consumeToken(TokenType.STATIC);
-            }
-        }
-        catch(ParseException e) {
-            parseException331= e;
-            throw e;
-        }
-        finally {
-            restoreCallStack(callStackSize332);
-            if (StartMethod8!=null) {
-                if (parseException331== null) {
-                    closeNodeScope(StartMethod8, nodeArity()> 1);
-                }
-                else  {
-                    clearNodeScope();
-                }
-            }
-            this.currentlyParsedProduction= prevProduction;
+            // JasminParser.jj:454:28
+            consumeToken(TokenType.STATIC);
         }
     }
 
-    // JasminParser.jj:100:1
+    // JasminParser.jj:457:1
     final public void MethodName() {
         if (cancelled) throw new CancellationException();
         String prevProduction= currentlyParsedProduction;
         this.currentlyParsedProduction= "MethodName";
-        MethodName MethodName9= null;
-        if (buildTree) {
-            MethodName9= new MethodName();
-            openNodeScope(MethodName9);
+        if (nextTokenType()== TokenType.LESS) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:458:6
+            consumeToken(TokenType.LESS);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:458:13
+            consumeToken(TokenType.IDENTIFIER);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:458:26
+            consumeToken(TokenType.GREAT);
         }
-        ParseException parseException349= null;
-        int callStackSize350= parsingStack.size();
-        try {
-            if (false) throw new ParseException("Never happens!");
-            if (nextTokenType()== TokenType.LESS) {
-                // Code for RegexpRef specified at:
-                // JasminParser.jj:101:6
-                consumeToken(TokenType.LESS);
-                // Code for RegexpRef specified at:
-                // JasminParser.jj:101:13
-                consumeToken(TokenType.IDENTIFIER);
-                // Code for RegexpRef specified at:
-                // JasminParser.jj:101:26
-                consumeToken(TokenType.GREAT);
-            }
-            else if (nextTokenType()== TokenType.IDENTIFIER) {
-                // Code for RegexpRef specified at:
-                // JasminParser.jj:102:5
-                consumeToken(TokenType.IDENTIFIER);
-            }
-            else  {
-                pushOntoCallStack("MethodName", "JasminParser.jj", 2391);
-                throw new ParseException(this, first_set$JasminParser_jj$101$6, parsingStack);
-            }
+        else if (nextTokenType()== TokenType.IDENTIFIER) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:459:5
+            consumeToken(TokenType.IDENTIFIER);
         }
-        catch(ParseException e) {
-            parseException349= e;
-            throw e;
-        }
-        finally {
-            restoreCallStack(callStackSize350);
-            if (MethodName9!=null) {
-                if (parseException349== null) {
-                    closeNodeScope(MethodName9, nodeArity()> 1);
-                }
-                else  {
-                    clearNodeScope();
-                }
-            }
-            this.currentlyParsedProduction= prevProduction;
+        else  {
+            pushOntoCallStack("MethodName", "JasminParser.jj", 18287);
+            throw new ParseException(this, first_set$JasminParser_jj$458$6, parsingStack);
         }
     }
 
-    // JasminParser.jj:104:1
+    // JasminParser.jj:461:1
     final public void MethodArguments() {
         if (cancelled) throw new CancellationException();
         String prevProduction= currentlyParsedProduction;
         this.currentlyParsedProduction= "MethodArguments";
-        MethodArguments MethodArguments10= null;
-        if (buildTree) {
-            MethodArguments10= new MethodArguments();
-            openNodeScope(MethodArguments10);
-        }
-        ParseException parseException374= null;
-        int callStackSize375= parsingStack.size();
-        try {
-            if (false) throw new ParseException("Never happens!");
+        // Code for RegexpRef specified at:
+        // JasminParser.jj:462:5
+        consumeToken(TokenType.OPEN_PAREN);
+        // Code for ZeroOrOne specified at:
+        // JasminParser.jj:462:18
+        if (nextTokenType()== TokenType.ARRAY_IDENTIFIER) {
             // Code for RegexpRef specified at:
-            // JasminParser.jj:105:5
-            consumeToken(TokenType.OPEN_PAREN);
-            // Code for ZeroOrOne specified at:
-            // JasminParser.jj:105:18
+            // JasminParser.jj:462:19
+            consumeToken(TokenType.ARRAY_IDENTIFIER);
+        }
+        // Code for ZeroOrMore specified at:
+        // JasminParser.jj:462:40
+        while (true) {
             // Code for ExpansionChoice specified at:
-            // JasminParser.jj:105:19
-            if (nextTokenType()== TokenType.INT) {
+            // JasminParser.jj:462:41
+            if (nextTokenType()== TokenType.IDENTIFIER) {
                 // Code for RegexpRef specified at:
-                // JasminParser.jj:105:19
-                consumeToken(TokenType.INT);
+                // JasminParser.jj:462:41
+                consumeToken(TokenType.IDENTIFIER);
             }
-            else if (nextTokenType()== TokenType.VOID) {
+            else if (nextTokenType()== TokenType.SLASH) {
                 // Code for RegexpRef specified at:
-                // JasminParser.jj:105:27
-                consumeToken(TokenType.VOID);
+                // JasminParser.jj:462:56
+                consumeToken(TokenType.SLASH);
             }
+            else  {
+                break;
+            }
+        }
+        // Code for RegexpRef specified at:
+        // JasminParser.jj:462:66
+        consumeToken(TokenType.CLOSE_PAREN);
+        if (nextTokenType()== TokenType.INT) {
             // Code for RegexpRef specified at:
-            // JasminParser.jj:105:36
-            consumeToken(TokenType.CLOSE_PAREN);
-            // Code for ZeroOrOne specified at:
-            // JasminParser.jj:105:50
-            // Code for ExpansionChoice specified at:
-            // JasminParser.jj:105:51
-            if (nextTokenType()== TokenType.INT) {
-                // Code for RegexpRef specified at:
-                // JasminParser.jj:105:51
-                consumeToken(TokenType.INT);
-            }
-            else if (nextTokenType()== TokenType.VOID) {
-                // Code for RegexpRef specified at:
-                // JasminParser.jj:105:59
-                consumeToken(TokenType.VOID);
-            }
+            // JasminParser.jj:462:81
+            consumeToken(TokenType.INT);
         }
-        catch(ParseException e) {
-            parseException374= e;
-            throw e;
+        else if (nextTokenType()== TokenType.VOID) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:462:89
+            consumeToken(TokenType.VOID);
         }
-        finally {
-            restoreCallStack(callStackSize375);
-            if (MethodArguments10!=null) {
-                if (parseException374== null) {
-                    closeNodeScope(MethodArguments10, nodeArity()> 1);
-                }
-                else  {
-                    clearNodeScope();
-                }
-            }
-            this.currentlyParsedProduction= prevProduction;
+        else  {
+            pushOntoCallStack("MethodArguments", "JasminParser.jj", 18434);
+            throw new ParseException(this, first_set$JasminParser_jj$462$81, parsingStack);
         }
     }
 
-    // JasminParser.jj:108:1
+    // JasminParser.jj:464:1
     final public void MethodBody() {
         if (cancelled) throw new CancellationException();
         String prevProduction= currentlyParsedProduction;
         this.currentlyParsedProduction= "MethodBody";
-        MethodBody MethodBody11= null;
-        if (buildTree) {
-            MethodBody11= new MethodBody();
-            openNodeScope(MethodBody11);
-        }
-        ParseException parseException419= null;
-        int callStackSize420= parsingStack.size();
-        try {
-            if (false) throw new ParseException("Never happens!");
-            if (first_set$JasminParser_jj$109$6.contains(nextTokenType())) {
-                // Code for NonTerminal specified at:
-                // JasminParser.jj:109:6
-                pushOntoCallStack("MethodBody", "JasminParser.jj", 2545);
-                try {
-                    Instruction();
-                }
-                finally {
-                    popCallStack();
-                }
+        if (first_set$JasminParser_jj$465$6.contains(nextTokenType())) {
+            // Code for NonTerminal specified at:
+            // JasminParser.jj:465:6
+            pushOntoCallStack("MethodBody", "JasminParser.jj", 18469);
+            try {
+                Instruction();
             }
-            else if (nextTokenType()== TokenType.IDENTIFIER) {
-                // Code for NonTerminal specified at:
-                // JasminParser.jj:109:20
-                pushOntoCallStack("MethodBody", "JasminParser.jj", 2559);
-                try {
-                    Label();
-                }
-                finally {
-                    popCallStack();
-                }
-            }
-            else  {
-                pushOntoCallStack("MethodBody", "JasminParser.jj", 2545);
-                throw new ParseException(this, first_set$JasminParser_jj$109$6$, parsingStack);
+            finally {
+                popCallStack();
             }
         }
-        catch(ParseException e) {
-            parseException419= e;
-            throw e;
-        }
-        finally {
-            restoreCallStack(callStackSize420);
-            if (MethodBody11!=null) {
-                if (parseException419== null) {
-                    closeNodeScope(MethodBody11, nodeArity()> 1);
-                }
-                else  {
-                    clearNodeScope();
-                }
+        else if (nextTokenType()== TokenType.LIMIT) {
+            // Code for NonTerminal specified at:
+            // JasminParser.jj:465:19
+            pushOntoCallStack("MethodBody", "JasminParser.jj", 18482);
+            try {
+                LimitInstructions();
             }
-            this.currentlyParsedProduction= prevProduction;
+            finally {
+                popCallStack();
+            }
+        }
+        else if (nextTokenType()== TokenType.IDENTIFIER) {
+            // Code for NonTerminal specified at:
+            // JasminParser.jj:465:38
+            pushOntoCallStack("MethodBody", "JasminParser.jj", 18501);
+            try {
+                Label();
+            }
+            finally {
+                popCallStack();
+            }
+        }
+        else  {
+            pushOntoCallStack("MethodBody", "JasminParser.jj", 18469);
+            throw new ParseException(this, first_set$JasminParser_jj$465$6$, parsingStack);
         }
     }
 
-    // JasminParser.jj:111:1
-    final public void MethodFinal() {
+    // JasminParser.jj:467:1
+    final public void LimitInstructions() {
         if (cancelled) throw new CancellationException();
         String prevProduction= currentlyParsedProduction;
-        this.currentlyParsedProduction= "MethodFinal";
-        MethodFinal MethodFinal12= null;
-        if (buildTree) {
-            MethodFinal12= new MethodFinal();
-            openNodeScope(MethodFinal12);
-        }
-        ParseException parseException438= null;
-        int callStackSize439= parsingStack.size();
+        this.currentlyParsedProduction= "LimitInstructions";
+        // Code for RegexpRef specified at:
+        // JasminParser.jj:468:5
+        consumeToken(TokenType.LIMIT);
+        // Code for NonTerminal specified at:
+        // JasminParser.jj:468:13
+        pushOntoCallStack("LimitInstructions", "JasminParser.jj", 18542);
         try {
-            if (false) throw new ParseException("Never happens!");
-            // Code for RegexpRef specified at:
-            // JasminParser.jj:112:5
-            consumeToken(TokenType.DOT);
-            // Code for RegexpRef specified at:
-            // JasminParser.jj:112:11
-            consumeToken(TokenType.END);
-            // Code for RegexpRef specified at:
-            // JasminParser.jj:112:17
-            consumeToken(TokenType.METHOD);
-        }
-        catch(ParseException e) {
-            parseException438= e;
-            throw e;
+            LimitStatementFactorization();
         }
         finally {
-            restoreCallStack(callStackSize439);
-            if (MethodFinal12!=null) {
-                if (parseException438== null) {
-                    closeNodeScope(MethodFinal12, nodeArity()> 1);
-                }
-                else  {
-                    clearNodeScope();
-                }
-            }
-            this.currentlyParsedProduction= prevProduction;
+            popCallStack();
         }
     }
 
-    static private final EnumSet<TokenType> first_set$JasminParser_jj$68$6= first_set$JasminParser_jj$68$6_init();
-    static private EnumSet<TokenType> first_set$JasminParser_jj$68$6_init() {
-        return tokenTypeSet(TokenType.DOT, TokenType.ICONST_0, TokenType.ISTORE_2, TokenType.ISTORE_3, TokenType.ILOAD_1, TokenType.ILOAD_2, TokenType.ILOAD_3, TokenType.IF_ICMPGE, TokenType.IADD, TokenType.IINC, TokenType.IRETURN, TokenType.ALOAD_0, TokenType.INVOKENONVIRTUAL, TokenType.RETURN);
+    static private final EnumSet<TokenType> LimitStatementFactorization_FIRST_SET= tokenTypeSet(TokenType.LOCALS, TokenType.STACK);
+    // JasminParser.jj:470:1
+    final public void LimitStatementFactorization() {
+        if (cancelled) throw new CancellationException();
+        String prevProduction= currentlyParsedProduction;
+        this.currentlyParsedProduction= "LimitStatementFactorization";
+        // Code for ExpansionChoice specified at:
+        // JasminParser.jj:471:5
+        if (nextTokenType()== TokenType.STACK) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:471:5
+            consumeToken(TokenType.STACK);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:471:13
+            consumeToken(TokenType.INTEGER);
+        }
+        else if (nextTokenType()== TokenType.LOCALS) {
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:473:5
+            consumeToken(TokenType.LOCALS);
+            // Code for RegexpRef specified at:
+            // JasminParser.jj:473:14
+            consumeToken(TokenType.INTEGER);
+        }
+        else  {
+            pushOntoCallStack("LimitStatementFactorization", "JasminParser.jj", 18605);
+            throw new ParseException(this, LimitStatementFactorization_FIRST_SET, parsingStack);
+        }
     }
 
-    static private final EnumSet<TokenType> first_set$JasminParser_jj$90$27= tokenTypeSet(TokenType.LESS, TokenType.IDENTIFIER);
-    static private final EnumSet<TokenType> first_set$JasminParser_jj$94$58= first_set$JasminParser_jj$94$58_init();
-    static private EnumSet<TokenType> first_set$JasminParser_jj$94$58_init() {
-        return tokenTypeSet(TokenType.DOT, TokenType.ICONST_0, TokenType.ISTORE_2, TokenType.ISTORE_3, TokenType.ILOAD_1, TokenType.ILOAD_2, TokenType.ILOAD_3, TokenType.IF_ICMPGE, TokenType.IADD, TokenType.IINC, TokenType.IRETURN, TokenType.ALOAD_0, TokenType.INVOKENONVIRTUAL, TokenType.RETURN, TokenType.IDENTIFIER);
+    // JasminParser.jj:475:1
+    final public void EndMethod() {
+        if (cancelled) throw new CancellationException();
+        String prevProduction= currentlyParsedProduction;
+        this.currentlyParsedProduction= "EndMethod";
+        // Code for RegexpRef specified at:
+        // JasminParser.jj:476:9
+        consumeToken(TokenType.END);
+        // Code for RegexpRef specified at:
+        // JasminParser.jj:476:15
+        consumeToken(TokenType.METHOD);
     }
 
-    static private final EnumSet<TokenType> first_set$JasminParser_jj$101$6= tokenTypeSet(TokenType.LESS, TokenType.IDENTIFIER);
-    static private final EnumSet<TokenType> first_set$JasminParser_jj$109$6$= first_set$JasminParser_jj$109$6$_init();
-    static private EnumSet<TokenType> first_set$JasminParser_jj$109$6$_init() {
-        return tokenTypeSet(TokenType.DOT, TokenType.ICONST_0, TokenType.ISTORE_2, TokenType.ISTORE_3, TokenType.ILOAD_1, TokenType.ILOAD_2, TokenType.ILOAD_3, TokenType.IF_ICMPGE, TokenType.IADD, TokenType.IINC, TokenType.IRETURN, TokenType.ALOAD_0, TokenType.INVOKENONVIRTUAL, TokenType.RETURN, TokenType.IDENTIFIER);
+    static private final EnumSet<TokenType> first_set$JasminParser_jj$285$12= tokenTypeSet(TokenType.INTEGER, TokenType.QUOTE);
+    static private final EnumSet<TokenType> first_set$JasminParser_jj$443$19= tokenTypeSet(TokenType.DOT, TokenType.SLASH);
+    static private final EnumSet<TokenType> first_set$JasminParser_jj$443$37= tokenTypeSet(TokenType.LESS, TokenType.IDENTIFIER);
+    static private final EnumSet<TokenType> first_set$JasminParser_jj$451$52= first_set$JasminParser_jj$451$52_init();
+    static private EnumSet<TokenType> first_set$JasminParser_jj$451$52_init() {
+        return tokenTypeSet(TokenType.LIMIT, TokenType.GO_TO, TokenType.GO_TO_W, TokenType.A_NEW_ARRAY, TokenType.ARRAY_LENGTH, TokenType.ARETURN, TokenType.ALOAD, TokenType.ALOAD_0, TokenType.ALOAD_1, TokenType.ALOAD_2, TokenType.ALOAD_3, TokenType.BALOAD, TokenType.CALOAD, TokenType.CASTORE, TokenType.CHECKCAST, TokenType.D2F, TokenType.D2I, TokenType.D2L, TokenType.DADD, TokenType.DALOAD, TokenType.DASTORE, TokenType.DCMPG, TokenType.DCMPL, TokenType.DCONST_0, TokenType.DCONST_1, TokenType.DDIV, TokenType.DLOAD, TokenType.DLOAD_0, TokenType.DLOAD_1, TokenType.DLOAD_2, TokenType.DLOAD_3, TokenType.DMUL, TokenType.DNEG, TokenType.DREM, TokenType.DRETURN, TokenType.DSTORE, TokenType.DSTORE_0, TokenType.DSTORE_1, TokenType.DSTORE_2, TokenType.DSTORE_3, TokenType.DSUB, TokenType.DUP, TokenType.DUP_X1, TokenType.DUP_X2, TokenType.DUP2, TokenType.DUP2_X1, TokenType.DUP2_X2, TokenType.F2D, TokenType.ATHROW, TokenType.ASTORE, TokenType.ASTORE_1, TokenType.ASTORE_2, TokenType.ASTORE_3, TokenType.BASTORE, TokenType.ICONST, TokenType.ICONST_0, TokenType.ICONST_1, TokenType.ICONST_2, TokenType.ICONST_3, TokenType.ICONST_4, TokenType.ICONST_5, TokenType.ISTORE, TokenType.ISTORE_2, TokenType.ISTORE_3, TokenType.ILOAD, TokenType.ILOAD_0, TokenType.ILOAD_1, TokenType.ILOAD_2, TokenType.ILOAD_3, TokenType.IF_ACMPEQ, TokenType.IF_ACMPNE, TokenType.IF_ICMPEQ, TokenType.IF_ICMPNE, TokenType.IF_ICMPLT, TokenType.IF_ICMPGE, TokenType.IF_ICMPGT, TokenType.IF_ICMPLE, TokenType.IFEQ, TokenType.IFNE, TokenType.IFLT, TokenType.IFGE, TokenType.IFGT, TokenType.IFLE, TokenType.IFNONNULL, TokenType.IFNULL, TokenType.IADD, TokenType.IINC, TokenType.INVOKENONVIRTUAL, TokenType.NEW, TokenType.BIPUSH, TokenType.F2I, TokenType.F2L, TokenType.FADD, TokenType.FALOAD, TokenType.FASTORE, TokenType.FCMPG, TokenType.FCMPL, TokenType.FCONST, TokenType.FCONST_0, TokenType.FCONST_1, TokenType.FCONST_2, TokenType.FCONST_3, TokenType.FDIV, TokenType.FLOAD, TokenType.FLOAD_0, TokenType.FLOAD_1, TokenType.FLOAD_2, TokenType.FLOAD_3, TokenType.FMUL, TokenType.FNEG, TokenType.FREM, TokenType.FRETURN, TokenType.FSTORE, TokenType.FSTORE_0, TokenType.FSTORE_1, TokenType.FSTORE_2, TokenType.FSTORE_3, TokenType.FSUB, TokenType.GETFIELD, TokenType.GETSTATIC, TokenType.I2B, TokenType.I2C, TokenType.I2D, TokenType.I2F, TokenType.I2L, TokenType.I2S, TokenType.IALOAD, TokenType.IAND, TokenType.IASTORE, TokenType.IDIV, TokenType.INEG, TokenType.IMUL, TokenType.INSTANCEOF, TokenType.INVOKEDYNAMIC, TokenType.INVOKEINTERFACE, TokenType.INVOKESPECIAL, TokenType.INVOKESTATIC, TokenType.INVOKEVIRTUAL, TokenType.IOR, TokenType.IREM, TokenType.ISHL, TokenType.ISHR, TokenType.ISUB, TokenType.IUSHR, TokenType.IXOR, TokenType.JSR, TokenType.JSR_W, TokenType.L2D, TokenType.L2F, TokenType.L2I, TokenType.LALOAD, TokenType.LAND, TokenType.LASTORE, TokenType.LCMP, TokenType.LCONST_0, TokenType.LCONST_1, TokenType.LDC, TokenType.LDC_W, TokenType.LADD, TokenType.IRETURN, TokenType.RETURN, TokenType.IDENTIFIER);
     }
 
-    static private final EnumSet<TokenType> first_set$JasminParser_jj$109$6= first_set$JasminParser_jj$109$6_init();
-    static private EnumSet<TokenType> first_set$JasminParser_jj$109$6_init() {
-        return tokenTypeSet(TokenType.DOT, TokenType.ICONST_0, TokenType.ISTORE_2, TokenType.ISTORE_3, TokenType.ILOAD_1, TokenType.ILOAD_2, TokenType.ILOAD_3, TokenType.IF_ICMPGE, TokenType.IADD, TokenType.IINC, TokenType.IRETURN, TokenType.ALOAD_0, TokenType.INVOKENONVIRTUAL, TokenType.RETURN);
+    static private final EnumSet<TokenType> first_set$JasminParser_jj$458$6= tokenTypeSet(TokenType.LESS, TokenType.IDENTIFIER);
+    static private final EnumSet<TokenType> first_set$JasminParser_jj$462$81= tokenTypeSet(TokenType.INT, TokenType.VOID);
+    static private final EnumSet<TokenType> first_set$JasminParser_jj$465$6$= first_set$JasminParser_jj$465$6$_init();
+    static private EnumSet<TokenType> first_set$JasminParser_jj$465$6$_init() {
+        return tokenTypeSet(TokenType.LIMIT, TokenType.GO_TO, TokenType.GO_TO_W, TokenType.A_NEW_ARRAY, TokenType.ARRAY_LENGTH, TokenType.ARETURN, TokenType.ALOAD, TokenType.ALOAD_0, TokenType.ALOAD_1, TokenType.ALOAD_2, TokenType.ALOAD_3, TokenType.BALOAD, TokenType.CALOAD, TokenType.CASTORE, TokenType.CHECKCAST, TokenType.D2F, TokenType.D2I, TokenType.D2L, TokenType.DADD, TokenType.DALOAD, TokenType.DASTORE, TokenType.DCMPG, TokenType.DCMPL, TokenType.DCONST_0, TokenType.DCONST_1, TokenType.DDIV, TokenType.DLOAD, TokenType.DLOAD_0, TokenType.DLOAD_1, TokenType.DLOAD_2, TokenType.DLOAD_3, TokenType.DMUL, TokenType.DNEG, TokenType.DREM, TokenType.DRETURN, TokenType.DSTORE, TokenType.DSTORE_0, TokenType.DSTORE_1, TokenType.DSTORE_2, TokenType.DSTORE_3, TokenType.DSUB, TokenType.DUP, TokenType.DUP_X1, TokenType.DUP_X2, TokenType.DUP2, TokenType.DUP2_X1, TokenType.DUP2_X2, TokenType.F2D, TokenType.ATHROW, TokenType.ASTORE, TokenType.ASTORE_1, TokenType.ASTORE_2, TokenType.ASTORE_3, TokenType.BASTORE, TokenType.ICONST, TokenType.ICONST_0, TokenType.ICONST_1, TokenType.ICONST_2, TokenType.ICONST_3, TokenType.ICONST_4, TokenType.ICONST_5, TokenType.ISTORE, TokenType.ISTORE_2, TokenType.ISTORE_3, TokenType.ILOAD, TokenType.ILOAD_0, TokenType.ILOAD_1, TokenType.ILOAD_2, TokenType.ILOAD_3, TokenType.IF_ACMPEQ, TokenType.IF_ACMPNE, TokenType.IF_ICMPEQ, TokenType.IF_ICMPNE, TokenType.IF_ICMPLT, TokenType.IF_ICMPGE, TokenType.IF_ICMPGT, TokenType.IF_ICMPLE, TokenType.IFEQ, TokenType.IFNE, TokenType.IFLT, TokenType.IFGE, TokenType.IFGT, TokenType.IFLE, TokenType.IFNONNULL, TokenType.IFNULL, TokenType.IADD, TokenType.IINC, TokenType.INVOKENONVIRTUAL, TokenType.NEW, TokenType.BIPUSH, TokenType.F2I, TokenType.F2L, TokenType.FADD, TokenType.FALOAD, TokenType.FASTORE, TokenType.FCMPG, TokenType.FCMPL, TokenType.FCONST, TokenType.FCONST_0, TokenType.FCONST_1, TokenType.FCONST_2, TokenType.FCONST_3, TokenType.FDIV, TokenType.FLOAD, TokenType.FLOAD_0, TokenType.FLOAD_1, TokenType.FLOAD_2, TokenType.FLOAD_3, TokenType.FMUL, TokenType.FNEG, TokenType.FREM, TokenType.FRETURN, TokenType.FSTORE, TokenType.FSTORE_0, TokenType.FSTORE_1, TokenType.FSTORE_2, TokenType.FSTORE_3, TokenType.FSUB, TokenType.GETFIELD, TokenType.GETSTATIC, TokenType.I2B, TokenType.I2C, TokenType.I2D, TokenType.I2F, TokenType.I2L, TokenType.I2S, TokenType.IALOAD, TokenType.IAND, TokenType.IASTORE, TokenType.IDIV, TokenType.INEG, TokenType.IMUL, TokenType.INSTANCEOF, TokenType.INVOKEDYNAMIC, TokenType.INVOKEINTERFACE, TokenType.INVOKESPECIAL, TokenType.INVOKESTATIC, TokenType.INVOKEVIRTUAL, TokenType.IOR, TokenType.IREM, TokenType.ISHL, TokenType.ISHR, TokenType.ISUB, TokenType.IUSHR, TokenType.IXOR, TokenType.JSR, TokenType.JSR_W, TokenType.L2D, TokenType.L2F, TokenType.L2I, TokenType.LALOAD, TokenType.LAND, TokenType.LASTORE, TokenType.LCMP, TokenType.LCONST_0, TokenType.LCONST_1, TokenType.LDC, TokenType.LDC_W, TokenType.LADD, TokenType.IRETURN, TokenType.RETURN, TokenType.IDENTIFIER);
+    }
+
+    static private final EnumSet<TokenType> first_set$JasminParser_jj$465$6= first_set$JasminParser_jj$465$6_init();
+    static private EnumSet<TokenType> first_set$JasminParser_jj$465$6_init() {
+        return tokenTypeSet(TokenType.GO_TO, TokenType.GO_TO_W, TokenType.A_NEW_ARRAY, TokenType.ARRAY_LENGTH, TokenType.ARETURN, TokenType.ALOAD, TokenType.ALOAD_0, TokenType.ALOAD_1, TokenType.ALOAD_2, TokenType.ALOAD_3, TokenType.BALOAD, TokenType.CALOAD, TokenType.CASTORE, TokenType.CHECKCAST, TokenType.D2F, TokenType.D2I, TokenType.D2L, TokenType.DADD, TokenType.DALOAD, TokenType.DASTORE, TokenType.DCMPG, TokenType.DCMPL, TokenType.DCONST_0, TokenType.DCONST_1, TokenType.DDIV, TokenType.DLOAD, TokenType.DLOAD_0, TokenType.DLOAD_1, TokenType.DLOAD_2, TokenType.DLOAD_3, TokenType.DMUL, TokenType.DNEG, TokenType.DREM, TokenType.DRETURN, TokenType.DSTORE, TokenType.DSTORE_0, TokenType.DSTORE_1, TokenType.DSTORE_2, TokenType.DSTORE_3, TokenType.DSUB, TokenType.DUP, TokenType.DUP_X1, TokenType.DUP_X2, TokenType.DUP2, TokenType.DUP2_X1, TokenType.DUP2_X2, TokenType.F2D, TokenType.ATHROW, TokenType.ASTORE, TokenType.ASTORE_1, TokenType.ASTORE_2, TokenType.ASTORE_3, TokenType.BASTORE, TokenType.ICONST, TokenType.ICONST_0, TokenType.ICONST_1, TokenType.ICONST_2, TokenType.ICONST_3, TokenType.ICONST_4, TokenType.ICONST_5, TokenType.ISTORE, TokenType.ISTORE_2, TokenType.ISTORE_3, TokenType.ILOAD, TokenType.ILOAD_0, TokenType.ILOAD_1, TokenType.ILOAD_2, TokenType.ILOAD_3, TokenType.IF_ACMPEQ, TokenType.IF_ACMPNE, TokenType.IF_ICMPEQ, TokenType.IF_ICMPNE, TokenType.IF_ICMPLT, TokenType.IF_ICMPGE, TokenType.IF_ICMPGT, TokenType.IF_ICMPLE, TokenType.IFEQ, TokenType.IFNE, TokenType.IFLT, TokenType.IFGE, TokenType.IFGT, TokenType.IFLE, TokenType.IFNONNULL, TokenType.IFNULL, TokenType.IADD, TokenType.IINC, TokenType.INVOKENONVIRTUAL, TokenType.NEW, TokenType.BIPUSH, TokenType.F2I, TokenType.F2L, TokenType.FADD, TokenType.FALOAD, TokenType.FASTORE, TokenType.FCMPG, TokenType.FCMPL, TokenType.FCONST, TokenType.FCONST_0, TokenType.FCONST_1, TokenType.FCONST_2, TokenType.FCONST_3, TokenType.FDIV, TokenType.FLOAD, TokenType.FLOAD_0, TokenType.FLOAD_1, TokenType.FLOAD_2, TokenType.FLOAD_3, TokenType.FMUL, TokenType.FNEG, TokenType.FREM, TokenType.FRETURN, TokenType.FSTORE, TokenType.FSTORE_0, TokenType.FSTORE_1, TokenType.FSTORE_2, TokenType.FSTORE_3, TokenType.FSUB, TokenType.GETFIELD, TokenType.GETSTATIC, TokenType.I2B, TokenType.I2C, TokenType.I2D, TokenType.I2F, TokenType.I2L, TokenType.I2S, TokenType.IALOAD, TokenType.IAND, TokenType.IASTORE, TokenType.IDIV, TokenType.INEG, TokenType.IMUL, TokenType.INSTANCEOF, TokenType.INVOKEDYNAMIC, TokenType.INVOKEINTERFACE, TokenType.INVOKESPECIAL, TokenType.INVOKESTATIC, TokenType.INVOKEVIRTUAL, TokenType.IOR, TokenType.IREM, TokenType.ISHL, TokenType.ISHR, TokenType.ISUB, TokenType.IUSHR, TokenType.IXOR, TokenType.JSR, TokenType.JSR_W, TokenType.L2D, TokenType.L2F, TokenType.L2I, TokenType.LALOAD, TokenType.LAND, TokenType.LASTORE, TokenType.LCMP, TokenType.LCONST_0, TokenType.LCONST_1, TokenType.LDC, TokenType.LDC_W, TokenType.LADD, TokenType.IRETURN, TokenType.RETURN);
     }
 
     ArrayList<NonTerminalCall> parsingStack= new ArrayList<> ();
@@ -1073,12 +2352,6 @@ public class JasminParser implements JasminParserConstants {
         this.currentlyParsedProduction= ntc.productionName;
     }
 
-    private final void restoreCallStack(int prevSize) {
-        while (parsingStack.size()> prevSize) {
-            popCallStack();
-        }
-    }
-
     void dumpLookaheadStack(PrintStream ps) {
         ListIterator<NonTerminalCall> it= lookaheadStack.listIterator(lookaheadStack.size());
         while (it.hasPrevious()) {
@@ -1120,9 +2393,6 @@ public class JasminParser implements JasminParserConstants {
         }
         this.lastConsumedToken= nextToken;
         this.nextTokenType= null;
-        if (buildTree&&tokensAreNodes) {
-            pushNode(lastConsumedToken);
-        }
         return lastConsumedToken;
     }
 
@@ -1133,229 +2403,16 @@ public class JasminParser implements JasminParserConstants {
     private class ParseState {
         Token lastConsumed;
         ArrayList<NonTerminalCall> parsingStack;
-        NodeScope nodeScope;
         ParseState() {
             this.lastConsumed= JasminParser.this.lastConsumedToken;
             @SuppressWarnings("unchecked")
             ArrayList<NonTerminalCall> parsingStack= (ArrayList<NonTerminalCall> ) JasminParser.this.parsingStack.clone();
             this.parsingStack= parsingStack;
-            this.nodeScope= (NodeScope) currentNodeScope.clone();
         }
 
     }
-    private boolean buildTree= true;
-    private boolean tokensAreNodes= true;
-    private boolean unparsedTokensAreNodes= false;
     public boolean isTreeBuildingEnabled() {
-        return buildTree;
+        return false;
     }
 
-    public void setUnparsedTokensAreNodes(boolean unparsedTokensAreNodes) {
-        this.unparsedTokensAreNodes= unparsedTokensAreNodes;
-    }
-
-    public void setTokensAreNodes(boolean tokensAreNodes) {
-        this.tokensAreNodes= tokensAreNodes;
-    }
-
-    NodeScope currentNodeScope= new NodeScope();
-    /** 
-         * @return the root node of the AST. It only makes sense to call
-         * this after a successful parse. 
-         */
-    public Node rootNode() {
-        return currentNodeScope.rootNode();
-    }
-
-    /**
-     * push a node onto the top of the node stack
-     * @param n the node to push
-     */
-    public void pushNode(Node n) {
-        currentNodeScope.add(n);
-    }
-
-    /** 
-     * @return the node on the top of the stack, and remove it from the
-     * stack.  
-     */
-    public Node popNode() {
-        return currentNodeScope.pop();
-    }
-
-    /** 
-     * @return the node currently on the top of the tree-building stack. 
-     */
-    public Node peekNode() {
-        return currentNodeScope.peek();
-    }
-
-    /**
-     * Puts the node on the top of the stack. However, unlike pushNode()
-     * it replaces the node that is currently on the top of the stack.
-     * This is effectively equivalent to popNode() followed by pushNode(n)
-     * @param n the node to poke
-     */
-    public void pokeNode(Node n) {
-        currentNodeScope.poke(n);
-    }
-
-    /** 
-     * @return the number of Nodes on the tree-building stack in the current node
-         * scope. 
-         */
-    public int nodeArity() {
-        return currentNodeScope.size();
-    }
-
-    private void clearNodeScope() {
-        currentNodeScope.clear();
-    }
-
-    private void openNodeScope(Node n) {
-        new NodeScope();
-        if (n!=null) {
-            Token next= nextToken(lastConsumedToken);
-            n.setTokenSource(lastConsumedToken.getTokenSource());
-            n.setBeginOffset(next.getBeginOffset());
-            n.open();
-        }
-    }
-
-    /* A definite node is constructed from a specified number of
-         * children.  That number of nodes are popped from the stack and
-         * made the children of the definite node.  Then the definite node
-         * is pushed on to the stack.
-         */
-    private void closeNodeScope(Node n, int num) {
-        n.setEndOffset(lastConsumedToken.getEndOffset());
-        currentNodeScope.close();
-        ArrayList<Node> nodes= new ArrayList<Node> ();
-        for (int i= 0; i<num; i++) {
-            nodes.add(popNode());
-        }
-        Collections.reverse(nodes);
-        for (Node child : nodes) {
-            // FIXME deal with the UNPARSED_TOKENS_ARE_NODES case
-            n.addChild(child);
-        }
-        n.close();
-        pushNode(n);
-    }
-
-    /**
-         * A conditional node is constructed if the condition is true.  All
-         * the nodes that have been pushed since the node was opened are
-         * made children of the conditional node, which is then pushed
-         * on to the stack.  If the condition is false the node is not
-         * constructed and they are left on the stack. 
-         */
-    private void closeNodeScope(Node n, boolean condition) {
-        if (n!=null&&condition) {
-            n.setEndOffset(lastConsumedToken.getEndOffset());
-            int a= nodeArity();
-            currentNodeScope.close();
-            ArrayList<Node> nodes= new ArrayList<Node> ();
-            while (a--> 0) {
-                nodes.add(popNode());
-            }
-            Collections.reverse(nodes);
-            for (Node child : nodes) {
-                if (unparsedTokensAreNodes&&child instanceof Token) {
-                    Token tok= (Token) child;
-                    while (tok.previousCachedToken()!=null&&tok.previousCachedToken().isUnparsed()) {
-                        tok= tok.previousCachedToken();
-                    }
-                    while (tok.isUnparsed()) {
-                        n.addChild(tok);
-                        tok= tok.nextCachedToken();
-                    }
-                }
-                n.addChild(child);
-            }
-            n.close();
-            pushNode(n);
-        }
-        else  {
-            currentNodeScope.close();
-        }
-    }
-
-    public boolean getBuildTree() {
-        return buildTree;
-    }
-
-    public void setBuildTree(boolean buildTree) {
-        this.buildTree= buildTree;
-    }
-
-    /**
-     * Just a kludge so that existing jjtree-based code that uses
-     * parser.jjtree.foo can work without change.
-     */
-    JasminParser jjtree= this;
-    @SuppressWarnings("serial")
-    class NodeScope extends ArrayList<Node>  {
-        NodeScope parentScope;
-        NodeScope() {
-            this.parentScope= JasminParser.this.currentNodeScope;
-            JasminParser.this.currentNodeScope= this;
-        }
-
-        boolean isRootScope() {
-            return parentScope== null;
-        }
-
-        Node rootNode() {
-            NodeScope ns= this;
-            while (ns.parentScope!=null) {
-                ns= ns.parentScope;
-            }
-            return ns.isEmpty()?null:
-            ns.get(0);
-        }
-
-        Node peek() {
-            return isEmpty()?parentScope.peek():
-            get(size()-1);
-        }
-
-        Node pop() {
-            return isEmpty()?parentScope.pop():
-            remove(size()-1);
-        }
-
-        void poke(Node n) {
-            if (isEmpty()) {
-                parentScope.poke(n);
-            }
-            else  {
-                set(size()-1, n);
-            }
-        }
-
-        void close() {
-            parentScope.addAll(this);
-            JasminParser.this.currentNodeScope= parentScope;
-        }
-
-        int nestingLevel() {
-            int result= 0;
-            NodeScope parent= this;
-            while (parent.parentScope!=null) {
-                result++;
-                parent= parent.parentScope;
-            }
-            return result;
-        }
-
-        public NodeScope clone() {
-            NodeScope clone= (NodeScope) super.clone();
-            if (parentScope!=null) {
-                clone.parentScope= (NodeScope) parentScope.clone();
-            }
-            return clone;
-        }
-
-    }
 }
