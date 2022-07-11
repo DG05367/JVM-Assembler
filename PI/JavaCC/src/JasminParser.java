@@ -13,8 +13,8 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.charset.Charset;
-import java.util.ArrayList;
 import Jasmin.*;
+import java.util.ArrayList;
 @SuppressWarnings("unused")
 public class JasminParser implements JasminParserConstants {
     ArrayList listInstr= new ArrayList();

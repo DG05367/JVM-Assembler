@@ -143,7 +143,7 @@ public class Method{
                 .append(this.locals);
             code.append("\n");
         }
-
+        
         if(!this.stack.equals("")){
             code.append("\t\t.limit ")
                 .append("stack ")
