@@ -5,15 +5,15 @@ This project was developed in scope of the course “Projeto Integrador”, and 
 
 ## Introduction
 Here we will discuss our approach to the project, different phases of the development as well what can be done in the future, following this structure:
-* [Java Virtual Machine](https://github.com/DG05367/JVM-Assembler/README.md#Java_Virtual_Machine) - what is the jvm, a small introduction. 
-* [Jasmin](https://github.com/DG05367/JVM-Assembler/README.md#Jasmin) -  an introduction to jasmin.
-* [JavaCC](https://github.com/DG05367/JVM-Assembler/README.md#JavaCC) - what is javacc, its main features and what can it be used for.
+* [Java Virtual Machine](https://github.com/DG05367/JVM-Assembler#java-virtual-machine) - what is the jvm, a small introduction. 
+* [Jasmin](https://github.com/DG05367/JVM-Assembler#jasmin) -  an introduction to jasmin.
+* [JavaCC](https://github.com/DG05367/JVM-Assembler#javacc) - what is javacc, its main features and what can it be used for.
 * [New Assembler Analysis](https://github.com/DG05367/JVM-Assembler/README.md#New_Assembler_Analysis) - Analysis of the current JVM Assembler status and our approach to this project.
-* [Grammar](https://github.com/DG05367/JVM-Assembler/README.md#Grammar) - Grammar structure and content.
-* [Jasmin Generation](https://github.com/DG05367/JVM-Assembler/README.md#Jasmin_Generation) - Code generation with some code snippets.
-* [Application](https://github.com/DG05367/JVM-Assembler/README.md#Application) - How to run the developed program.
-* [Future Work](https://github.com/DG05367/JVM-Assembler/README.md#Future_Work) - what can we improve in future versions.
-* [Conclusion](https://github.com/DG05367/JVM-Assembler/README.md#Conclusion) -  project conclusions.
+* [Grammar](https://github.com/DG05367/JVM-Assembler#grammar) - Grammar structure and content.
+* [Jasmin Generation](https://github.com/DG05367/JVM-Assembler#jasmin-generation) - Code generation with some code snippets.
+* [Application](https://github.com/DG05367/JVM-Assembler#application) - How to run the developed program.
+* [Future Work](https://github.com/DG05367/JVM-Assembler#future-work) - what can we improve in future versions.
+* [Conclusion](https://github.com/DG05367/JVM-Assembler#conclusion) -  project conclusions.
 
 
 ## Java Virtual Machine
