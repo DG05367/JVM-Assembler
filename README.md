@@ -198,9 +198,12 @@ But this class alone can’t do the job, we created more classes that stored spe
 We keep our project open source for anyone that might be interested in using or improving our project further.
 
 To run our program do the following terminal commands:
+
+```
 java -jar javacc-full.jar JasminParser.jj
 javac *.java -d ../build
 javac Jasmin/*.java -d ../build
+```
 
 Or to test on our sample exercises, give permissions to our run.sh script (chmod u+x run.sh) and then execute the script.
 
